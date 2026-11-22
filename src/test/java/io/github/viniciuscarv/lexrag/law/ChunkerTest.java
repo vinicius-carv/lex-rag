@@ -67,6 +67,32 @@ class ChunkerTest {
   }
 
   @Test
+  void longIncisosNeverExceedMax() {
+    String text =
+        String.join(
+            "\n",
+            "Art. 9º Caput:",
+            "I - " + "a".repeat(500),
+            "II - " + "b".repeat(900),
+            "III - " + "c".repeat(900));
+
+    List<Chunk> chunks = Chunker.chunk(article("x:art9", text, false));
+
+    assertThat(chunks).allSatisfy(c -> assertThat(c.text().length()).isLessThanOrEqualTo(1500));
+    String joined = String.join(" ", chunks.stream().map(Chunk::text).toList());
+    assertThat(joined.replaceAll("\\s+", " ")).isEqualTo(text.replaceAll("\\s+", " "));
+  }
+
+  @Test
+  void realCorpusChunksFitMax() throws Exception {
+    for (Article a : LawParser.load(java.nio.file.Path.of("corpus/laws/manifest.json"))) {
+      assertThat(Chunker.chunk(a))
+          .as(a.id())
+          .allSatisfy(c -> assertThat(c.text().length()).isLessThanOrEqualTo(1500));
+    }
+  }
+
+  @Test
   void revokedArticleHasNoChunks() {
     assertThat(Chunker.chunk(article("x:art3", "Art. 3º (Revogado)", true))).isEmpty();
   }

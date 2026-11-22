@@ -15,7 +15,7 @@ public final class Chunker {
   private Chunker() {}
 
   public static List<Chunk> chunk(Article a) {
-    if (a.revoked()) return List.of();
+    if (a.revoked() || a.text().isBlank()) return List.of();
     List<String> lines = new ArrayList<>();
     for (String l : a.text().split("\n")) splitLong(l, lines);
 
@@ -23,7 +23,7 @@ public final class Chunker {
     List<String> cur = new ArrayList<>();
     int len = 0;
     for (String line : lines) {
-      if (!cur.isEmpty() && len + 1 + line.length() > MAX) {
+      while (!cur.isEmpty() && len + 1 + line.length() > MAX) {
         int cut = lastBoundary(cur);
         texts.add(String.join("\n", cur.subList(0, cut)));
         cur = new ArrayList<>(cur.subList(cut, cur.size()));

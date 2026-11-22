@@ -2,6 +2,7 @@ package io.github.viniciuscarv.lexrag.answer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -14,7 +15,7 @@ public final class CitationVerifier {
 
   public static List<VerifiedCitation> verify(
       List<Citation> citations, Map<String, String> retrievedTexts) {
-    Map<String, String> norm = new java.util.LinkedHashMap<>();
+    Map<String, String> norm = new LinkedHashMap<>();
     retrievedTexts.forEach((id, t) -> norm.put(id, Text.normalize(t)));
 
     List<VerifiedCitation> out = new ArrayList<>();
