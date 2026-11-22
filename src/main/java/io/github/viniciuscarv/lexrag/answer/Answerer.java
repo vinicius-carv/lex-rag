@@ -50,7 +50,7 @@ public class Answerer {
     }
 
     ParsedAnswer p = parsed.get();
-    List<Citation> cites = p.insufficient() ? List.of() : p.citations();
+    List<Citation> cites = p.insufficient() ? List.<Citation>of() : p.citations().stream().limit(3).toList();
     var verified = CitationVerifier.verify(cites, repo.articleTexts(ids));
     return new Answer(question, mode, provider, p.answer(), p.insufficient(), false, verified, ids);
   }
@@ -68,6 +68,6 @@ public class Answerer {
       }
       sb.append('\n');
     }
-    return template.replace("{{articles}}", sb.toString().strip()).replace("{{question}}", question);
+    return template.replace("{{question}}", question).replace("{{articles}}", sb.toString().strip());
   }
 }

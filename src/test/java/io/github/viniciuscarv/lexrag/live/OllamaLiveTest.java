@@ -51,7 +51,6 @@ class OllamaLiveTest {
         new Answerer(retriever, repo, chat, "ollama")
             .answer("Qual o prazo para desistir de uma compra feita pela internet?", Mode.HYBRID);
 
-    System.out.println(r);
     assertThat(r.failed()).isFalse();
     assertThat(r.citations()).isNotEmpty();
   }

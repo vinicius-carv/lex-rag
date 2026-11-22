@@ -5,8 +5,10 @@ import io.github.viniciuscarv.lexrag.answer.Answerer;
 import io.github.viniciuscarv.lexrag.ingest.Ingest;
 import io.github.viniciuscarv.lexrag.retrieve.Mode;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationRunner;
@@ -21,25 +23,28 @@ public class LexRagApplication {
 
   public static void main(String[] args) {
     List<String> a = Arrays.asList(args);
-    boolean ingest = a.contains("--ingest");
-    int ask = a.indexOf("--ask");
-    if (ask >= 0) {
-      System.setProperty("lexrag.ask", opt(a, "--ask"));
-      System.setProperty("lexrag.ask-mode", Objects.toString(opt(a, "--mode"), "hybrid"));
-    }
-    String provider = opt(a, "--provider");
-    if (provider != null) System.setProperty("lexrag.chat.provider", provider);
-    if (ingest || ask >= 0) {
-      System.setProperty("spring.main.web-application-type", "none");
-      System.setProperty("lexrag.ingest", "true");
-    }
-    if (Arrays.asList(args).contains("--record")) {
-      System.setProperty("lexrag.record", "true");
-    }
+    properties(a).forEach(System::setProperty);
     ConfigurableApplicationContext ctx = SpringApplication.run(LexRagApplication.class, args);
-    if (ingest || ask >= 0) {
+    if (a.contains("--ingest") || a.contains("--ask")) {
       System.exit(SpringApplication.exit(ctx));
     }
+  }
+
+  /** Maps CLI flags to system properties; --ask and --ingest are both non-web, only --ingest ingests. */
+  static Map<String, String> properties(List<String> a) {
+    Map<String, String> p = new LinkedHashMap<>();
+    boolean ingest = a.contains("--ingest");
+    boolean ask = a.contains("--ask");
+    if (ask) {
+      p.put("lexrag.ask", opt(a, "--ask"));
+      p.put("lexrag.ask-mode", Objects.toString(opt(a, "--mode"), "hybrid"));
+    }
+    String provider = opt(a, "--provider");
+    if (provider != null) p.put("lexrag.chat.provider", provider);
+    if (ingest || ask) p.put("spring.main.web-application-type", "none");
+    if (ingest) p.put("lexrag.ingest", "true");
+    if (a.contains("--record")) p.put("lexrag.record", "true");
+    return p;
   }
 
   private static String opt(List<String> args, String name) {
