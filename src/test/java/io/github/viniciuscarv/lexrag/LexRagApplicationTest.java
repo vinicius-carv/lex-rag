@@ -27,6 +27,17 @@ class LexRagApplicationTest {
   }
 
   @Test
+  void evalIsNonWebWithDefaults() {
+    assertThat(LexRagApplication.properties(List.of("--eval", "--retrieval-only", "--judge")))
+        .containsEntry("lexrag.eval", "true")
+        .containsEntry("lexrag.eval-mode", "all")
+        .containsEntry("lexrag.eval-retrieval-only", "true")
+        .containsEntry("lexrag.judge", "true")
+        .containsEntry("spring.main.web-application-type", "none")
+        .doesNotContainKey("lexrag.ingest");
+  }
+
+  @Test
   void noFlagsStartsWebServer() {
     assertThat(LexRagApplication.properties(List.of())).isEmpty();
   }

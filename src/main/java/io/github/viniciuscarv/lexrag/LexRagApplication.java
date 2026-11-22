@@ -25,7 +25,7 @@ public class LexRagApplication {
     List<String> a = Arrays.asList(args);
     properties(a).forEach(System::setProperty);
     ConfigurableApplicationContext ctx = SpringApplication.run(LexRagApplication.class, args);
-    if (a.contains("--ingest") || a.contains("--ask")) {
+    if (a.contains("--ingest") || a.contains("--ask") || a.contains("--eval")) {
       System.exit(SpringApplication.exit(ctx));
     }
   }
@@ -39,9 +39,16 @@ public class LexRagApplication {
       p.put("lexrag.ask", opt(a, "--ask"));
       p.put("lexrag.ask-mode", Objects.toString(opt(a, "--mode"), "hybrid"));
     }
+    boolean eval = a.contains("--eval");
+    if (eval) {
+      p.put("lexrag.eval", "true");
+      p.put("lexrag.eval-mode", Objects.toString(opt(a, "--mode"), "all"));
+      if (a.contains("--retrieval-only")) p.put("lexrag.eval-retrieval-only", "true");
+      if (a.contains("--judge")) p.put("lexrag.judge", "true");
+    }
     String provider = opt(a, "--provider");
     if (provider != null) p.put("lexrag.chat.provider", provider);
-    if (ingest || ask) p.put("spring.main.web-application-type", "none");
+    if (ingest || ask || eval) p.put("spring.main.web-application-type", "none");
     if (ingest) p.put("lexrag.ingest", "true");
     if (a.contains("--record")) p.put("lexrag.record", "true");
     return p;
