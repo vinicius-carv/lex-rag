@@ -1,0 +1,9 @@
+services:
+  db:
+    image: pgvector/pgvector:0.8.7-pg18
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: lexrag
+      POSTGRES_USER: lexrag
+      POSTGRES_PASSWORD: lexrag

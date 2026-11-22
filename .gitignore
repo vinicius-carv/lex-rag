@@ -1,0 +1,5 @@
+target/
+results/*.tmp
+.env
+.idea/
+*.iml
