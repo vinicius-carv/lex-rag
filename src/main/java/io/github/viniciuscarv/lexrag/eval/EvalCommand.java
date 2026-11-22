@@ -81,7 +81,7 @@ public class EvalCommand implements ApplicationRunner, ExitCodeGenerator {
       Files.createDirectories(out.getParent());
       JsonMapper.builder().enable(SerializationFeature.INDENT_OUTPUT).build().writeValue(out, report);
       System.out.println(report.toMarkdown());
-      if (!EvalRunner.gate(report, Path.of("corpus/baseline.json"))) exitCode = 1;
+      if (!EvalRunner.gate(report, Path.of("corpus/baseline.json"), !retrievalOnly)) exitCode = 1;
     } catch (Exception e) {
       System.err.println("Eval failed: " + e.getMessage());
       exitCode = 1;

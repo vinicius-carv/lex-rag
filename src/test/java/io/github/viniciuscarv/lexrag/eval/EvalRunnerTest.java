@@ -33,9 +33,20 @@ class EvalRunnerTest {
   void gateToleratesTwoPointsAndFailsBeyond() throws Exception {
     Path b = dir.resolve("baseline.json");
     Files.writeString(b, "{\"hybridRecall5\":0.80,\"supportedRate\":0.70}");
-    assertThat(EvalRunner.gate(report(0.79, 0.69), b)).isTrue();
-    assertThat(EvalRunner.gate(report(0.77, 0.69), b)).isFalse();
-    assertThat(EvalRunner.gate(report(0.79, 0.67), b)).isFalse();
+    assertThat(EvalRunner.gate(report(0.79, 0.69), b, true)).isTrue();
+    assertThat(EvalRunner.gate(report(0.77, 0.69), b, true)).isFalse();
+    assertThat(EvalRunner.gate(report(0.79, 0.67), b, true)).isFalse();
+  }
+
+  @Test
+  void gateFailsOnMissingRowsButRetrievalOnlySkipsAnswers() throws Exception {
+    Path b = dir.resolve("baseline.json");
+    Files.writeString(b, "{\"hybridRecall5\":0.80,\"supportedRate\":0.70}");
+    var retrievalOnly = new EvalReport(report(0.80, 0).retrieval(), List.of(), List.of());
+    assertThat(EvalRunner.gate(retrievalOnly, b, false)).isTrue();
+    assertThat(EvalRunner.gate(retrievalOnly, b, true)).isFalse();
+    var noHybrid = new EvalReport(List.of(new RetrievalRow(Mode.KEYWORD, 0, 1, 0, 1)), List.of(), List.of());
+    assertThat(EvalRunner.gate(noHybrid, b, false)).isFalse();
   }
 
   @Test

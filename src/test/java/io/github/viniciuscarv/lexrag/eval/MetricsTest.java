@@ -43,7 +43,7 @@ class MetricsTest {
     var answers =
         Map.of(
             "q1", ans(false, false, cite("g:art1", CitationStatus.VERIFIED), cite("g:art9", CitationStatus.UNSUPPORTED)),
-            "q2", ans(false, false, cite("g:art2", CitationStatus.WRONG_ARTICLE)),
+            "q2", ans(false, false, new VerifiedCitation("g:art2", "g:art8", "q", CitationStatus.WRONG_ARTICLE)),
             "q3", ans(false, true),
             "q4", ans(true, false),
             "q5", ans(true, false));

@@ -118,8 +118,11 @@ public class EvalRunner {
     }
   }
 
-  /** Fails when hybrid Recall@5 or the ollama/hybrid supported rate fall more than 0.02 below the baseline. */
-  public static boolean gate(EvalReport r, Path baseline) {
+  /**
+   * Fails when hybrid Recall@5 or (if answers were run) the ollama/hybrid supported rate fall more than 0.02
+   * below the baseline, or when a row to gate is missing.
+   */
+  public static boolean gate(EvalReport r, Path baseline, boolean answersRun) {
     JsonNode b;
     try {
       b = MAPPER.readTree(Files.readString(baseline));
@@ -127,6 +130,14 @@ public class EvalRunner {
       throw new UncheckedIOException(e);
     }
     boolean ok = true;
+    if (r.retrieval().stream().noneMatch(x -> x.mode() == Mode.HYBRID)) {
+      System.out.println("GATE FAIL: no hybrid retrieval row to gate; run with --mode hybrid or all");
+      ok = false;
+    }
+    if (answersRun && r.answers().stream().noneMatch(x -> x.mode() == Mode.HYBRID && x.provider().equals("ollama"))) {
+      System.out.println("GATE FAIL: no ollama/hybrid answer row to gate; use --provider ollama or --retrieval-only");
+      ok = false;
+    }
     double minRecall = b.get("hybridRecall5").asDouble() - TOLERANCE;
     for (RetrievalRow row : r.retrieval()) {
       if (row.mode() == Mode.HYBRID && row.recall5() < minRecall - 1e-9) {
