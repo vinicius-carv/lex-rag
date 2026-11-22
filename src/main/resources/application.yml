@@ -2,3 +2,19 @@ spring:
   sql:
     init:
       mode: always
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/lexrag}
+    username: ${DB_USER:lexrag}
+    password: ${DB_PASSWORD:lexrag}
+
+lexrag:
+  embedding:
+    model: ${LEXRAG_EMBEDDING_MODEL:bge-m3}
+  ollama:
+    base-url: ${LEXRAG_OLLAMA_BASE_URL:http://localhost:11434}
+  chat:
+    provider: ${LEXRAG_CHAT_PROVIDER:ollama}
+    ollama-model: ${LEXRAG_CHAT_OLLAMA_MODEL:qwen3.5:9b}
+    anthropic-model: ${LEXRAG_CHAT_ANTHROPIC_MODEL:claude-sonnet-5-5}
+  record: ${LEXRAG_RECORD:false}
+  recordings-dir: ${LEXRAG_RECORDINGS_DIR:corpus/recordings}
