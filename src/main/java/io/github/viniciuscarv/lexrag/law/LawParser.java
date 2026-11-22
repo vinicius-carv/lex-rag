@@ -32,7 +32,7 @@ public final class LawParser {
   // One level of nested parentheses is enough for "(Redação dada ... (Vide ...))".
   private static final Pattern NOTE =
       Pattern.compile(
-          "\\((?:Redação dada|Incluído|Incluída|Revogado|Revogada|Vide|Regulamento)"
+          "\\((?:Redação dada|Incluído|Incluída|Revogado|Revogada|Vide|Regulamento|Produção de efeito|Vigência)"
               + "(?:[^()]|\\([^()]*\\))*\\)\\.?");
   private static final Pattern EMPTY_BODY =
       Pattern.compile("^(\\(?(?:Revogad[oa]|Vetado)\\)?)?$", Pattern.CASE_INSENSITIVE);

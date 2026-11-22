@@ -109,6 +109,18 @@ class LawParserTest {
   }
 
   @Test
+  void movesVigenciaNotesOutOfText() {
+    byte[] html =
+        "<p>Art. 7º Texto aqui. (Vigência)</p><p>§ 1º Outro. (Produção de efeito)</p>"
+            .getBytes(java.nio.charset.Charset.forName("windows-1252"));
+
+    Article a = byId(LawParser.parse("x", html), "x:art7");
+
+    assertThat(a.text()).doesNotContain("Vigência").doesNotContain("Produção");
+    assertThat(a.notes()).containsExactly("(Vigência)", "(Produção de efeito)");
+  }
+
+  @Test
   void realSnapshotCounts() throws Exception {
     List<Article> all = LawParser.load(MANIFEST);
 
