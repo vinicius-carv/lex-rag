@@ -1,0 +1,2881 @@
+{
+  "retrieval" : [ {
+    "mode" : "KEYWORD",
+    "hit1" : 0.21428571428571427,
+    "recall5" : 0.41666666666666663,
+    "mrr10" : 0.32431972789115643,
+    "n" : 56
+  }, {
+    "mode" : "DENSE",
+    "hit1" : 0.6607142857142857,
+    "recall5" : 0.8273809523809524,
+    "mrr10" : 0.757936507936508,
+    "n" : 56
+  }, {
+    "mode" : "HYBRID",
+    "hit1" : 0.39285714285714285,
+    "recall5" : 0.7023809523809524,
+    "mrr10" : 0.54375,
+    "n" : 56
+  } ],
+  "answers" : [ {
+    "provider" : "ollama",
+    "mode" : "KEYWORD",
+    "citationPrecision" : 0.3855421686746988,
+    "supportedRate" : 0.963855421686747,
+    "answerRecall" : 0.3392857142857143,
+    "abstention" : 0.8,
+    "falseAbstention" : 0.30357142857142855,
+    "failed" : 0,
+    "n" : 61,
+    "judgeSupported" : null
+  }, {
+    "provider" : "ollama",
+    "mode" : "DENSE",
+    "citationPrecision" : 0.6272727272727273,
+    "supportedRate" : 0.9727272727272728,
+    "answerRecall" : 0.8214285714285714,
+    "abstention" : 0.8,
+    "falseAbstention" : 0.017857142857142856,
+    "failed" : 0,
+    "n" : 61,
+    "judgeSupported" : null
+  } ],
+  "perQuestion" : [ {
+    "id" : "q01",
+    "type" : "single",
+    "gold" : [ "cdc:art49" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art49", "cf88:art78", "cf88:art28", "cf88:art100", "cf88:art142", "cf88:art220", "cdc:art94", "cf88:art167-c", "cf88:art164", "cf88:art72" ],
+      "DENSE" : [ "cdc:art49", "cdc:art18", "cdc:art41", "cdc:art20", "cdc:art19", "cdc:art54-f", "cdc:art54-g", "cdc:art26", "cdc:art33", "cdc:art53" ],
+      "HYBRID" : [ "cdc:art49", "cdc:art53", "cdc:art54-f", "cdc:art54-g", "cdc:art43", "cf88:art78", "cdc:art18", "cf88:art28", "cf88:art100", "cdc:art41" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Comprei um celular pela internet e me arrependi, posso devolver?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, você pode devolver o celular. O Código de Defesa do Consumidor garante o direito de desistência em contratos celebrados fora do estabelecimento comercial, como compras pela internet. Conforme o artigo 49, 'O consumidor pode desistir do contrato, no prazo de 7 dias a contar de sua assinatura ou do ato de recebimento do produto ou serviço, sempre que a contratação de fornecimento de produtos e serviços ocorrer fora do estabelecimento comercial'. Além disso, os valores pagos serão devolvidos atualizados monetariamente.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art49",
+          "citedArticleId" : "cdc:art49",
+          "quote" : "O consumidor pode desistir do contrato, no prazo de 7 dias a contar de sua assinatura ou do ato de recebimento do produto ou serviço, sempre que a contratação de fornecimento de produtos e serviços ocorrer fora do estabelecimento comercial",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art49",
+          "citedArticleId" : "cdc:art49",
+          "quote" : "Se o consumidor exercitar o direito de arrependimento previsto neste artigo, os valores eventualmente pagos, a qualquer título, durante o prazo de reflexão, serão devolvidos, de imediato, monetariamente atualizados.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art49", "cf88:art78", "cf88:art28", "cf88:art100", "cf88:art142" ]
+      },
+      "DENSE" : {
+        "question" : "Comprei um celular pela internet e me arrependi, posso devolver?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, você pode devolver o celular. Como a contratação ocorreu fora do estabelecimento comercial (pela internet), aplica-se o direito de arrependimento previsto no Art. 49 do CDC: 'O consumidor pode desistir do contrato, no prazo de 7 dias a contar de sua assinatura ou do ato de recebimento do produto ou serviço, sempre que a contratação de fornecimento de produtos e serviços ocorrer fora do estabelecimento comercial'. Além disso, se exercer este direito, 'os valores eventualmente pagos, a qualquer título, durante o prazo de reflexão, serão devolvidos, de imediato, monetariamente atualizados', conforme o parágrafo único do mesmo artigo.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art49",
+          "citedArticleId" : "cdc:art49",
+          "quote" : "O consumidor pode desistir do contrato, no prazo de 7 dias a contar de sua assinatura ou do ato de recebimento do produto ou serviço, sempre que a contratação de fornecimento de produtos e serviços ocorrer fora do estabelecimento comercial",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art49",
+          "citedArticleId" : "cdc:art49",
+          "quote" : "os valores eventualmente pagos, a qualquer título, durante o prazo de reflexão, serão devolvidos, de imediato, monetariamente atualizados",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art49", "cdc:art18", "cdc:art41", "cdc:art20", "cdc:art19" ]
+      }
+    }
+  }, {
+    "id" : "q02",
+    "type" : "single",
+    "gold" : [ "cdc:art18" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art12", "cdc:art35", "cdc:art14", "cf88:art159", "cdc:art43", "cf88:art220", "cdc:art31", "cf88:art78", "cdc:art10", "cf88:art28" ],
+      "DENSE" : [ "cdc:art18", "cdc:art70", "cdc:art21", "cdc:art12", "cdc:art14", "cdc:art20", "cdc:art25", "cdc:art73", "cdc:art19", "cdc:art26" ],
+      "HYBRID" : [ "cdc:art12", "cdc:art14", "cdc:art18", "cdc:art21", "cdc:art35", "cdc:art20", "cdc:art19", "cdc:art26", "cdc:art41", "cdc:art104-a" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "O celular novo apresentou defeito e a loja enrola há mais de um mês sem consertar. O que posso exigir?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Você pode exigir o cumprimento forçado da obrigação de consertar o celular conforme a oferta ou publicidade, aceitar outro produto equivalente ou rescindir o contrato com restituição de valores e perdas e danos. Além disso, o fabricante responde pelos danos causados por defeitos do produto, independentemente da culpa.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art35",
+          "citedArticleId" : "cdc:art35",
+          "quote" : "I - exigir o cumprimento forçado da obrigação, nos termos da oferta, apresentação ou publicidade; II - aceitar outro produto ou prestação de serviço equivalente; III - rescindir o contrato, com direito à restituição de quantia eventualmente antecipada, monetariamente atualizada, e a perdas e danos.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art12",
+          "citedArticleId" : "cdc:art12",
+          "quote" : "O fabricante, o produtor, o construtor, nacional ou estrangeiro, e o importador respondem, independentemente da existência de culpa, pela reparação dos danos causados aos consumidores por defeitos decorrentes de projeto, fabricação, construção, montagem, fórmulas, manipulação, apresentação ou acondicionamento de seus produtos.",
+          "status" : "FUZZY"
+        } ],
+        "retrievedIds" : [ "cdc:art12", "cdc:art35", "cdc:art14", "cf88:art159", "cdc:art43" ]
+      },
+      "DENSE" : {
+        "question" : "O celular novo apresentou defeito e a loja enrola há mais de um mês sem consertar. O que posso exigir?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Você pode exigir a substituição do produto por outro da mesma espécie em perfeitas condições de uso, ou a restituição imediata da quantia paga atualizada, ou o abatimento proporcional do preço. Isso ocorre porque não foi sanado o vício no prazo máximo de trinta dias. Além disso, é proibido empregar peças usadas na reparação sem sua autorização.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art18",
+          "citedArticleId" : "cdc:art18",
+          "quote" : "§ 1° Não sendo o vício sanado no prazo máximo de trinta dias, pode o consumidor exigir, alternativamente e à sua escolha:\nI - a substituição do produto por outro da mesma espécie, em perfeitas condições de uso;\nII - a restituição imediata da quantia paga, monetariamente atualizada, sem prejuízo de eventuais perdas e danos;\nIII - o abatimento proporcional do preço.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art70",
+          "citedArticleId" : "cdc:art70",
+          "quote" : "Empregar na reparação de produtos, peça ou componentes de reposição usados, sem autorização do consumidor:\nPena Detenção de três meses a um ano e multa.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art18", "cdc:art70", "cdc:art21", "cdc:art12", "cdc:art14" ]
+      }
+    }
+  }, {
+    "id" : "q03",
+    "type" : "single",
+    "gold" : [ "cdc:art26" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art6", "cf88:art78", "cdc:art14", "cf88:art231", "cdc:art12", "cf88:art156-a", "cf88:art220", "cdc:art31", "cf88:art219", "cdc:art3" ],
+      "DENSE" : [ "cdc:art26", "cdc:art18", "cdc:art27", "cdc:art12", "cdc:art10", "cdc:art20", "cdc:art25", "cdc:art101", "cdc:art74", "cdc:art64" ],
+      "HYBRID" : [ "cdc:art12", "cdc:art20", "cdc:art8", "cdc:art14", "cdc:art31", "cdc:art40", "cdc:art6", "cdc:art26", "cf88:art78", "cdc:art18" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "A TV que comprei já veio com um risco bem visível na tela. Até quando posso reclamar?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Você pode reclamar pela reparação dos danos causados por defeitos no produto. O produto é considerado defeituoso quando não oferece a segurança que dele legitimamente se espera, levando-se em consideração as circunstâncias relevantes, entre as quais: sua apresentação; o uso e os riscos que razoavelmente dele se esperam; a época em que foi colocado em circulação.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art12",
+          "citedArticleId" : "cdc:art12",
+          "quote" : "O fabricante, o produtor, o construtor, nacional ou estrangeiro, e o importador respondem, independentemente da existência de culpa, pela reparação dos danos causados aos consumidores por defeitos decorrentes de projeto, fabricação, construção, montagem, fórmulas, manipulação, apresentação ou acondicionamento de seus produtos, bem como por informações insuficientes ou inadequadas sobre sua utilização e riscos.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art12",
+          "citedArticleId" : "cdc:art12",
+          "quote" : "§ 1° O produto é defeituoso quando não oferece a segurança que dele legitimamente se espera, levando-se em consideração as circunstâncias relevantes, entre as quais:\nI - sua apresentação;\nII - o uso e os riscos que razoavelmente dele se esperam;\nIII - a época em que foi colocado em circulação.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art6", "cf88:art78", "cdc:art14", "cf88:art231", "cdc:art12" ]
+      },
+      "DENSE" : {
+        "question" : "A TV que comprei já veio com um risco bem visível na tela. Até quando posso reclamar?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Você pode reclamar até 30 dias após a entrega da TV. O prazo de reclamação por vícios aparentes em produtos duráveis é de noventa dias, mas como o risco na tela é um defeito visível (vício aparente), aplica-se o prazo de trinta dias para produtos não duráveis ou serviços, conforme interpretação estrita do texto fornecido que diferencia prazos. Contudo, a TV é produto durável, logo o prazo seria noventa dias. O direito de reclamar pelos vícios aparentes ou de fácil constatação caduca em: II - noventa dias, tratando-se de fornecimento de serviço e de produtos duráveis.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art26",
+          "citedArticleId" : "cdc:art26",
+          "quote" : "Art. 26. O direito de reclamar pelos vícios aparentes ou de fácil constatação caduca em:\nI - trinta dias, tratando-se de fornecimento de serviço e de produtos não duráveis;\nII - noventa dias, tratando-se de fornecimento de serviço e de produtos duráveis.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art26", "cdc:art18", "cdc:art27", "cdc:art12", "cdc:art10" ]
+      }
+    }
+  }, {
+    "id" : "q04",
+    "type" : "single",
+    "gold" : [ "cdc:art42" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art5", "cf88:art155", "cf88:art156-a", "cdc:art42", "cf88:art149", "cf88:art100", "cdc:art54-g", "cdc:art54-b", "cdc:art54-f", "cf88:art9" ],
+      "DENSE" : [ "cdc:art42", "cdc:art41", "cdc:art54-f", "cdc:art51", "cdc:art54-g", "cdc:art20", "cdc:art39", "cdc:art73", "cdc:art71", "cdc:art40" ],
+      "HYBRID" : [ "cdc:art42", "cdc:art54-g", "cdc:art51", "cdc:art54-f", "cf88:art156-a", "cdc:art40", "cdc:art7", "cdc:art54-b", "cf88:art100", "cdc:art49" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "A operadora me cobrou um valor que eu não devia e eu já paguei. Tenho direito a receber de volta em dobro?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não há previsão de restituição em dobro nos artigos fornecidos. O artigo 5º, XXXII da CF/88 garante que o Estado promoverá a defesa do consumidor, mas não especifica valores punitivos para cobrança indevida já paga. O CDC Art. 42 trata de responsabilidade civil por danos materiais ou morais, sem mencionar dobra automática. Portanto, com base apenas nos textos citados, não se confirma direito à restituição em dobro.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXXII - o Estado promoverá, na forma da lei, a defesa do consumidor;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art42",
+          "citedArticleId" : "cdc:art42",
+          "quote" : "Art. 42. A responsabilidade civil por danos materiais ou morais será apurada nos termos da lei.",
+          "status" : "UNSUPPORTED"
+        } ],
+        "retrievedIds" : [ "cf88:art5", "cf88:art155", "cf88:art156-a", "cdc:art42", "cf88:art149" ]
+      },
+      "DENSE" : {
+        "question" : "A operadora me cobrou um valor que eu não devia e eu já paguei. Tenho direito a receber de volta em dobro?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, você tem direito à repetição do indébito em dobro. O artigo 42 estabelece que o consumidor cobrado em quantia indevida tem direito à repetição do indébito, por valor igual ao dobro do que pagou em excesso, acrescido de correção monetária e juros legais.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art42",
+          "citedArticleId" : "cdc:art42",
+          "quote" : "O consumidor cobrado em quantia indevida tem direito à repetição do indébito, por valor igual ao dobro do que pagou em excesso, acrescido de correção monetária e juros legais",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art42", "cdc:art41", "cdc:art54-f", "cdc:art51", "cdc:art54-g" ]
+      }
+    }
+  }, {
+    "id" : "q05",
+    "type" : "single",
+    "gold" : [ "cdc:art42", "cdc:art71" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art31", "cf88:art155", "cdc:art37", "cf88:art52", "cf88:art62", "cf88:art5", "cf88:art163", "cf88:art166", "cdc:art54-a", "cf88:art38" ],
+      "DENSE" : [ "cdc:art71", "cdc:art42", "cf88:art150", "cdc:art54-g", "cf88:art5", "cdc:art42-a", "cdc:art54-a", "cdc:art51", "cdc:art54-d", "cdc:art52" ],
+      "HYBRID" : [ "cdc:art54-a", "cf88:art100", "cdc:art54-d", "cdc:art104-a", "cf88:art167-a", "cf88:art220", "cdc:art104-c", "cf88:art37", "cf88:art31", "cdc:art71" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Um cobrador fica ligando para o meu emprego e ameaçando contar a todos sobre minha dívida. Isso é permitido?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não é permitido. A ameaça de divulgar a dívida pode configurar publicidade enganosa ou abusiva, pois induz o consumidor a erro sobre dados essenciais e pode ser considerada discriminatória ou capaz de prejudicar sua reputação indevidamente. O Código de Defesa do Consumidor proíbe toda publicidade enganosa ou abusiva.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art37",
+          "citedArticleId" : "cdc:art37",
+          "quote" : "Art. 37. É proibida toda publicidade enganosa ou abusiva.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art37",
+          "citedArticleId" : "cdc:art37",
+          "quote" : "§ 1° É enganosa qualquer modalidade de informação ou comunicação de caráter publicitário, inteira ou parcialmente falsa, ou, por qualquer outro modo, mesmo por omissão, capaz de induzir em erro o consumidor a respeito da natureza, características, qualidade, quantidade, propriedades, origem, preço e quaisquer outros dados sobre produtos e serviços.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art37",
+          "citedArticleId" : "cdc:art37",
+          "quote" : "§ 2° É abusiva, dentre outras a publicidade discriminatória de qualquer natureza, a que incite à violência, explore o medo ou a superstição, se aproveite da deficiência de julgamento e experiência da criança, desrespeita valores ambientais, ou que seja capaz de induzir o consumidor a se comportar de forma prejudicial ou perigosa à sua saúde ou segurança.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art31", "cf88:art155", "cdc:art37", "cf88:art52", "cf88:art62" ]
+      },
+      "DENSE" : {
+        "question" : "Um cobrador fica ligando para o meu emprego e ameaçando contar a todos sobre minha dívida. Isso é permitido?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não é permitido. O cobrador está violando a vedação de expor o consumidor a ridículo ou submeter-lo a constrangimento e ameaça durante a cobrança de débitos. Além disso, tal conduta configura procedimento que injustificadamente expõe o consumidor a ridículo ou interfere em seu trabalho. A pena prevista é detenção de três meses a um ano e multa.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art42",
+          "citedArticleId" : "cdc:art42",
+          "quote" : "Na cobrança de débitos, o consumidor inadimplente não será exposto a ridículo, nem será submetido a qualquer tipo de constrangimento ou ameaça.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art71",
+          "citedArticleId" : "cdc:art71",
+          "quote" : "Utilizar, na cobrança de dívidas, de ameaça, coação, constrangimento físico ou moral, afirmações falsas incorretas ou enganosas ou de qualquer outro procedimento que exponha o consumidor, injustificadamente, a ridículo ou interfira com seu trabalho, descanso ou lazer: Pena Detenção de três meses a um ano e multa.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art71", "cdc:art42", "cf88:art150", "cdc:art54-g", "cf88:art5" ]
+      }
+    }
+  }, {
+    "id" : "q06",
+    "type" : "single",
+    "gold" : [ "cdc:art43" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art37", "cf88:art213", "cf88:art40", "cf88:art60", "cf88:art167-a", "cf88:art84", "cf88:art103-a", "cf88:art155", "cf88:art103-b", "cdc:art18" ],
+      "DENSE" : [ "cdc:art72", "cdc:art104-a", "cdc:art73", "cdc:art64", "cdc:art49", "cdc:art66", "cdc:art63", "cdc:art74", "cdc:art71", "cdc:art70" ],
+      "HYBRID" : [ "cdc:art18", "cf88:art138", "cdc:art43", "cf88:art93", "cf88:art71", "cf88:art54", "cf88:art37", "cdc:art72", "cf88:art213", "cdc:art104-a" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Por quanto tempo meu nome pode ficar negativado no SPC ou na Serasa?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não contêm informações sobre o tempo de permanência de nomes negativados no SPC ou Serasa. O texto aborda limites salariais, destinação de recursos públicos, regras para emenda constitucional e medidas fiscais, mas não menciona restrições ao nome dos consumidores.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art37", "cf88:art213", "cf88:art40", "cf88:art60", "cf88:art167-a" ]
+      },
+      "DENSE" : {
+        "question" : "Por quanto tempo meu nome pode ficar negativado no SPC ou na Serasa?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não contêm informações sobre o prazo de permanência do nome negativado nos cadastros de restrição ao crédito, como SPC ou Serasa. Eles tratam de penalidades por impedir acesso a informações (art. 72), repactuação de dívidas (art. 104-A), correção de dados inexatos (art. 73), comunicação de periculosidade de produtos (art. 64) e direito de arrependimento em contratos fora do estabelecimento (art. 49). Portanto, não é possível responder à pergunta com base nos textos disponíveis.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cdc:art72", "cdc:art104-a", "cdc:art73", "cdc:art64", "cdc:art49" ]
+      }
+    }
+  }, {
+    "id" : "q07",
+    "type" : "single",
+    "gold" : [ "cdc:art39" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art54-f", "cdc:art54-g", "cf88:art53", "cf88:art146", "cdc:art43", "cf88:art55", "cdc:art54-c", "cf88:art57", "cf88:art37", "cf88:art167" ],
+      "DENSE" : [ "cdc:art54-g", "cdc:art54-f", "cdc:art54-c", "cdc:art54-d", "cdc:art51", "cdc:art52", "cdc:art54-b", "cdc:art42", "cdc:art54-a", "cf88:art150" ],
+      "HYBRID" : [ "cdc:art54-g", "cdc:art54-f", "cdc:art54-c", "cdc:art54-b", "cdc:art54-d", "cdc:art51", "cdc:art52", "cdc:art43", "cdc:art40", "cf88:art167" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Chegou um cartão de crédito na minha casa que eu nunca pedi e já vieram cobrar anuidade. Posso ser obrigado a pagar?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não pode ser obrigado a pagar se não solicitou o cartão. O fornecedor é vedado a recusar ou dificultar que o consumidor obtenha a anulação do pagamento em caso de utilização fraudulenta, conforme o Art. 54-G, §1º do CDC. Além disso, ao receber um cartão não solicitado, trata-se de situação onde o fornecedor deve entregar cópia do contrato após conclusão, mas como não houve contratação válida, a cobrança é indevida.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art54-g",
+          "citedArticleId" : "cdc:art54-g",
+          "quote" : "III - impedir ou dificultar, em caso de utilização fraudulenta do cartão de crédito ou similar, que o consumidor peça e obtenha, quando aplicável, a anulação ou o imediato bloqueio do pagamento, ou ainda a restituição dos valores indevidamente recebidos.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art54-g",
+          "citedArticleId" : "cdc:art54-g",
+          "quote" : "II - recusar ou não entregar ao consumidor, ao garante e aos outros coobrigados cópia da minuta do contrato principal de consumo ou do contrato de crédito, em papel ou outro suporte duradouro, disponível e acessível, e, após a conclusão, cópia do contrato;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art54-f", "cdc:art54-g", "cf88:art53", "cf88:art146", "cdc:art43" ]
+      },
+      "DENSE" : {
+        "question" : "Chegou um cartão de crédito na minha casa que eu nunca pedi e já vieram cobrar anuidade. Posso ser obrigado a pagar?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não pode ser obrigado a pagar se não solicitou o cartão. O fornecedor deve entregar cópia do contrato após a conclusão, conforme Art. 54-G, II. Além disso, é vedado recusar ou não entregar ao consumidor cópia da minuta do contrato principal de consumo ou do contrato de crédito, em papel ou outro suporte duradouro, disponível e acessível, e, após a conclusão, cópia do contrato. Se o cartão foi fornecido sem sua solicitação, há violação das regras de oferta de crédito.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art54-g",
+          "citedArticleId" : "cdc:art54-g",
+          "quote" : "II - recusar ou não entregar ao consumidor, ao garante e aos outros coobrigados cópia da minuta do contrato principal de consumo ou do contrato de crédito, em papel ou outro suporte duradouro, disponível e acessível, e, após a conclusão, cópia do contrato;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art54-d",
+          "citedArticleId" : "cdc:art54-d",
+          "quote" : "III - informar a identidade do agente financiador e entregar ao consumidor, ao garante e a outros coobrigados cópia do contrato de crédito.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art54-g", "cdc:art54-f", "cdc:art54-c", "cdc:art54-d", "cdc:art51" ]
+      }
+    }
+  }, {
+    "id" : "q08",
+    "type" : "multi",
+    "gold" : [ "cdc:art30", "cdc:art35" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art100", "cf88:art155", "cdc:art54-g", "cdc:art79", "cf88:art149", "cf88:art216", "cdc:art18", "cf88:art201", "cdc:art39", "cf88:art5" ],
+      "DENSE" : [ "cdc:art35", "cdc:art33", "cdc:art54-g", "cdc:art39", "cdc:art37", "cdc:art54-c", "cdc:art66", "cdc:art68", "cdc:art63", "cdc:art67" ],
+      "HYBRID" : [ "cdc:art54-g", "cdc:art39", "cdc:art66", "cdc:art37", "cdc:art41", "cdc:art68", "cdc:art67", "cdc:art52", "cdc:art40", "cdc:art18" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "A loja anunciou um preço no panfleto e agora no caixa se recusa a vender por esse valor. O que eu posso fazer?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Insuficiente para responder com base nos artigos fornecidos.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art100", "cf88:art155", "cdc:art54-g", "cdc:art79", "cf88:art149" ]
+      },
+      "DENSE" : {
+        "question" : "A loja anunciou um preço no panfleto e agora no caixa se recusa a vender por esse valor. O que eu posso fazer?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Se o fornecedor recusar cumprimento à oferta ou publicidade, você pode exigir o cumprimento forçado da obrigação, aceitar outro produto equivalente ou rescindir o contrato com restituição de valores e perdas e danos. Além disso, é vedado ao fornecedor recusar atendimento às demandas dos consumidores na medida de suas disponibilidades de estoque.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art35",
+          "citedArticleId" : "cdc:art35",
+          "quote" : "Se o fornecedor de produtos ou serviços recusar cumprimento à oferta, apresentação ou publicidade, o consumidor poderá, alternativamente e à sua livre escolha: I - exigir o cumprimento forçado da obrigação, nos termos da oferta, apresentação ou publicidade; II - aceitar outro produto ou prestação de serviço equivalente; III - rescindir o contrato, com direito à restituição de quantia eventualmente antecipada, monetariamente atualizada, e a perdas e danos.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art39",
+          "citedArticleId" : "cdc:art39",
+          "quote" : "II - recusar atendimento às demandas dos consumidores, na exata medida de suas disponibilidades de estoque, e, ainda, de conformidade com os usos e costumes;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art35", "cdc:art33", "cdc:art54-g", "cdc:art39", "cdc:art37" ]
+      }
+    }
+  }, {
+    "id" : "q09",
+    "type" : "single",
+    "gold" : [ "cdc:art37" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art5", "cdc:art37", "cf88:art150", "cf88:art158", "cf88:art8", "cf88:art167", "cf88:art100", "cf88:art153", "cf88:art165", "cf88:art157" ],
+      "DENSE" : [ "cdc:art37", "cdc:art67", "cdc:art66", "cdc:art68", "cdc:art10", "cdc:art54-c", "cdc:art69", "cdc:art60", "cdc:art39", "cdc:art71" ],
+      "HYBRID" : [ "cdc:art37", "cf88:art167", "cdc:art54-g", "cf88:art150", "cdc:art33", "cdc:art54-c", "cf88:art160", "cdc:art51", "cf88:art151", "cdc:art52" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Vi um anúncio de um suplemento que prometia emagrecer 10 quilos em uma semana, mas era mentira. Isso é proibido?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, é proibido. A publicidade enganosa que induz o consumidor a erro sobre características do produto ou serviços é vedada. O anúncio prometendo emagrecer 10 quilos em uma semana, sendo mentira, configura informação falsa capaz de induzir em erro.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art37",
+          "citedArticleId" : "cdc:art37",
+          "quote" : "§ 1° É enganosa qualquer modalidade de informação ou comunicação de caráter publicitário, inteira ou parcialmente falsa, ou, por qualquer outro modo, mesmo por omissão, capaz de induzir em erro o consumidor a respeito da natureza, características, qualidade, quantidade, propriedades, origem, preço e quaisquer outros dados sobre produtos e serviços.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art37",
+          "citedArticleId" : "cdc:art37",
+          "quote" : "Art. 37. É proibida toda publicidade enganosa ou abusiva.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art5", "cdc:art37", "cf88:art150", "cf88:art158", "cf88:art8" ]
+      },
+      "DENSE" : {
+        "question" : "Vi um anúncio de um suplemento que prometia emagrecer 10 quilos em uma semana, mas era mentira. Isso é proibido?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, é proibido. O Código de Defesa do Consumidor veda toda publicidade enganosa ou abusiva. Um anúncio que promete emagrecer 10 quilos em uma semana, quando mentira, configura informação falsa capaz de induzir o consumidor a erro sobre as características do produto. Além disso, fazer afirmação falsa ou omitir informação relevante sobre qualidade e desempenho também é punível.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art37",
+          "citedArticleId" : "cdc:art37",
+          "quote" : "É proibida toda publicidade enganosa ou abusiva.\n§ 1° É enganosa qualquer modalidade de informação ou comunicação de caráter publicitário, inteira ou parcialmente falsa, ou, por qualquer outro modo, mesmo por omissão, capaz de induzir em erro o consumidor a respeito da natureza, características, qualidade, quantidade, propriedades, origem, preço e quaisquer outros dados sobre produtos e serviços.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art66",
+          "citedArticleId" : "cdc:art66",
+          "quote" : "Fazer afirmação falsa ou enganosa, ou omitir informação relevante sobre a natureza, característica, qualidade, quantidade, segurança, desempenho, durabilidade, preço ou garantia de produtos ou services:",
+          "status" : "FUZZY"
+        } ],
+        "retrievedIds" : [ "cdc:art37", "cdc:art67", "cdc:art66", "cdc:art68", "cdc:art10" ]
+      }
+    }
+  }, {
+    "id" : "q10",
+    "type" : "single",
+    "gold" : [ "cdc:art51" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art54-f", "cf88:art37", "cf88:art103-a", "cf88:art103-b", "cf88:art167-a", "cf88:art71", "cf88:art50", "cf88:art54", "cf88:art213", "cf88:art195" ],
+      "DENSE" : [ "cdc:art53", "cdc:art51", "cdc:art49", "cf88:art206", "cdc:art54", "cdc:art40", "cdc:art54-g", "cdc:art31", "cdc:art41", "cf88:art5" ],
+      "HYBRID" : [ "cdc:art54", "cdc:art51", "cdc:art53", "cdc:art54-f", "cf88:art54", "cdc:art54-g", "cf88:art5", "cdc:art18", "cdc:art54-c", "cf88:art37" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "O contrato da minha academia diz que o aluno jamais pode cancelar nem pedir o dinheiro de volta. Essa regra tem validade?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "A regra da academia é inválida. O Código de Defesa do Consumidor estabelece que o exercício do direito de arrependimento implica a resolução de pleno direito do contrato conexo, e em caso de inexecução, o consumidor pode requerer a rescisão.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art54-f",
+          "citedArticleId" : "cdc:art54-f",
+          "quote" : "§ 1º O exercício do direito de arrependimento nas hipóteses previstas neste Código, no contrato principal ou no contrato de crédito, implica a resolução de pleno direito do contrato que lhe seja conexo.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art54-f",
+          "citedArticleId" : "cdc:art54-f",
+          "quote" : "§ 2º Nos casos dos incisos I e II do caput deste artigo, se houver inexecução de qualquer das obrigações e deveres do fornecedor de produto ou serviço, o consumidor poderá requerer a rescisão do contrato não cumprido contra o fornecedor do crédito.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art54-f", "cf88:art37", "cf88:art103-a", "cf88:art103-b", "cf88:art167-a" ]
+      },
+      "DENSE" : {
+        "question" : "O contrato da minha academia diz que o aluno jamais pode cancelar nem pedir o dinheiro de volta. Essa regra tem validade?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não, essa regra não tem validade. O Código de Defesa do Consumidor considera nulas cláusulas que subtraem ao consumidor a opção de reembolso da quantia já paga ou que impeçam o restabelecimento dos direitos em caso de inadimplemento. Além disso, contratos de adesão não podem conter termos abusivos que coloquem o consumidor em desvantagem exagerada.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art51",
+          "citedArticleId" : "cdc:art51",
+          "quote" : "II - subtraiam ao consumidor a opção de reembolso da quantia já paga, nos casos previstos neste código;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art51",
+          "citedArticleId" : "cdc:art51",
+          "quote" : "XVIII - estabeleçam prazos de carência em caso de impontualidade das prestações mensais ou impeçam o restabelecimento integral dos direitos do consumidor e de seus meios de pagamento a partir da purgação da mora ou do acordo com os credores;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art51",
+          "citedArticleId" : "cdc:art51",
+          "quote" : "IV - estabeleçam obrigações consideradas iníquas, abusivas, que coloquem o consumidor em desvantagem exagerada, ou sejam incompatíveis com a boa-fé ou a eqüidade;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art53", "cdc:art51", "cdc:art49", "cf88:art206", "cdc:art54" ]
+      }
+    }
+  }, {
+    "id" : "q11",
+    "type" : "single",
+    "gold" : [ "cdc:art52" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art164", "cdc:art52", "cf88:art5", "cdc:art84", "cf88:art223", "cdc:art37", "cf88:art100", "cdc:art54-f", "cdc:art54-b", "cf88:art8" ],
+      "DENSE" : [ "cdc:art52", "cdc:art54-b", "cdc:art54-d", "cf88:art100", "cdc:art54-c", "cdc:art54-g", "cf88:art195", "cdc:art104-a", "cf88:art156-a", "cf88:art184" ],
+      "HYBRID" : [ "cdc:art52", "cdc:art54-b", "cf88:art100", "cdc:art54-d", "cf88:art164", "cdc:art54-f", "cdc:art40", "cf88:art151", "cf88:art150", "cdc:art104-b" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Quero quitar o financiamento do meu carro antes do prazo. O banco é obrigado a abater juros?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, o banco é obrigado a abater juros proporcionalmente. O Código de Defesa do Consumidor assegura ao consumidor a liquidação antecipada do débito, total ou parcialmente, mediante redução proporcional dos juros e demais acréscimos. Isso garante que você não pague juros sobre valores que já foram quitados.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art52",
+          "citedArticleId" : "cdc:art52",
+          "quote" : "§ 2º É assegurado ao consumidor a liquidação antecipada do débito, total ou parcialmente, mediante redução proporcional dos juros e demais acréscimos.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art164", "cdc:art52", "cf88:art5", "cdc:art84", "cf88:art223" ]
+      },
+      "DENSE" : {
+        "question" : "Quero quitar o financiamento do meu carro antes do prazo. O banco é obrigado a abater juros?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, o banco é obrigado a abater juros. O consumidor tem assegurado o direito à liquidação antecipada do débito, total ou parcialmente, mediante redução proporcional dos juros e demais acréscimos.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art52",
+          "citedArticleId" : "cdc:art52",
+          "quote" : "§ 2º É assegurado ao consumidor a liquidação antecipada do débito, total ou parcialmente, mediante redução proporcional dos juros e demais acréscimos.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art52", "cdc:art54-b", "cdc:art54-d", "cf88:art100", "cdc:art54-c" ]
+      }
+    }
+  }, {
+    "id" : "q12",
+    "type" : "single",
+    "gold" : [ "cdc:art53" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art37", "cf88:art213", "cf88:art100", "cf88:art103-b", "cf88:art167-a", "cf88:art60", "cf88:art103-a", "cf88:art85", "cf88:art97", "cf88:art114" ],
+      "DENSE" : [ "cf88:art100", "cf88:art167-a", "cdc:art71", "cf88:art195", "cf88:art250", "cf88:art167", "cdc:art54-g", "cf88:art156-a", "cf88:art150", "cf88:art184" ],
+      "HYBRID" : [ "cf88:art100", "cf88:art150", "cf88:art5", "cdc:art52", "cf88:art169", "cf88:art37", "cf88:art213", "cf88:art167-a", "cf88:art103-b", "cdc:art71" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Parei de pagar as parcelas do carro e a financeira quer ficar com o veículo e com tudo o que eu já paguei. Pode?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não há previsão nos artigos fornecidos sobre a posse de veículos por financeiras em caso de inadimplência. Os textos citados tratam exclusivamente de limites remuneratórios de servidores (art. 37), destinação de recursos públicos para escolas (art. 213) e regras de pagamento de precatórios e endividamento da União, Estados, DF e Municípios (art. 100). Portanto, as informações necessárias para responder à sua dúvida sobre contratos de financiamento veicular não estão presentes no material fornecido.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art37", "cf88:art213", "cf88:art100", "cf88:art103-b", "cf88:art167-a" ]
+      },
+      "DENSE" : {
+        "question" : "Parei de pagar as parcelas do carro e a financeira quer ficar com o veículo e com tudo o que eu já paguei. Pode?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, a financeira pode reaver o veículo e os valores pagos se você deixar de pagar as parcelas. O artigo 71 do Código Civil estabelece que o credor pode executar o bem para garantir o pagamento da dívida.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art71",
+          "citedArticleId" : "cdc:art71",
+          "quote" : "Art. 71. A execução da garantia real será feita na forma do art. 833 do Código de Processo Civil.",
+          "status" : "UNSUPPORTED"
+        } ],
+        "retrievedIds" : [ "cf88:art100", "cf88:art167-a", "cdc:art71", "cf88:art195", "cf88:art250" ]
+      }
+    }
+  }, {
+    "id" : "q13",
+    "type" : "multi",
+    "gold" : [ "cdc:art54-a", "cdc:art104-a" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art104-a", "cdc:art104-b", "cdc:art104-c", "cf88:art163", "cdc:art54-a", "cf88:art100", "cf88:art35", "cdc:art53", "cf88:art167-a", "cf88:art52" ],
+      "DENSE" : [ "cdc:art104-b", "cdc:art104-a", "cdc:art104-c", "cdc:art54-a", "cf88:art100", "cdc:art54-f", "cdc:art54-g", "cdc:art54-d", "cdc:art54-c", "cdc:art18" ],
+      "HYBRID" : [ "cdc:art104-b", "cdc:art104-a", "cdc:art104-c", "cdc:art54-a", "cf88:art100", "cdc:art53", "cdc:art42", "cf88:art163", "cdc:art42-a", "cf88:art52" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Estou com tantas dívidas que não consigo pagar todas sem deixar de comprar comida. Existe um jeito de renegociar com todos os credores de uma vez?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, existe. O juiz poderá instaurar processo de repactuação de dívidas para realização de audiência conciliatória com a presença de todos os credores, na qual o consumidor apresentará proposta de plano de pagamento com prazo máximo de 5 anos, preservado o mínimo existencial.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art104-a",
+          "citedArticleId" : "cdc:art104-a",
+          "quote" : "Art. 104-A. A requerimento do consumidor superendividado pessoa natural, o juiz poderá instaurar processo de repactuação de dívidas, com vistas à realização de audiência conciliatória, presidida por ele ou por conciliador credenciado no juízo, com a presença de todos os credores de dívidas previstas no art. 54-A deste Código, na qual o consumidor apresentará proposta de plano de pagamento com prazo máximo de 5 (cinco) anos, preservados o mínimo existencial, nos termos da regulamentação, e as garantias e as formas de pagamento originalmente pactuadas.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art104-a", "cdc:art104-b", "cdc:art104-c", "cf88:art163", "cdc:art54-a" ]
+      },
+      "DENSE" : {
+        "question" : "Estou com tantas dívidas que não consigo pagar todas sem deixar de comprar comida. Existe um jeito de renegociar com todos os credores de uma vez?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, existe o processo de repactuação. O juiz poderá instaurar um processo para audiência conciliatória com todos os credores, onde você apresentará uma proposta de plano de pagamento com prazo máximo de 5 anos, preservado o mínimo existencial. Se não houver êxito na conciliação voluntária, o juiz instaurará processo por superendividamento para revisão e integração dos contratos mediante plano judicial compulsório.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art104-a",
+          "citedArticleId" : "cdc:art104-a",
+          "quote" : "A requerimento do consumidor superendividado pessoa natural, o juiz poderá instaurar processo de repactuação de dívidas, com vistas à realização de audiência conciliatória... na qual o consumidor apresentará proposta de plano de pagamento com prazo máximo de 5 (cinco) anos, preservados o mínimo existencial",
+          "status" : "UNSUPPORTED"
+        }, {
+          "articleId" : "cdc:art104-b",
+          "citedArticleId" : "cdc:art104-b",
+          "quote" : "Se não houver êxito na conciliação em relação a quaisquer credores, o juiz, a pedido do consumidor, instaurará processo por superendividamento para revisão e integração dos contratos e repactuação das dívidas remanescentes mediante plano judicial compulsório",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art104-b", "cdc:art104-a", "cdc:art104-c", "cdc:art54-a", "cf88:art100" ]
+      }
+    }
+  }, {
+    "id" : "q14",
+    "type" : "single",
+    "gold" : [ "cdc:art54-c" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art164", "cf88:art5", "cdc:art32", "cf88:art8", "cdc:art43", "cdc:art50", "cf88:art199", "cdc:art37", "cf88:art150", "cf88:art155" ],
+      "DENSE" : [ "cdc:art54-c", "cdc:art54-d", "cdc:art52", "cdc:art54-b", "cdc:art54-f", "cf88:art239", "cdc:art54-g", "cf88:art167", "cdc:art104-a", "cf88:art199" ],
+      "HYBRID" : [ "cf88:art199", "cdc:art54-c", "cf88:art164", "cdc:art54-b", "cdc:art43", "cdc:art33", "cf88:art150", "cf88:art201", "cdc:art66", "cf88:art166" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "O banco me ligou dizendo que o empréstimo sai sem olhar se estou no Serasa e sem analisar minha renda. Esse tipo de oferta é correta?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "A oferta descrita pode ser questionada sob a ótica da liberdade de associação e direitos fundamentais, mas os artigos fornecidos não tratam especificamente de regras de concessão de empréstimos por bancos. O Art. 164 do CF/88 estabelece que a competência para emitir moeda é exclusiva do banco central e veda-lhe conceder empréstimos ao Tesouro Nacional ou a entidades que não sejam instituições financeiras, mas não detalha critérios internos de análise de crédito.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art164",
+          "citedArticleId" : "cf88:art164",
+          "quote" : "Art. 164. A competência da União para emitir moeda será exercida exclusivamente pelo banco central.\n§ 1º É vedado ao banco central conceder, direta ou indiretamente, empréstimos ao Tesouro Nacional e a qualquer órgão ou entidade que não seja instituição financeira.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade, nos termos seguintes:",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art164", "cf88:art5", "cdc:art32", "cf88:art8", "cdc:art43" ]
+      },
+      "DENSE" : {
+        "question" : "O banco me ligou dizendo que o empréstimo sai sem olhar se estou no Serasa e sem analisar minha renda. Esse tipo de oferta é correta?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não, essa oferta é incorreta. O Código de Defesa do Consumidor veda expressamente indicar que a operação poderá ser concluída sem consulta a serviços de proteção ao crédito ou sem avaliação da situação financeira do consumidor.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art54-c",
+          "citedArticleId" : "cdc:art54-c",
+          "quote" : "II - indicar que a operação de crédito poderá ser concluída sem consulta a serviços de proteção ao crédito ou sem avaliação da situação financeira do consumidor;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art54-d",
+          "citedArticleId" : "cdc:art54-d",
+          "quote" : "II - avaliar, de forma responsável, as condições de crédito do consumidor, mediante análise das informações disponíveis em bancos de dados de proteção ao crédito...",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art54-c", "cdc:art54-d", "cdc:art52", "cdc:art54-b", "cdc:art54-f" ]
+      }
+    }
+  }, {
+    "id" : "q15",
+    "type" : "multi",
+    "gold" : [ "cdc:art39", "cdc:art40" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art37", "cf88:art176", "cdc:art84", "cf88:art167", "cdc:art51", "cdc:art70", "cf88:art100", "cf88:art5", "cf88:art49", "cdc:art21" ],
+      "DENSE" : [ "cdc:art70", "cdc:art25", "cdc:art39", "cdc:art51", "cdc:art21", "cdc:art42", "cdc:art40", "cf88:art150", "cdc:art73", "cf88:art156-a" ],
+      "HYBRID" : [ "cdc:art70", "cdc:art51", "cdc:art21", "cdc:art25", "cdc:art42", "cdc:art40", "cdc:art39", "cdc:art52", "cdc:art22", "cf88:art167" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "O mecânico trocou várias peças do meu carro e cobrou muito mais do que combinou, sem eu autorizar nada. Estou obrigado a pagar?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não há obrigação de pagar o valor excedente não autorizado. O Código Civil (art. 84) permite ao juiz determinar providências para assegurar o resultado prático equivalente, como a remoção de coisas ou desfazimento de obra, sem prejuízo da multa. Além disso, a administração pública (art. 37, XVIII) tem precedência apenas em suas áreas de competência, e recursos minerais (art. 176) pertencem à União, mas nada disso se aplica diretamente ao seu caso de contratação particular. Portanto, você só deve pagar pelo que foi combinado e autorizado.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art84",
+          "citedArticleId" : "cdc:art84",
+          "quote" : "§ 2° A indenização por perdas e danos se fará sem prejuízo da multa (art. 287, do Código de Processo Civil).",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art37",
+          "citedArticleId" : "cf88:art37",
+          "quote" : "XVIII - a administração fazendária e seus servidores fiscais terão, dentro de suas áreas de competência e jurisdição, precedência sobre os demais setores administrativos, na forma da law;",
+          "status" : "FUZZY"
+        }, {
+          "articleId" : "cf88:art176",
+          "citedArticleId" : "cf88:art176",
+          "quote" : "Art. 176. As jazidas, em lavra ou não, e demais recursos minerais e os potenciais de energia hidráulica constituem propriedade distinta da do solo, para efeito de exploração ou aproveitamento, e pertencem à União, garantida ao concessionário a propriedade do produto da lavra.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art37", "cf88:art176", "cdc:art84", "cf88:art167", "cdc:art51" ]
+      },
+      "DENSE" : {
+        "question" : "O mecânico trocou várias peças do meu carro e cobrou muito mais do que combinou, sem eu autorizar nada. Estou obrigado a pagar?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não está obrigado a pagar o valor exorbitante nem por peças não autorizadas. O fornecedor é vedado a elevar sem justa causa o preço e a colocar produtos em desacordo com normas. Além disso, na reparação de produtos, considera-se implícita a obrigação de empregar componentes originais ou novos, salvo autorização em contrário do consumidor. Empregar peças usadas sem autorização também é crime. Portanto, você pode contestar o valor e a substituição não autorizada.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art39",
+          "citedArticleId" : "cdc:art39",
+          "quote" : "X - elevar sem justa causa o preço de produtos ou serviços.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art21",
+          "citedArticleId" : "cdc:art21",
+          "quote" : "No fornecimento de serviços que tenham por objetivo a reparação de qualquer produto considerar-se-á implícita a obrigação do fornecedor de empregar componentes de reposição originais adequados e novos, ou que mantenham as especificações técnicas do fabricante, salvo, quanto a estes últimos, autorização em contrário do consumidor.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art70",
+          "citedArticleId" : "cdc:art70",
+          "quote" : "Empregar na reparação de produtos, peça ou componentes de reposição usados, sem autorização do consumidor:",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art70", "cdc:art25", "cdc:art39", "cdc:art51", "cdc:art21" ]
+      }
+    }
+  }, {
+    "id" : "q16",
+    "type" : "single",
+    "gold" : [ "cdc:art21", "cdc:art70" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art37", "cf88:art103-b", "cf88:art213", "cf88:art60", "cf88:art103-a", "cf88:art167-a", "cf88:art85", "cf88:art97", "cf88:art114", "cf88:art71" ],
+      "DENSE" : [ "cdc:art70", "cdc:art73", "cdc:art63", "cdc:art39", "cdc:art21", "cdc:art72", "cdc:art25", "cdc:art71", "cdc:art64", "cdc:art66" ],
+      "HYBRID" : [ "cdc:art12", "cf88:art50", "cdc:art18", "cf88:art37", "cdc:art70", "cf88:art103-b", "cdc:art73", "cf88:art213", "cdc:art63", "cf88:art60" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "A oficina colocou uma peça usada no meu carro sem me avisar. Eles podem fazer isso?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos tratam de remuneração de servidores públicos (art. 37), controle do Poder Judiciário (art. 103-B), recursos para escolas (art. 213) e emendas constitucionais (art. 60). Nenhum deles aborda relações de consumo, responsabilidade civil por fornecimento de peças usadas ou deveres de informação em contratos de serviço automotivo. Portanto, as leis citadas não respondem à sua pergunta sobre a oficina.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art37", "cf88:art103-b", "cf88:art213", "cf88:art60", "cf88:art103-a" ]
+      },
+      "DENSE" : {
+        "question" : "A oficina colocou uma peça usada no meu carro sem me avisar. Eles podem fazer isso?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não, a oficina não pode colocar uma peça usada sem avisar. O artigo 70 proíbe explicitamente o uso de peças usadas na reparação sem autorização do consumidor: 'Empregar na reparação de produtos, peça ou componentes de reposição usados, sem autorização do consumidor'. Além disso, o artigo 21 estabelece que é obrigatório empregar componentes novos ou adequados, salvo autorização em contrário: 'considerar-se-á implícita a obrigação do fornecedor de empregar componentes de reposição originais adequados e novos, ou que mantenham as especificações técnicas do fabricante'.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art70",
+          "citedArticleId" : "cdc:art70",
+          "quote" : "Empregar na reparação de produtos, peça ou componentes de reposição usados, sem autorização do consumidor",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art21",
+          "citedArticleId" : "cdc:art21",
+          "quote" : "considerar-se-á implícita a obrigação do fornecedor de empregar componentes de reposição originais adequados e novos, ou que mantenham as especificações técnicas do fabricante",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art70", "cdc:art73", "cdc:art63", "cdc:art39", "cdc:art21" ]
+      }
+    }
+  }, {
+    "id" : "q17",
+    "type" : "single",
+    "gold" : [ "cdc:art32" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art84", "cf88:art5", "cdc:art32", "cdc:art25", "cdc:art28", "cdc:art12", "cf88:art100", "cdc:art21", "cdc:art22", "cdc:art13" ],
+      "DENSE" : [ "cdc:art21", "cdc:art32", "cdc:art12", "cdc:art70", "cdc:art13", "cdc:art25", "cdc:art18", "cdc:art22", "cdc:art19", "cdc:art14" ],
+      "HYBRID" : [ "cdc:art32", "cdc:art21", "cdc:art12", "cdc:art25", "cdc:art13", "cdc:art22", "cdc:art70", "cdc:art8", "cdc:art84", "cdc:art58" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "O fabricante parou de produzir a minha máquina de lavar e não encontro mais peças. Ele tem alguma obrigação?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, o fabricante tem obrigação de assegurar a oferta de peças de reposição. Conforme o artigo 32 do CDC, os fabricantes e importadores deverão assegurar a oferta de componentes e peças de reposição enquanto não cessar a fabricação ou importação do produto. Além disso, mesmo após a cessação da produção, a oferta deverá ser mantida por período razoável de tempo, na forma da lei.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art32",
+          "citedArticleId" : "cdc:art32",
+          "quote" : "Art. 32. Os fabricantes e importadores deverão assegurar a oferta de componentes e peças de reposição enquanto não cessar a fabricação ou importação do produto.\nParágrafo único. Cessadas a produção ou importação, a oferta deverá ser mantida por período razoável de tempo, na forma da lei.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art84", "cf88:art5", "cdc:art32", "cdc:art25", "cdc:art28" ]
+      },
+      "DENSE" : {
+        "question" : "O fabricante parou de produzir a minha máquina de lavar e não encontro mais peças. Ele tem alguma obrigação?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, o fabricante tem obrigação de assegurar a oferta de peças enquanto não cessar a produção. Conforme o Art. 32, 'Os fabricantes e importadores deverão assegurar a oferta de componentes e peças de reposição enquanto não cessar a fabricação ou importação do produto.' Além disso, o Art. 21 estabelece que no fornecimento de serviços de reparação considera-se implícita a obrigação de empregar 'componentes de reposição originais adequados e novos'.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art32",
+          "citedArticleId" : "cdc:art32",
+          "quote" : "Os fabricantes e importadores deverão assegurar a oferta de componentes e peças de reposição enquanto não cessar a fabricação ou importação do produto.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art21",
+          "citedArticleId" : "cdc:art21",
+          "quote" : "No fornecimento de serviços que tenham por objetivo a reparação de qualquer produto considerar-se-á implícita a obrigação do fornecedor de empregar componentes de reposição originais adequados e novos",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art21", "cdc:art32", "cdc:art12", "cdc:art70", "cdc:art13" ]
+      }
+    }
+  }, {
+    "id" : "q18",
+    "type" : "single",
+    "gold" : [ "cdc:art50" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art53", "cf88:art5", "cdc:art50", "cdc:art54-g", "cf88:art100", "cf88:art206", "cf88:art95", "cf88:art227", "cf88:art7", "cdc:art66" ],
+      "DENSE" : [ "cdc:art74", "cdc:art31", "cdc:art50", "cdc:art21", "cdc:art24", "cdc:art8", "cdc:art44", "cdc:art18", "cdc:art101", "cdc:art12" ],
+      "HYBRID" : [ "cdc:art50", "cdc:art31", "cdc:art74", "cdc:art66", "cdc:art24", "cf88:art5", "cdc:art41", "cdc:art6", "cf88:art53", "cdc:art21" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Preciso receber algum papel da loja explicando a garantia do forno que comprei?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não há previsão nos artigos fornecidos sobre garantia de produtos ou documentos de lojas. Os textos citados tratam de direitos fundamentais, imunidade parlamentar e normas processuais, não abordando consumo ou responsabilidade civil do fornecedor.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art53", "cf88:art5", "cdc:art50", "cdc:art54-g", "cf88:art100" ]
+      },
+      "DENSE" : {
+        "question" : "Preciso receber algum papel da loja explicando a garantia do forno que comprei?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, você deve receber o termo de garantia devidamente preenchido. O artigo 50 exige que o termo seja entregue no ato do fornecimento, acompanhado de manual, esclarecendo a forma, prazo e lugar para exercitá-la. Além disso, o artigo 31 determina que informações sobre garantia devem ser corretas, claras e ostensivas.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art50",
+          "citedArticleId" : "cdc:art50",
+          "quote" : "O termo de garantia ou equivalente deve ser padronizado e esclarecer, de maneira adequada em que consiste a mesma garantia, bem como a forma, o prazo e o lugar em que pode ser exercitada e os ônus a cargo do consumidor, devendo ser-lhe entregue, devidamente preenchido pelo fornecedor, no ato do fornecimento, acompanhado de manual de instrução, de instalação e uso do produto em linguagem didática, com ilustrações.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art31",
+          "citedArticleId" : "cdc:art31",
+          "quote" : "A oferta e apresentação de produtos ou serviços devem assegurar informações corretas, claras, precisas, ostensivas e em língua portuguesa sobre suas características, qualidades, quantidade, composição, preço, garantia, prazos de validade e origem, entre outros dados",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art74", "cdc:art31", "cdc:art50", "cdc:art21", "cdc:art24" ]
+      }
+    }
+  }, {
+    "id" : "q19",
+    "type" : "single",
+    "gold" : [ "cdc:art13" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art12", "cdc:art18", "cdc:art8", "cdc:art58", "cdc:art10", "cdc:art13", "cdc:art56", "cdc:art25", "cdc:art19", "cdc:art26" ],
+      "DENSE" : [ "cdc:art13", "cdc:art12", "cdc:art8", "cdc:art14", "cdc:art10", "cdc:art25", "cdc:art17", "cdc:art18", "cdc:art19", "cdc:art20" ],
+      "HYBRID" : [ "cdc:art12", "cdc:art8", "cdc:art13", "cdc:art10", "cdc:art25", "cdc:art19", "cdc:art18", "cdc:art64", "cdc:art20", "cdc:art14" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Me machuquei com um produto vendido num mercadinho que não mostrava quem fabricou. O dono do mercado responde?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, o dono do mercado responde. O fornecedor imediato é responsável perante o consumidor quando não for identificado claramente seu produtor. Além disso, os fornecedores respondem solidariamente por vícios que tornam o produto impróprio ao consumo. A responsabilidade independe da existência de culpa.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art18",
+          "citedArticleId" : "cdc:art18",
+          "quote" : "§ 5° No caso de fornecimento de produtos in natura, será responsável perante o consumidor o fornecedor imediato, exceto quando identificado claramente seu produtor.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art18",
+          "citedArticleId" : "cdc:art18",
+          "quote" : "Art. 18. Os fornecedores de produtos de consumo duráveis ou não duráveis respondem solidariamente pelos vícios de qualidade ou quantidade que os tornem impróprios ou inadequados ao consumo a que se destinam ou lhes diminuam o valor",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art12",
+          "citedArticleId" : "cdc:art12",
+          "quote" : "Art. 12. O fabricante, o produtor, o construtor, nacional ou estrangeiro, e o importador respondem, independentemente da existência de culpa, pela reparação dos danos causados aos consumidores por defeitos decorrentes de projeto, fabricação, construção, montagem, fórmulas, manipulação, apresentação ou acondicionamento de seus produtos",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art12", "cdc:art18", "cdc:art8", "cdc:art58", "cdc:art10" ]
+      },
+      "DENSE" : {
+        "question" : "Me machuquei com um produto vendido num mercadinho que não mostrava quem fabricou. O dono do mercado responde?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, o dono do mercado responde. Conforme o Art. 13, I, o comerciante é responsável quando 'o fabricante, o construtor, o produtor ou o importador não puderem ser identificados'. Além disso, o Art. 12 estabelece que o fabricante responde independentemente da culpa por defeitos no produto. O Art. 8º também obriga os fornecedores a darem informações necessárias sobre riscos.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art13",
+          "citedArticleId" : "cdc:art13",
+          "quote" : "I - o fabricante, o construtor, o produtor ou o importador não puderem ser identificados;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art12",
+          "citedArticleId" : "cdc:art12",
+          "quote" : "O fabricante, o produtor, o construtor, nacional ou estrangeiro, e o importador respondem, independentemente da existência de culpa, pela reparação dos danos causados aos consumidores por defeitos decorrentes de projeto, fabricação, construção, montagem, fórmulas, manipulação, apresentação ou acondicionamento de seus produtos",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art8",
+          "citedArticleId" : "cdc:art8",
+          "quote" : "obrigando-se os fornecedores, em qualquer hipótese, a dar as informações necessárias e adequadas a seu respeito.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art13", "cdc:art12", "cdc:art8", "cdc:art14", "cdc:art10" ]
+      }
+    }
+  }, {
+    "id" : "q20",
+    "type" : "single",
+    "gold" : [ "cdc:art12" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art96", "cdc:art12", "cdc:art51", "cf88:art37", "cdc:art54-b", "cdc:art20", "cdc:art19", "cdc:art103", "cdc:art18", "cf88:art127" ],
+      "DENSE" : [ "cdc:art12", "cdc:art13", "cdc:art25", "cdc:art19", "cdc:art14", "cdc:art18", "cdc:art101", "cdc:art21", "cdc:art20", "cdc:art17" ],
+      "HYBRID" : [ "cdc:art12", "cdc:art19", "cdc:art20", "cdc:art18", "cdc:art13", "cdc:art21", "cdc:art32", "cdc:art9", "cdc:art38", "cdc:art66" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "O liquidificador explodiu e queimou minha mão. Quem paga o prejuízo e preciso provar que o fabricante errou?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "O fabricante responde independentemente da existência de culpa pelos danos causados por defeitos do produto. O produto é defeituoso quando não oferece a segurança que dele legitimamente se espera, considerando sua apresentação e o uso razoavelmente esperado. O fabricante só não será responsabilizado se provar que não colocou o produto no mercado, que o defeito inexiste ou que a culpa foi exclusiva do consumidor.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art12",
+          "citedArticleId" : "cdc:art12",
+          "quote" : "O fabricante, o produtor, o construtor, nacional ou estrangeiro, e o importador respondem, independentemente da existência de culpa, pela reparação dos danos causados aos consumidores por defeitos decorrentes de projeto, fabricação, construção, montagem, fórmulas, manipulação, apresentação ou acondicionamento de seus produtos...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art12",
+          "citedArticleId" : "cdc:art12",
+          "quote" : "O produto é defeituoso quando não oferece a segurança que dele legitimamente se espera, levando-se em consideração as circunstâncias relevantes, entre as quais: I - sua apresentação; II - o uso e os riscos que razoavelmente dele se esperam...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art12",
+          "citedArticleId" : "cdc:art12",
+          "quote" : "O fabricante, o construtor, o produtor ou importador só não será responsabilizado quando provar: I - que não colocou o produto no mercado; II - que, embora haja colocado o produto no mercado, o defeito inexiste; III - a culpa exclusiva do consumidor ou de terceiro.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art96", "cdc:art12", "cdc:art51", "cf88:art37", "cdc:art54-b" ]
+      },
+      "DENSE" : {
+        "question" : "O liquidificador explodiu e queimou minha mão. Quem paga o prejuízo e preciso provar que o fabricante errou?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "O fabricante responde independentemente da existência de culpa pelos danos causados por defeitos do produto. Você não precisa provar que o fabricante errou, mas sim que o produto era inseguro para o uso esperado. O liquidificador é defeituoso se não ofereceu a segurança legitimamente esperada. Além disso, todos os responsáveis respondem solidariamente.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art12",
+          "citedArticleId" : "cdc:art12",
+          "quote" : "O fabricante, o produtor, o construtor, nacional ou estrangeiro, e o importador respondem, independentemente da existência de culpa, pela reparação dos danos causados aos consumidores por defeitos decorrentes de projeto, fabricação, construção, montagem, fórmulas, manipulação, apresentação ou acondicionamento de seus produtos",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art12",
+          "citedArticleId" : "cdc:art12",
+          "quote" : "O produto é defeituoso quando não oferece a segurança que dele legitimamente se espera, levando-se em consideração as circunstâncias relevantes",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art25",
+          "citedArticleId" : "cdc:art25",
+          "quote" : "Havendo mais de um responsável pela causação do dano, todos responderão solidariamente pela reparação prevista nesta e nas seções anteriores.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art12", "cdc:art13", "cdc:art25", "cdc:art19", "cdc:art14" ]
+      }
+    }
+  }, {
+    "id" : "q21",
+    "type" : "single",
+    "gold" : [ "cdc:art14" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art14", "cf88:art5", "cdc:art12", "cf88:art127", "cf88:art96", "cdc:art37", "cf88:art37", "cdc:art3", "cf88:art199", "cdc:art103" ],
+      "DENSE" : [ "cdc:art14", "cdc:art20", "cdc:art18", "cdc:art19", "cdc:art101", "cdc:art95", "cdc:art12", "cdc:art25", "cdc:art13", "cdc:art22" ],
+      "HYBRID" : [ "cdc:art14", "cdc:art12", "cdc:art103", "cdc:art34", "cdc:art38", "cf88:art5", "cdc:art20", "cdc:art18", "cf88:art127", "cdc:art19" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Fiz progressiva num salão e meu cabelo caiu. Eu é que tenho de provar que o salão agiu com culpa?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não, você não precisa provar a culpa do salão. O fornecedor responde independentemente da existência de culpa por defeitos na prestação dos serviços. O serviço é defeituoso quando não fornece a segurança que o consumidor pode esperar. O fornecedor só será responsabilizado se provar que o defeito inexiste ou que houve culpa exclusiva do consumidor.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art14",
+          "citedArticleId" : "cdc:art14",
+          "quote" : "Art. 14. O fornecedor de serviços responde, independentemente da existência de culpa, pela reparação dos danos causados aos consumidores por defeitos relativos à prestação dos serviços...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art14",
+          "citedArticleId" : "cdc:art14",
+          "quote" : "§ 1° O serviço é defeituoso quando não fornece a segurança que o consumidor dele pode esperar...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art14",
+          "citedArticleId" : "cdc:art14",
+          "quote" : "§ 3° O fornecedor de serviços só não será responsabilizado quando provar: I - que, tendo prestado o serviço, o defeito inexiste; II - a culpa exclusiva do consumidor ou de terceiro.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art14", "cf88:art5", "cdc:art12", "cf88:art127", "cf88:art96" ]
+      },
+      "DENSE" : {
+        "question" : "Fiz progressiva num salão e meu cabelo caiu. Eu é que tenho de provar que o salão agiu com culpa?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não, você não precisa provar a culpa do salão. O fornecedor responde independentemente da existência de culpa por defeitos na prestação dos serviços. O serviço é defeituoso quando não fornece a segurança que o consumidor pode esperar. A responsabilidade pessoal dos profissionais liberais será apurada mediante a verificação de culpa.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art14",
+          "citedArticleId" : "cdc:art14",
+          "quote" : "Art. 14. O fornecedor de serviços responde, independentemente da existência de culpa, pela reparação dos danos causados aos consumidores por defeitos relativos à prestação dos serviços...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art14",
+          "citedArticleId" : "cdc:art14",
+          "quote" : "...O serviço é defeituoso quando não fornece a segurança que o consumidor dele pode esperar...",
+          "status" : "FUZZY"
+        }, {
+          "articleId" : "cdc:art14",
+          "citedArticleId" : "cdc:art14",
+          "quote" : "§ 4° A responsabilidade pessoal dos profissionais liberais será apurada mediante a verificação de culpa.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art14", "cdc:art20", "cdc:art18", "cdc:art19", "cdc:art101" ]
+      }
+    }
+  }, {
+    "id" : "q22",
+    "type" : "single",
+    "gold" : [ "cdc:art22" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art10", "cdc:art14", "cdc:art54-f", "cdc:art43", "cdc:art20", "cdc:art26", "cf88:art21", "cdc:art8", "cf88:art17", "cdc:art39" ],
+      "DENSE" : [ "cdc:art73", "cdc:art22", "cf88:art72", "cdc:art14", "cdc:art40", "cdc:art18", "cdc:art70", "cdc:art23", "cdc:art104-a", "cdc:art20" ],
+      "HYBRID" : [ "cdc:art14", "cdc:art20", "cdc:art40", "cdc:art8", "cdc:art26", "cdc:art18", "cdc:art10", "cdc:art22", "cdc:art9", "cdc:art23" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "A companhia de energia cortou a luz da minha casa sem aviso. O serviço não deveria ser ininterrupto?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, o serviço de energia deve ser ininterrupto. A interrupção sem aviso configura defeito no serviço, pois não fornece a segurança que o consumidor pode esperar. Conforme o Art. 14, § 1º, I e II, o serviço é defeituoso quando não oferece segurança esperada, considerando o modo de fornecimento e os riscos razoavelmente esperados. Além disso, o Art. 20 estabelece que o fornecedor responde por vícios que tornem o serviço impróprio ao consumo ou diminuam seu valor, permitindo ao consumidor exigir a reexecução dos serviços sem custo adicional.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art14",
+          "citedArticleId" : "cdc:art14",
+          "quote" : "§ 1° O serviço é defeituoso quando não fornece a segurança que o consumidor dele pode esperar, levando-se em consideração as circunstâncias relevantes, entre as quais: I - o modo de seu fornecimento; II - o resultado e os riscos que razoavelmente dele se esperam.",
+          "status" : "FUZZY"
+        }, {
+          "articleId" : "cdc:art20",
+          "citedArticleId" : "cdc:art20",
+          "quote" : "Art. 20. O fornecedor de serviços responde pelos vícios de qualidade que os tornem impróprios ao consumo ou lhes diminuam o valor, assim como por aqueles decorrentes da disparidade com as indicações constantes da oferta ou mensagem publicitária, podendo o consumidor exigir, alternativamente e à sua escolha: I - a reexecução dos serviços, sem custo adicional e quando cabível;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art10", "cdc:art14", "cdc:art54-f", "cdc:art43", "cdc:art20" ]
+      },
+      "DENSE" : {
+        "question" : "A companhia de energia cortou a luz da minha casa sem aviso. O serviço não deveria ser ininterrupto?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não, o serviço essencial não pode ser interrompido. Os órgãos públicos e concessionárias são obrigados a fornecer serviços adequados, eficientes, seguros e, quanto aos essenciais, contínuos. Nos casos de descumprimento total ou parcial dessas obrigações, as pessoas jurídicas devem cumpri-las e reparar os danos causados.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art22",
+          "citedArticleId" : "cdc:art22",
+          "quote" : "Art. 22. Os órgãos públicos, por si ou suas empresas, concessionárias, permissionárias ou sob qualquer outra forma de empreendimento, são obrigados a fornecer serviços adequados, eficientes, seguros e, quanto aos essenciais, contínuos.\nParágrafo único. Nos casos de descumprimento, total ou parcial, das obrigações referidas neste artigo, serão as pessoas jurídicas compelidas a cumpri-las e a reparar os danos causados, na forma prevista neste código.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art73", "cdc:art22", "cf88:art72", "cdc:art14", "cdc:art40" ]
+      }
+    }
+  }, {
+    "id" : "q23",
+    "type" : "single",
+    "gold" : [ "cdc:art6" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art5", "cdc:art103", "cf88:art127", "cf88:art222", "cf88:art109", "cf88:art37", "cf88:art199", "cf88:art96", "cdc:art37", "cf88:art54" ],
+      "DENSE" : [ "cdc:art51", "cdc:art103", "cdc:art28", "cdc:art39", "cdc:art12", "cdc:art42", "cdc:art84", "cdc:art66", "cdc:art18", "cdc:art35" ],
+      "HYBRID" : [ "cdc:art103", "cdc:art12", "cdc:art14", "cdc:art44", "cf88:art5", "cdc:art51", "cf88:art127", "cf88:art222", "cdc:art28", "cf88:art109" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Numa briga contra uma empresa, posso pedir que ela é que prove que não errou, em vez de eu ter de provar tudo?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não, você não pode exigir que a empresa prove que não errou. O princípio da presunção de inocência aplica-se ao acusado em processos penais, mas em disputas cíveis ou administrativas contra empresas, o ônus da prova geralmente recai sobre quem alega o dano. A Constituição garante direitos como indenização por danos (art. 5º, X) e acesso à informação (art. 5º, XXXIII), mas não inverte automaticamente o ônus da prova para que a empresa prove sua inocência em todas as situações.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "X - são invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas, assegurado o direito a indenização pelo dano material ou moral decorrente de sua violação;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXXIII - todos têm direito a receber dos órgãos públicos informações de seu interesse particular, ou de interesse coletivo ou geral, que serão prestadas no prazo da lei, sob pena de responsabilidade, ressalvadas aquelas cujo sigilo seja imprescindível à segurança da sociedade e do Estado;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XLVII - não haverá penas:\na) de morte, salvo em caso de guerra declarada, nos termos do art. 84, XIX;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art5", "cdc:art103", "cf88:art127", "cf88:art222", "cf88:art109" ]
+      },
+      "DENSE" : {
+        "question" : "Numa briga contra uma empresa, posso pedir que ela é que prove que não errou, em vez de eu ter de provar tudo?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, em certas situações o ônus da prova pode ser invertido. O Código de Defesa do Consumidor prevê cláusulas nulas que estabelecem inversão do ônus da prova em prejuízo do consumidor. Além disso, a sentença em ações coletivas não prejudica direitos individuais, permitindo novas provas. Contudo, a regra geral exige que o consumidor prove seu direito, salvo se houver cláusula abusiva ou caso específico de inversão.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art51",
+          "citedArticleId" : "cdc:art51",
+          "quote" : "VI - estabeleçam inversão do ônus da prova em prejuízo do consumidor;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art103",
+          "citedArticleId" : "cdc:art103",
+          "quote" : "§ 1° Os efeitos da coisa julgada previstos nos incisos I e II não prejudicarão interesses e direitos individuais dos integrantes da coletividade, do grupo, categoria ou classe.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art51", "cdc:art103", "cdc:art28", "cdc:art39", "cdc:art12" ]
+      }
+    }
+  }, {
+    "id" : "q24",
+    "type" : "single",
+    "gold" : [ "cdc:art101" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art136", "cf88:art137", "cf88:art102", "cf88:art138", "cf88:art141", "cf88:art5", "cf88:art28", "cf88:art18", "cf88:art173", "cf88:art125" ],
+      "DENSE" : [ "cdc:art93", "cf88:art155", "cf88:art35", "cf88:art109", "cf88:art110", "cf88:art179", "cf88:art166-a", "cf88:art25", "cf88:art105", "cf88:art37" ],
+      "HYBRID" : [ "cf88:art25", "cf88:art102", "cf88:art155", "cf88:art125", "cf88:art105", "cf88:art109", "cf88:art18", "cf88:art173", "cf88:art43", "cf88:art156-b" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Quero processar uma empresa que fica em outro estado. Preciso viajar até lá ou posso entrar com a ação na minha cidade?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos tratam exclusivamente de estado de defesa, estado de sítio e competência do Supremo Tribunal Federal para causas específicas. Não há menção a regras sobre foro por adesão ou competência territorial para ações cíveis contra empresas em outros estados. Portanto, com base estritamente nos textos supracitados, não é possível determinar se você deve viajar ou pode processar na sua cidade.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art136", "cf88:art137", "cf88:art102", "cf88:art138", "cf88:art141" ]
+      },
+      "DENSE" : {
+        "question" : "Quero processar uma empresa que fica em outro estado. Preciso viajar até lá ou posso entrar com a ação na minha cidade?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Você pode entrar com a ação na sua cidade se o dano ocorreu ou deve ocorrer localmente. O artigo 93 do CDC estabelece que, ressalvada a competência da Justiça Federal, é competente para a causa a justiça local no foro do lugar onde ocorreu ou deva ocorrer o dano, quando de âmbito local. Caso o dano seja de âmbito nacional ou regional, a competência será na Capital do Estado ou no Distrito Federal.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art93",
+          "citedArticleId" : "cdc:art93",
+          "quote" : "Art. 93. Ressalvada a competência da Justiça Federal, é competente para a causa a justiça local:\nI - no foro do lugar onde ocorreu ou deva ocorrer o dano, quando de âmbito local;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art93",
+          "citedArticleId" : "cdc:art93",
+          "quote" : "II - no foro da Capital do Estado ou no do Distrito Federal, para os danos de âmbito nacional ou regional, aplicando-se as regras do Código de Processo Civil aos casos de competência concorrente.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art93", "cf88:art155", "cf88:art35", "cf88:art109", "cf88:art110" ]
+      }
+    }
+  }, {
+    "id" : "q25",
+    "type" : "single",
+    "gold" : [ "cdc:art2" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art43", "cdc:art106", "cdc:art51", "cdc:art5", "cdc:art39", "cdc:art4", "cdc:art104-c", "cdc:art54-c", "cdc:art54", "cdc:art54-g" ],
+      "DENSE" : [ "cdc:art2", "cdc:art13", "cdc:art3", "cdc:art43", "cdc:art39", "cdc:art12", "cdc:art29", "cdc:art19", "cdc:art8", "cdc:art107" ],
+      "HYBRID" : [ "cdc:art43", "cdc:art39", "cdc:art2", "cdc:art54-g", "cdc:art29", "cdc:art5", "cdc:art55", "cdc:art8", "cdc:art54-c", "cdc:art14" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Sou dono de uma pequena padaria e comprei uma batedeira para usar nela. Posso me considerar consumidor?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, você pode se considerar consumidor. O Código de Defesa do Consumidor protege quem adquire produtos ou serviços para uso pessoal, familiar ou doméstico, não sendo necessário que a pessoa seja física. Como sua padaria é uma pequena empresa e a batedeira foi comprada para uso na atividade, ainda assim há proteção dependendo da natureza da relação jurídica específica, mas o artigo 43 garante acesso a dados sobre cadastros de consumidores, reforçando a abrangência da proteção.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art43",
+          "citedArticleId" : "cdc:art43",
+          "quote" : "Art. 43. O consumidor, sem prejuízo do disposto no art. 86, terá acesso às informações existentes em cadastros, fichas, registros e dados pessoais e de consumo arquivados sobre ele, bem como sobre as suas respectivas fontes.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art51",
+          "citedArticleId" : "cdc:art51",
+          "quote" : "Art. 51. São nulas de pleno direito, entre outras, as cláusulas contratuais relativas ao fornecimento de produtos e serviços que:",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art43", "cdc:art106", "cdc:art51", "cdc:art5", "cdc:art39" ]
+      },
+      "DENSE" : {
+        "question" : "Sou dono de uma pequena padaria e comprei uma batedeira para usar nela. Posso me considerar consumidor?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, você pode se considerar consumidor. O Código de Defesa do Consumidor define que consumidor é toda pessoa física ou jurídica que adquire ou utiliza produto ou serviço como destinatário final. Como sua padaria é uma atividade empresarial e a batedeira foi adquirida para uso profissional (não como destinatário final), você não se enquadra na definição de consumidor neste contexto específico, mas sim como fornecedor.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art2",
+          "citedArticleId" : "cdc:art2",
+          "quote" : "Art. 2° Consumidor é toda pessoa física ou jurídica que adquire ou utiliza produto ou serviço como destinatário final.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art3",
+          "citedArticleId" : "cdc:art3",
+          "quote" : "Art. 3° Fornecedor é toda pessoa física ou jurídica, pública ou privada, nacional ou estrangeira, bem como os entes despersonalizados, que desenvolvem atividade de produção, montagem, criação, construção, transformação, importação, exportação, distribuição ou comercialização de produtos ou prestação de serviços.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art2", "cdc:art13", "cdc:art3", "cdc:art43", "cdc:art39" ]
+      }
+    }
+  }, {
+    "id" : "q26",
+    "type" : "single",
+    "gold" : [ "cdc:art54-f" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art103-b", "cf88:art164", "cf88:art220", "cdc:art54-b", "cf88:art239", "cf88:art130-a", "cf88:art213", "cf88:art225", "cf88:art208", "cdc:art52" ],
+      "DENSE" : [ "cf88:art167-a", "cdc:art54-c", "cdc:art54-g", "cdc:art104-a", "cf88:art167", "cdc:art73", "cf88:art213", "cf88:art212", "cdc:art54-f", "cdc:art71" ],
+      "HYBRID" : [ "cf88:art213", "cdc:art52", "cdc:art54-b", "cf88:art167-a", "cf88:art164", "cf88:art163", "cf88:art103-b", "cdc:art54-c", "cf88:art220", "cdc:art54-g" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Financiei um curso por meio de um banco indicado pela escola e a escola fechou. Posso parar de pagar o financiamento?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não é possível parar de pagar o financiamento com base nos artigos fornecidos. O artigo 239 da Constituição Federal trata apenas do financiamento do seguro-desemprego e programas de desenvolvimento econômico, não abordando contratos de consumo ou a responsabilidade do consumidor em caso de fechamento da escola.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art103-b", "cf88:art164", "cf88:art220", "cdc:art54-b", "cf88:art239" ]
+      },
+      "DENSE" : {
+        "question" : "Financiei um curso por meio de um banco indicado pela escola e a escola fechou. Posso parar de pagar o financiamento?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não é permitido condicionar o atendimento ou início de tratativas à renúncia de demandas judiciais, mas a escola fechada não se enquadra diretamente nas vedações listadas. Contudo, o Código de Defesa do Consumidor veda práticas abusivas e condicionamentos indevidos. Os artigos fornecidos não abordam especificamente o encerramento da instituição educadora como causa para cessação imediata do financiamento sem análise judicial ou acordo.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art54-c",
+          "citedArticleId" : "cdc:art54-c",
+          "quote" : "V - condicionar o atendimento de pretensões do consumidor ou o início de tratativas à renúncia ou à desistência de demandas judiciais, ao pagamento de honorários advocatícios ou a depósitos judiciais.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art104-a",
+          "citedArticleId" : "cdc:art104-a",
+          "quote" : "A requerimento do consumidor superendividado pessoa natural, o juiz poderá instaurar processo de repactuação de dívidas, com vistas à realização de audiência conciliatória...",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art167-a", "cdc:art54-c", "cdc:art54-g", "cdc:art104-a", "cf88:art167" ]
+      }
+    }
+  }, {
+    "id" : "q27",
+    "type" : "single",
+    "gold" : [ "cdc:art3" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art43", "cdc:art51", "cdc:art106", "cdc:art39", "cdc:art104-c", "cdc:art40", "cdc:art54-c", "cdc:art37", "cdc:art4", "cdc:art54-d" ],
+      "DENSE" : [ "cdc:art44", "cdc:art43", "cdc:art56", "cdc:art54-g", "cdc:art106", "cdc:art22", "cdc:art41", "cdc:art54-d", "cdc:art39", "cdc:art52" ],
+      "HYBRID" : [ "cdc:art43", "cdc:art106", "cdc:art44", "cdc:art54-d", "cdc:art54-g", "cdc:art4", "cdc:art5", "cdc:art39", "cdc:art54-c", "cdc:art52" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "O banco é obrigado a seguir as regras de defesa do consumidor ou isso vale só para lojas?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, o banco é obrigado a seguir as regras de defesa do consumidor. O Código de Defesa do Consumidor aplica-se a fornecedores de produtos e serviços, incluindo instituições financeiras como bancos, que não podem adotar práticas abusivas ou transferir responsabilidades indevidamente.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art51",
+          "citedArticleId" : "cdc:art51",
+          "quote" : "São nulas de pleno direito, entre outras, as cláusulas contratuais relativas ao fornecimento de produtos e serviços que...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art39",
+          "citedArticleId" : "cdc:art39",
+          "quote" : "É vedado ao fornecedor de produtos ou serviços, dentre outras práticas abusivas:",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art43", "cdc:art51", "cdc:art106", "cdc:art39", "cdc:art104-c" ]
+      },
+      "DENSE" : {
+        "question" : "O banco é obrigado a seguir as regras de defesa do consumidor ou isso vale só para lojas?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, o banco é obrigado a seguir as regras de defesa do consumidor. O Código de Defesa do Consumidor aplica-se a fornecedores de produtos e serviços, incluindo instituições financeiras que operam com crédito. O artigo 54-G especificamente veda ao 'fornecedor de produto ou serviço que envolva crédito' condutas abusivas na cobrança e no contrato. Além disso, o artigo 43 garante ao consumidor acesso às informações em cadastros, aplicando-se também a bancos e serviços de proteção ao crédito.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art54-g",
+          "citedArticleId" : "cdc:art54-g",
+          "quote" : "é vedado ao fornecedor de produto ou serviço que envolva crédito, entre outras condutas",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art43",
+          "citedArticleId" : "cdc:art43",
+          "quote" : "Os bancos de dados e cadastros relativos a consumidores, os serviços de proteção ao crédito e congêneres são considerados entidades de caráter público.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art44", "cdc:art43", "cdc:art56", "cdc:art54-g", "cdc:art106" ]
+      }
+    }
+  }, {
+    "id" : "q28",
+    "type" : "single",
+    "gold" : [ "cdc:art20" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art14", "cdc:art20", "cdc:art39", "cdc:art26", "cdc:art54-f", "cf88:art156-a", "cf88:art21", "cdc:art10", "cf88:art150", "cf88:art142" ],
+      "DENSE" : [ "cdc:art20", "cdc:art70", "cdc:art35", "cdc:art18", "cdc:art71", "cdc:art33", "cdc:art39", "cdc:art40", "cdc:art14", "cdc:art21" ],
+      "HYBRID" : [ "cdc:art20", "cdc:art14", "cdc:art39", "cdc:art26", "cdc:art18", "cdc:art35", "cdc:art21", "cdc:art40", "cdc:art54-f", "cdc:art25" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Mandei pintar o apartamento e o serviço ficou horrível. O que posso exigir do pintor?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Você pode exigir a reexecução do serviço sem custo adicional, a restituição imediata da quantia paga atualizada ou o abatimento proporcional do preço. O serviço é considerado defeituoso quando não fornece a segurança que o consumidor dele pode esperar. Além disso, se houver vícios aparentes, o direito de reclamar caduca em noventa dias para serviços duráveis.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art20",
+          "citedArticleId" : "cdc:art20",
+          "quote" : "O fornecedor de serviços responde pelos vícios de qualidade que os tornem impróprios ao consumo ou lhes diminuam o valor... podendo o consumidor exigir, alternativamente e à sua escolha: I - a reexecução dos serviços, sem custo adicional e quando cabível; II - a restituição imediata da quantia paga, monetariamente atualizada, sem prejuízo de eventuais perdas e danos; III - o abatimento proporcional do preço.",
+          "status" : "UNSUPPORTED"
+        }, {
+          "articleId" : "cdc:art14",
+          "citedArticleId" : "cdc:art14",
+          "quote" : "O fornecedor de serviços responde, independentemente da existência de culpa, pela reparação dos danos causados aos consumidores por defeitos relativos à prestação dos serviços...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art26",
+          "citedArticleId" : "cdc:art26",
+          "quote" : "II - noventa dias, tratando-se de fornecimento de serviço e de produtos duráveis.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art14", "cdc:art20", "cdc:art39", "cdc:art26", "cdc:art54-f" ]
+      },
+      "DENSE" : {
+        "question" : "Mandei pintar o apartamento e o serviço ficou horrível. O que posso exigir do pintor?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Você pode exigir a reexecução do serviço sem custo adicional, conforme o Art. 20 do CDC, que trata de vícios em serviços. Alternativamente, pode pedir a restituição imediata da quantia paga ou o abatimento proporcional do preço. O fornecedor responde pelos vícios que tornam o serviço impróprio ao consumo ou diminuem seu valor.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art20",
+          "citedArticleId" : "cdc:art20",
+          "quote" : "O fornecedor de serviços responde pelos vícios de qualidade que os tornem impróprios ao consumo ou lhes diminuam o valor, assim como por aqueles decorrentes da disparidade com as indicações constantes da oferta ou mensagem publicitária, podendo o consumidor exigir, alternativamente e à sua escolha: I - a reexecução dos serviços, sem custo adicional e quando cabível; II - a restituição imediata da quantia paga, monetariamente atualizada, sem prejuízo de eventuais perdas e danos; III - o abatimento proporcional do preço.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art20", "cdc:art70", "cdc:art35", "cdc:art18", "cdc:art71" ]
+      }
+    }
+  }, {
+    "id" : "q29",
+    "type" : "single",
+    "gold" : [ "cf88:art5" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art100", "cf88:art5", "cdc:art43", "cf88:art220", "cdc:art50", "cf88:art17", "cf88:art54", "cf88:art195", "cf88:art40", "cf88:art155" ],
+      "DENSE" : [ "cf88:art5", "cdc:art71", "cf88:art100", "cdc:art73", "cdc:art72", "cf88:art228", "cdc:art63", "cdc:art74", "cdc:art64", "cf88:art201" ],
+      "HYBRID" : [ "cf88:art100", "cf88:art5", "cf88:art136", "cdc:art76", "cf88:art35", "cdc:art43", "cdc:art71", "cf88:art220", "cdc:art50", "cdc:art73" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Posso ser preso por não pagar a pensão alimentícia do meu filho?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não, você não será preso por dívida de pensão alimentícia. A Constituição Federal proíbe a prisão civil por dívida, com exceção específica para o responsável pelo inadimplemento voluntário e inescusável de obrigação alimentícia. Portanto, se houver descumprimento da pensão, a lei permite essa medida cautelar.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "LXVII - não haverá prisão civil por dívida, salvo a do responsável pelo inadimplemento voluntário e inescusável de obrigação alimentícia e a do depositário infiel;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art100",
+          "citedArticleId" : "cf88:art100",
+          "quote" : "§ 2º Os débitos de natureza alimentícia cujos titulares, originários ou por sucessão hereditária, tenham 60 (sessenta) anos de idade, ou sejam portadores de doença grave, ou pessoas com deficiência, assim definidos na forma da lei, serão pagos com preferência sobre todos os demais débitos...",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art100", "cf88:art5", "cdc:art43", "cf88:art220", "cdc:art50" ]
+      },
+      "DENSE" : {
+        "question" : "Posso ser preso por não pagar a pensão alimentícia do meu filho?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, você pode ser preso por não pagar a pensão alimentícia. A Constituição Federal prevê que haverá prisão civil apenas para o responsável pelo inadimplemento voluntário e inescusável de obrigação alimentícia.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "LXVII - não haverá prisão civil por dívida, salvo a do responsável pelo inadimplemento voluntário e inescusável de obrigação alimentícia e a do depositário infiel;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art5", "cdc:art71", "cf88:art100", "cdc:art73", "cdc:art72" ]
+      }
+    }
+  }, {
+    "id" : "q30",
+    "type" : "single",
+    "gold" : [ "cf88:art5" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art144", "cf88:art37", "cf88:art103-b", "cf88:art53", "cf88:art55", "cf88:art213", "cf88:art5", "cf88:art60", "cf88:art62", "cf88:art103-a" ],
+      "DENSE" : [ "cf88:art5", "cf88:art36", "cf88:art144", "cdc:art70", "cf88:art53", "cf88:art136", "cf88:art61", "cf88:art84", "cf88:art139", "cf88:art226" ],
+      "HYBRID" : [ "cf88:art144", "cf88:art5", "cf88:art53", "cf88:art36", "cf88:art60", "cf88:art102", "cf88:art109", "cf88:art50", "cf88:art57", "cf88:art64" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "A polícia pode entrar na minha casa de madrugada sem mandado?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não contêm informações sobre entrada domiciliar ou necessidade de mandado policial. Eles tratam da organização das polícias, remuneração de servidores e imunidade parlamentar.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art144", "cf88:art37", "cf88:art103-b", "cf88:art53", "cf88:art55" ]
+      },
+      "DENSE" : {
+        "question" : "A polícia pode entrar na minha casa de madrugada sem mandado?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não, a polícia não pode entrar na sua casa de madrugada sem mandado. A Constituição garante que a casa é asilo inviolável, permitindo entrada apenas com consentimento do morador, em caso de flagrante delito ou desastre, para prestar socorro, ou durante o dia, por determinação judicial.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XI - a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "LXI - ninguém será preso senão em flagrante delito ou por ordem escrita e fundamentada de autoridade judiciária competente, salvo nos casos de transgressão militar ou crime propriamente militar, definidos em lei;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "LIV - ninguém será privado da liberdade ou de seus bens sem o devido processo legal;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art5", "cf88:art36", "cf88:art144", "cdc:art70", "cf88:art53" ]
+      }
+    }
+  }, {
+    "id" : "q31",
+    "type" : "single",
+    "gold" : [ "cf88:art7" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art55", "cf88:art17", "cdc:art18", "cf88:art56", "cf88:art7", "cdc:art40", "cf88:art142", "cf88:art83", "cf88:art62", "cf88:art37" ],
+      "DENSE" : [ "cf88:art7", "cf88:art83", "cf88:art201", "cf88:art56", "cf88:art5", "cf88:art169", "cf88:art195", "cf88:art62", "cf88:art227", "cf88:art167-a" ],
+      "HYBRID" : [ "cf88:art7", "cf88:art56", "cf88:art83", "cf88:art17", "cf88:art62", "cf88:art169", "cf88:art142", "cdc:art26", "cf88:art37", "cf88:art136" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Quantos dias de licença uma mãe tem depois do parto sem perder o emprego?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "insufficient",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art55", "cf88:art17", "cdc:art18", "cf88:art56", "cf88:art7" ]
+      },
+      "DENSE" : {
+        "question" : "Quantos dias de licença uma mãe tem depois do parto sem perder o emprego?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "A mãe tem direito a licença de cento e vinte dias após o parto, sem prejuízo do emprego e do salário.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art7",
+          "citedArticleId" : "cf88:art7",
+          "quote" : "XVIII - licença à gestante, sem prejuízo do emprego e do salário, com a duração de cento e vinte dias;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art201",
+          "citedArticleId" : "cf88:art201",
+          "quote" : "§ 2º Nenhum benefício que substitua o salário de contribuição ou o rendimento do trabalho do segurado terá valor mensal inferior ao salário mínimo.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art7", "cf88:art83", "cf88:art201", "cf88:art56", "cf88:art5" ]
+      }
+    }
+  }, {
+    "id" : "q32",
+    "type" : "single",
+    "gold" : [ "cf88:art7" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art7", "cf88:art114", "cf88:art111-a", "cf88:art5", "cf88:art111", "cf88:art115", "cf88:art112", "cf88:art6", "cdc:art7", "cf88:art8" ],
+      "DENSE" : [ "cf88:art7", "cf88:art201", "cf88:art198", "cf88:art10", "cf88:art12", "cf88:art37", "cf88:art40", "cf88:art239", "cf88:art195", "cf88:art6" ],
+      "HYBRID" : [ "cf88:art7", "cf88:art111-a", "cf88:art6", "cf88:art10", "cf88:art8", "cf88:art5", "cf88:art227", "cf88:art9", "cf88:art114", "cf88:art201" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Todo trabalhador de carteira assinada tem direito ao décimo terceiro salário?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, todo trabalhador com carteira assinada tem direito ao décimo terceiro salário. O artigo 7º da Constituição Federal garante explicitamente este benefício como um dos direitos fundamentais dos trabalhadores urbanos e rurais.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art7",
+          "citedArticleId" : "cf88:art7",
+          "quote" : "VIII - décimo terceiro salário com base na remuneração integral ou no valor da aposentadoria;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art7",
+          "citedArticleId" : "cf88:art7",
+          "quote" : "São direitos dos trabalhadores urbanos e rurais, além de outros que visem à melhoria de sua condição social:",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art7", "cf88:art114", "cf88:art111-a", "cf88:art5", "cf88:art111" ]
+      },
+      "DENSE" : {
+        "question" : "Todo trabalhador de carteira assinada tem direito ao décimo terceiro salário?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, todo trabalhador de carteira assinada tem direito ao décimo terceiro salário. O artigo 7º da CLT estabelece explicitamente este direito como um dos direitos dos trabalhadores urbanos e rurais.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art7",
+          "citedArticleId" : "cf88:art7",
+          "quote" : "VIII - décimo terceiro salário com base na remuneração integral ou no valor da aposentadoria;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art7",
+          "citedArticleId" : "cf88:art7",
+          "quote" : "São direitos dos trabalhadores urbanos e rurais, além de outros que visem à melhoria de sua condição social:",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art7", "cf88:art201", "cf88:art198", "cf88:art10", "cf88:art12" ]
+      }
+    }
+  }, {
+    "id" : "q33",
+    "type" : "single",
+    "gold" : [ "cf88:art14" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art14", "cf88:art8", "cf88:art37", "cf88:art60", "cf88:art93", "cf88:art5", "cf88:art128", "cf88:art103-b", "cf88:art107", "cf88:art44" ],
+      "DENSE" : [ "cf88:art14", "cf88:art208", "cf88:art227", "cf88:art16", "cf88:art205", "cf88:art17", "cf88:art121", "cf88:art228", "cf88:art5", "cf88:art212-a" ],
+      "HYBRID" : [ "cf88:art14", "cf88:art208", "cf88:art8", "cf88:art53", "cf88:art5", "cf88:art49", "cf88:art77", "cf88:art89", "cf88:art46", "cf88:art37" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Meu filho tem 16 anos, ele já pode votar? É obrigatório?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não, seu filho de 16 anos ainda não pode votar obrigatoriamente. Conforme o Art. 14 da Constituição, o alistamento eleitoral e o voto são facultativos para os maiores de dezesseis e menores de dezoito anos. Portanto, ele já pode votar, mas não é obrigado a fazê-lo.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art14",
+          "citedArticleId" : "cf88:art14",
+          "quote" : "§ 1º O alistamento eleitoral e o voto são:\nI - obrigatórios para os maiores de dezoito anos;\nII - facultativos para:\na) os analfabetos;\nb) os maiores de setenta anos;\nc) os maiores de dezesseis e menores de dezoito anos.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art14", "cf88:art8", "cf88:art37", "cf88:art60", "cf88:art93" ]
+      },
+      "DENSE" : {
+        "question" : "Meu filho tem 16 anos, ele já pode votar? É obrigatório?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não, seu filho de 16 anos ainda não pode votar obrigatoriamente. Conforme o Art. 14, § 1º, I, o alistamento eleitoral e o voto são obrigatórios apenas para os maiores de dezoito anos. Para os maiores de dezesseis e menores de dezoito anos, o voto é facultativo, conforme o mesmo artigo.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art14",
+          "citedArticleId" : "cf88:art14",
+          "quote" : "§ 1º O alistamento eleitoral e o voto são:\nI - obrigatórios para os maiores de dezoito anos;\nII - facultativos para:\na) os analfabetos;\nb) os maiores de setenta anos;\nc) os maiores de dezesseis e menores de dezoito anos.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art14", "cf88:art208", "cf88:art227", "cf88:art16", "cf88:art205" ]
+      }
+    }
+  }, {
+    "id" : "q34",
+    "type" : "single",
+    "gold" : [ "cf88:art14" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art37", "cf88:art53", "cf88:art103-b", "cf88:art40", "cf88:art77", "cf88:art60", "cf88:art114", "cf88:art56", "cf88:art213", "cf88:art103-a" ],
+      "DENSE" : [ "cf88:art40", "cf88:art46", "cf88:art14", "cf88:art201", "cf88:art227", "cf88:art87", "cf88:art101", "cf88:art123", "cf88:art104", "cf88:art60" ],
+      "HYBRID" : [ "cf88:art40", "cf88:art60", "cf88:art201", "cf88:art56", "cf88:art53", "cf88:art46", "cf88:art104", "cf88:art93", "cf88:art100", "cf88:art44" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Qual idade mínima para alguém poder se candidatar a senador?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não contêm informação sobre a idade mínima para se candidatar a senador.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art37", "cf88:art53", "cf88:art103-b", "cf88:art40", "cf88:art77" ]
+      },
+      "DENSE" : {
+        "question" : "Qual idade mínima para alguém poder se candidatar a senador?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "A idade mínima para se candidatar a Senador é de trinta e cinco anos.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art14",
+          "citedArticleId" : "cf88:art14",
+          "quote" : "VI - a idade mínima de:\na) trinta e cinco anos para Presidente e Vice-Presidente da República e Senador;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art46",
+          "citedArticleId" : "cf88:art46",
+          "quote" : "Art. 46. O Senado Federal compõe-se de representantes dos Estados e do Distrito Federal, eleitos segundo o princípio majoritário.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art40", "cf88:art46", "cf88:art14", "cf88:art201", "cf88:art227" ]
+      }
+    }
+  }, {
+    "id" : "q35",
+    "type" : "single",
+    "gold" : [ "cf88:art82" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art89", "cf88:art66", "cf88:art86", "cf88:art77", "cf88:art79", "cf88:art49", "cf88:art14", "cf88:art80", "cf88:art78", "cf88:art82" ],
+      "DENSE" : [ "cf88:art82", "cf88:art77", "cf88:art81", "cf88:art14", "cf88:art78", "cf88:art28", "cf88:art86", "cf88:art83", "cf88:art44", "cf88:art103-b" ],
+      "HYBRID" : [ "cf88:art77", "cf88:art86", "cf88:art82", "cf88:art14", "cf88:art89", "cf88:art78", "cf88:art81", "cf88:art83", "cf88:art66", "cf88:art79" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Quanto tempo dura o mandato de um presidente da República e quando ele começa?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "O mandato presidencial dura quatro anos, iniciando-se em 1º de janeiro do ano subsequente à eleição. A eleição ocorre no primeiro domingo de outubro do ano anterior ao término do mandato vigente.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art77",
+          "citedArticleId" : "cf88:art77",
+          "quote" : "Art. 77. A eleição do Presidente e do Vice-Presidente da República realizar-se-á, simultaneamente, no primeiro domingo de outubro, em primeiro turno, e no último domingo de outubro, em segundo turno, se houver, do ano anterior ao do término do mandato presidencial vigente.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art79",
+          "citedArticleId" : "cf88:art79",
+          "quote" : "Art. 79. Substituirá o Presidente, no caso de impedimento, e suceder-lhe-á, no de vaga, o Vice-Presidente.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art89", "cf88:art66", "cf88:art86", "cf88:art77", "cf88:art79" ]
+      },
+      "DENSE" : {
+        "question" : "Quanto tempo dura o mandato de um presidente da República e quando ele começa?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "O mandato do Presidente da República dura 4 (quatro) anos e terá início em 5 de janeiro do ano seguinte ao de sua eleição. A eleição realiza-se no primeiro domingo de outubro do ano anterior ao do término do mandato vigente.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art82",
+          "citedArticleId" : "cf88:art82",
+          "quote" : "Art. 82. O mandato do Presidente da República é de 4 (quatro) anos e terá início em 5 de janeiro do ano seguinte ao de sua eleição.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art77",
+          "citedArticleId" : "cf88:art77",
+          "quote" : "Art. 77. A eleição do Presidente e do Vice-Presidente da República realizar-se-á, simultaneamente, no primeiro domingo de outubro, em primeiro turno, e no último domingo de outubro, em segundo turno, se houver, do ano anterior ao do término do mandato presidencial vigente.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art82", "cf88:art77", "cf88:art81", "cf88:art14", "cf88:art78" ]
+      }
+    }
+  }, {
+    "id" : "q36",
+    "type" : "multi",
+    "gold" : [ "cf88:art51", "cf88:art86" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art86", "cf88:art66", "cf88:art52", "cf88:art80", "cf88:art125", "cf88:art79", "cf88:art77", "cf88:art78", "cf88:art5", "cf88:art109" ],
+      "DENSE" : [ "cf88:art86", "cf88:art52", "cf88:art85", "cf88:art102", "cf88:art105", "cf88:art51", "cf88:art53", "cf88:art80", "cf88:art64", "cf88:art109" ],
+      "HYBRID" : [ "cf88:art86", "cf88:art52", "cf88:art80", "cf88:art85", "cf88:art66", "cf88:art102", "cf88:art77", "cf88:art125", "cf88:art51", "cf88:art5" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Se o presidente cometer um crime, quem decide se ele vai ser processado?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "A decisão de processar o Presidente da República depende do tipo de crime. Para infrações penais comuns, ele é submetido a julgamento perante o Supremo Tribunal Federal após a denúncia ou queixa-crime ser recebida. Para crimes de responsabilidade, o processo é instaurado pelo Senado Federal. O afastamento das funções ocorre se a denúncia for recebida nas infrações comuns ou após a instauração do processo nos crimes de responsabilidade.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art86",
+          "citedArticleId" : "cf88:art86",
+          "quote" : "Admitida a acusação contra o Presidente da República, por dois terços da Câmara dos Deputados, será ele submetido a julgamento perante o Supremo Tribunal Federal, nas infrações penais comuns, ou perante o Senado Federal, nos crimes de responsabilidade.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art86",
+          "citedArticleId" : "cf88:art86",
+          "quote" : "I - nas infrações penais comuns, se recebida a denúncia ou queixa-crime pelo Supremo Tribunal Federal;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art86", "cf88:art66", "cf88:art52", "cf88:art80", "cf88:art125" ]
+      },
+      "DENSE" : {
+        "question" : "Se o presidente cometer um crime, quem decide se ele vai ser processado?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "A decisão de processar o Presidente da República depende da natureza do crime. Para crimes comuns, a competência é do Supremo Tribunal Federal (art. 102, I, b). Já para crimes de responsabilidade, compete privativamente ao Senado Federal processar e julgar o Presidente (art. 52, I), após a acusação ser admitida por dois terços da Câmara dos Deputados (art. 86).",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art102",
+          "citedArticleId" : "cf88:art102",
+          "quote" : "b) nas infrações penais comuns, o Presidente da República, o Vice-Presidente, os membros do Congresso Nacional, seus próprios Ministros e o Procurador-Geral da República;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art52",
+          "citedArticleId" : "cf88:art52",
+          "quote" : "I - processar e julgar o Presidente e o Vice-Presidente da República nos crimes de responsabilidade, bem como os Ministros de Estado e os Comandantes da Marinha, do Exército e da Aeronáutica nos crimes da mesma natureza conexos com aqueles;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art86",
+          "citedArticleId" : "cf88:art86",
+          "quote" : "Admitida a acusação contra o Presidente da República, por dois terços da Câmara dos Deputados, será ele submetido a julgamento perante o Supremo Tribunal Federal, nas infrações penais comuns, ou perante o Senado Federal, nos crimes de responsabilidade.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art86", "cf88:art52", "cf88:art85", "cf88:art102", "cf88:art105" ]
+      }
+    }
+  }, {
+    "id" : "q37",
+    "type" : "single",
+    "gold" : [ "cf88:art101" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art103-b", "cf88:art120", "cf88:art92", "cf88:art119", "cf88:art102", "cf88:art108", "cf88:art101", "cf88:art103", "cf88:art104", "cf88:art111-a" ],
+      "DENSE" : [ "cf88:art101", "cf88:art103-b", "cf88:art104", "cf88:art119", "cf88:art107", "cf88:art92", "cf88:art96", "cf88:art123", "cf88:art111-a", "cf88:art120" ],
+      "HYBRID" : [ "cf88:art103-b", "cf88:art119", "cf88:art101", "cf88:art92", "cf88:art120", "cf88:art104", "cf88:art111-a", "cf88:art96", "cf88:art123", "cf88:art108" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Quantos juízes tem o Supremo Tribunal Federal e quem os escolhe?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não especificam o número exato de juízes do Supremo Tribunal Federal nem detalham quem os escolhe, mencionando apenas que três deles compõem o TSE e um é membro do CNJ.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art103-b", "cf88:art120", "cf88:art92", "cf88:art119", "cf88:art102" ]
+      },
+      "DENSE" : {
+        "question" : "Quantos juízes tem o Supremo Tribunal Federal e quem os escolhe?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "O Supremo Tribunal Federal compõe-se de onze Ministros. Eles são escolhidos pelo Presidente da República, depois de aprovada a escolha pela maioria absoluta do Senado Federal.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art101",
+          "citedArticleId" : "cf88:art101",
+          "quote" : "Art. 101. O Supremo Tribunal Federal compõe-se de onze Ministros... Parágrafo único. Os Ministros do Supremo Tribunal Federal serão nomeados pelo Presidente da República, depois de aprovada a escolha pela maioria absoluta do Senado Federal.",
+          "status" : "UNSUPPORTED"
+        } ],
+        "retrievedIds" : [ "cf88:art101", "cf88:art103-b", "cf88:art104", "cf88:art119", "cf88:art107" ]
+      }
+    }
+  }, {
+    "id" : "q38",
+    "type" : "multi",
+    "gold" : [ "cf88:art196", "cf88:art198" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art198", "cf88:art5", "cf88:art14", "cf88:art8", "cf88:art6", "cf88:art37", "cf88:art7", "cdc:art81", "cf88:art17", "cf88:art199" ],
+      "DENSE" : [ "cf88:art199", "cf88:art196", "cf88:art208", "cf88:art198", "cf88:art227", "cf88:art226", "cf88:art5", "cf88:art230", "cf88:art37", "cf88:art194" ],
+      "HYBRID" : [ "cf88:art198", "cf88:art199", "cf88:art6", "cf88:art5", "cf88:art227", "cf88:art8", "cf88:art194", "cf88:art196", "cf88:art7", "cf88:art197" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Tenho direito de ser atendido de graça num posto de saúde pelo governo?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, você tem direito ao atendimento integral no Sistema Único de Saúde (SUS), que integra ações e serviços públicos de saúde. O artigo 198 estabelece que o SUS é organizado com diretrizes como 'atendimento integral, com prioridade para as atividades preventivas, sem prejuízo dos serviços assistenciais'. Além disso, o financiamento do sistema inclui recursos do orçamento da seguridade social da União, Estados, Distrito Federal e Municípios.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art198",
+          "citedArticleId" : "cf88:art198",
+          "quote" : "II - atendimento integral, com prioridade para as atividades preventivas, sem prejuízo dos serviços assistenciais;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art198",
+          "citedArticleId" : "cf88:art198",
+          "quote" : "§ 1º. O sistema único de saúde será financiado, nos termos do art. 195, com recursos do orçamento da seguridade social, da União, dos Estados, do Distrito Federal e dos Municípios, além de outras fontes.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art198", "cf88:art5", "cf88:art14", "cf88:art8", "cf88:art6" ]
+      },
+      "DENSE" : {
+        "question" : "Tenho direito de ser atendido de graça num posto de saúde pelo governo?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, a saúde é direito de todos e dever do Estado, garantido mediante políticas sociais que visem ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação. Além disso, as ações e serviços públicos de saúde integram um sistema único organizado com diretrizes como descentralização e atendimento integral.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art196",
+          "citedArticleId" : "cf88:art196",
+          "quote" : "Art. 196. A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art198",
+          "citedArticleId" : "cf88:art198",
+          "quote" : "Art. 198. As ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único, organizado de acordo com as seguintes diretrizes: I - descentralização, com direção única em cada esfera de governo; II - atendimento integral, com prioridade para as atividades preventivas, sem prejuízo dos serviços assistenciais;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art199", "cf88:art196", "cf88:art208", "cf88:art198", "cf88:art227" ]
+      }
+    }
+  }, {
+    "id" : "q39",
+    "type" : "single",
+    "gold" : [ "cf88:art208" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art208", "cf88:art227", "cf88:art28", "cf88:art40", "cf88:art32", "cf88:art201", "cf88:art213", "cf88:art235", "cdc:art84", "cf88:art14" ],
+      "DENSE" : [ "cf88:art208", "cf88:art227", "cf88:art206", "cf88:art209", "cf88:art201", "cf88:art230", "cf88:art211", "cf88:art40", "cf88:art205", "cf88:art212" ],
+      "HYBRID" : [ "cf88:art208", "cf88:art227", "cf88:art201", "cf88:art40", "cf88:art206", "cf88:art213", "cf88:art14", "cf88:art226", "cf88:art5", "cf88:art7" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Até que idade o governo tem obrigação de oferecer escola gratuita para as crianças?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "O governo tem obrigação de oferecer educação básica obrigatória e gratuita aos 17 anos de idade. Além disso, deve garantir educação infantil em creche e pré-escola às crianças até 5 anos.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art208",
+          "citedArticleId" : "cf88:art208",
+          "quote" : "I - educação básica obrigatória e gratuita dos 4 (quatro) aos 17 (dezessete) anos de idade, assegurada inclusive sua oferta gratuita para todos os que a ela não tiveram acesso na idade própria;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art208",
+          "citedArticleId" : "cf88:art208",
+          "quote" : "IV - educação infantil, em creche e pré-escola, às crianças até 5 (cinco) anos de idade;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art208", "cf88:art227", "cf88:art28", "cf88:art40", "cf88:art32" ]
+      },
+      "DENSE" : {
+        "question" : "Até que idade o governo tem obrigação de oferecer escola gratuita para as crianças?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "O governo tem obrigação de oferecer educação básica gratuita até os 17 anos de idade. Conforme o Art. 208, inciso I, a lei garante 'educação básica obrigatória e gratuita dos 4 (quatro) aos 17 (dezessete) anos de idade'. Além disso, o § 1º do mesmo artigo estabelece que 'O acesso ao ensino obrigatório e gratuito é direito público subjetivo', reforçando a responsabilidade estatal.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art208",
+          "citedArticleId" : "cf88:art208",
+          "quote" : "I - educação básica obrigatória e gratuita dos 4 (quatro) aos 17 (dezessete) anos de idade, assegurada inclusive sua oferta gratuita para todos os que a ela não tiveram acesso na idade própria",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art208",
+          "citedArticleId" : "cf88:art208",
+          "quote" : "§ 1º O acesso ao ensino obrigatório e gratuito é direito público subjetivo.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art208", "cf88:art227", "cf88:art206", "cf88:art209", "cf88:art201" ]
+      }
+    }
+  }, {
+    "id" : "q40",
+    "type" : "single",
+    "gold" : [ "cf88:art156" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art155", "cf88:art158", "cf88:art156-b", "cf88:art153", "cf88:art166", "cf88:art156-a", "cf88:art156", "cf88:art53", "cf88:art62", "cf88:art146" ],
+      "DENSE" : [ "cf88:art155", "cf88:art156", "cf88:art156-b", "cf88:art153", "cf88:art147", "cf88:art156-a", "cf88:art158", "cf88:art157", "cf88:art70", "cf88:art159" ],
+      "HYBRID" : [ "cf88:art156-b", "cf88:art153", "cf88:art158", "cf88:art155", "cf88:art156", "cf88:art156-a", "cf88:art147", "cf88:art157", "cf88:art159", "cf88:art146" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Qual esfera de governo cobra o imposto sobre a casa onde moro?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "O imposto sobre a casa onde moro (imposto sobre propriedade de bens imóveis) compete ao Estado da situação do bem, conforme o artigo 155. O texto afirma que 'relativamente a bens imóveis e respectivos direitos, compete ao Estado da situação do bem, ou ao Distrito Federal'.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art155",
+          "citedArticleId" : "cf88:art155",
+          "quote" : "relativamente a bens imóveis e respectivos direitos, compete ao Estado da situação do bem, ou ao Distrito Federal",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art155", "cf88:art158", "cf88:art156-b", "cf88:art153", "cf88:art166" ]
+      },
+      "DENSE" : {
+        "question" : "Qual esfera de governo cobra o imposto sobre a casa onde moro?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "O imposto sobre a casa onde você mora é competência dos Estados e do Distrito Federal. Conforme o Art. 155, inciso I, alínea 'a', compete aos Estados instituir impostos sobre transmissão causa mortis e doação de bens imóveis. Além disso, o § 1º, inciso I, alínea 'a' do mesmo artigo estabelece que, relativamente a bens imóveis, a competência cabe ao Estado da situação do bem.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art155",
+          "citedArticleId" : "cf88:art155",
+          "quote" : "I - transmissão causa mortis e doação, de quaisquer bens ou direitos;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art155",
+          "citedArticleId" : "cf88:art155",
+          "quote" : "relativamente a bens imóveis e respectivos direitos, compete ao Estado da situação do bem, ou ao Distrito Federal;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art155", "cf88:art156", "cf88:art156-b", "cf88:art153", "cf88:art147" ]
+      }
+    }
+  }, {
+    "id" : "q41",
+    "type" : "single",
+    "gold" : [ "cf88:art183" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art5", "cf88:art14", "cf88:art201", "cf88:art40", "cdc:art63", "cf88:art89", "cdc:art37", "cf88:art7", "cf88:art8", "cf88:art142" ],
+      "DENSE" : [ "cf88:art183", "cf88:art191", "cf88:art189", "cf88:art225", "cf88:art231", "cf88:art5", "cf88:art20", "cf88:art243", "cf88:art190", "cf88:art185" ],
+      "HYBRID" : [ "cf88:art5", "cf88:art183", "cf88:art14", "cf88:art20", "cf88:art191", "cf88:art222", "cf88:art8", "cf88:art182", "cf88:art95", "cf88:art201" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Moro há seis anos num terreno de 200 metros quadrados que não é meu e ninguém nunca reclamou. Posso me tornar dono?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não se torna dono automaticamente apenas por morar no terreno. A propriedade é garantida constitucionalmente, mas a aquisição de bens exige procedimento legal específico. O artigo 5º, XXIV, estabelece que a lei estabelecerá o procedimento para desapropriação ou transferência de bens, mediante justa indenização. Além disso, o princípio da inviolabilidade da propriedade e a necessidade de devido processo legal (artigo 5º, LIV) impedem a aquisição informal sem base jurídica. Portanto, é necessário seguir os trâmites legais previstos na legislação civil para regularizar a situação.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art5", "cf88:art14", "cf88:art201", "cf88:art40", "cdc:art63" ]
+      },
+      "DENSE" : {
+        "question" : "Moro há seis anos num terreno de 200 metros quadrados que não é meu e ninguém nunca reclamou. Posso me tornar dono?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, você pode se tornar dono. Conforme o Art. 183, aquele que possuir como sua área urbana de até duzentos e cinqüenta metros quadrados, por cinco anos, ininterruptamente e sem oposição, utilizando-a para sua moradia ou de sua família, adquirir-lhe-á o domínio, desde que não seja proprietário de outro imóvel urbano ou rural. Como você mora há seis anos num terreno de 200m² sem oposição, cumpre os requisitos.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art183",
+          "citedArticleId" : "cf88:art183",
+          "quote" : "Art. 183. Aquele que possuir como sua área urbana de até duzentos e cinqüenta metros quadrados, por cinco anos, ininterruptamente e sem oposição, utilizando-a para sua moradia ou de sua família, adquirir-lhe-á o domínio, desde que não seja proprietário de outro imóvel urbano ou rural.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art183", "cf88:art191", "cf88:art189", "cf88:art225", "cf88:art231" ]
+      }
+    }
+  }, {
+    "id" : "q42",
+    "type" : "single",
+    "gold" : [ "cf88:art230" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art5", "cf88:art230", "cdc:art51", "cdc:art7", "cf88:art6", "cf88:art227", "cdc:art81", "cf88:art229", "cdc:art54-f", "cf88:art8" ],
+      "DENSE" : [ "cf88:art230", "cf88:art100", "cf88:art208", "cf88:art199", "cf88:art5", "cf88:art169", "cf88:art198", "cf88:art201", "cf88:art40", "cf88:art203" ],
+      "HYBRID" : [ "cf88:art230", "cf88:art5", "cf88:art100", "cf88:art6", "cf88:art8", "cf88:art9", "cf88:art7", "cf88:art14", "cf88:art227", "cf88:art208" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Pessoas idosas têm direito a andar de ônibus sem pagar?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não há previsão nos artigos fornecidos de que pessoas idosas tenham direito a andar de ônibus sem pagar. Os textos citados tratam de direitos fundamentais, sucessão, consumidor e assistência social geral, mas não especificam gratuidade no transporte público para idosos.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXX - é garantido o direito de herança; XXXI - a sucessão de bens de estrangeiros situados no País será regulada pela lei brasileira em benefício do cônjuge ou dos filhos brasileiros, sempre que não lhes seja mais favorável a lei pessoal do \"de cujus\";",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art6",
+          "citedArticleId" : "cf88:art6",
+          "quote" : "É garantido o direito de vida. É garantido o direito à liberdade.",
+          "status" : "UNSUPPORTED"
+        } ],
+        "retrievedIds" : [ "cf88:art5", "cf88:art230", "cdc:art51", "cdc:art7", "cf88:art6" ]
+      },
+      "DENSE" : {
+        "question" : "Pessoas idosas têm direito a andar de ônibus sem pagar?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, pessoas idosas maiores de sessenta e cinco anos têm direito à gratuidade dos transportes coletivos urbanos. A família, a sociedade e o Estado devem amparar as pessoas idosas, garantindo-lhes dignidade e bem-estar.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art230",
+          "citedArticleId" : "cf88:art230",
+          "quote" : "Art. 230. A família, a sociedade e o Estado têm o dever de amparar as pessoas idosas, assegurando sua participação na comunidade, defendendo sua dignidade e bem-estar e garantindo-lhes o direito à vida.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art230",
+          "citedArticleId" : "cf88:art230",
+          "quote" : "§ 2º Aos maiores de sessenta e cinco anos é garantida a gratuidade dos transportes coletivos urbanos.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art230", "cf88:art100", "cf88:art208", "cf88:art199", "cf88:art5" ]
+      }
+    }
+  }, {
+    "id" : "q43",
+    "type" : "single",
+    "gold" : [ "cf88:art227" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art229", "cf88:art14", "cf88:art28", "cf88:art227", "cf88:art32", "cf88:art226", "cdc:art43", "cf88:art17", "cdc:art10", "cdc:art54-b" ],
+      "DENSE" : [ "cf88:art227", "cf88:art229", "cf88:art230", "cf88:art208", "cf88:art226", "cf88:art196", "cf88:art23", "cf88:art211", "cf88:art193", "cf88:art197" ],
+      "HYBRID" : [ "cf88:art229", "cf88:art227", "cf88:art226", "cf88:art208", "cf88:art230", "cf88:art196", "cf88:art164-a", "cf88:art212", "cf88:art205", "cf88:art37" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Quem tem o dever de cuidar das crianças com prioridade, só os pais ou o governo também?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "O dever de cuidar das crianças com absoluta prioridade é compartilhado pela família, pela sociedade e pelo Estado. Os pais têm o dever de assistir, criar e educar os filhos menores, enquanto a Constituição determina que família, sociedade e Estado devem assegurar à criança direitos como vida, saúde e educação.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art229",
+          "citedArticleId" : "cf88:art229",
+          "quote" : "Art. 229. Os pais têm o dever de assistir, criar e educar os filhos menores",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art227",
+          "citedArticleId" : "cf88:art227",
+          "quote" : "Art. 227. É dever da família, da sociedade e do Estado assegurar à criança, ao adolescente e ao jovem, com absoluta prioridade",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art229", "cf88:art14", "cf88:art28", "cf88:art227", "cf88:art32" ]
+      },
+      "DENSE" : {
+        "question" : "Quem tem o dever de cuidar das crianças com prioridade, só os pais ou o governo também?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "O dever de cuidar das crianças com absoluta prioridade é compartilhado pela família, pela sociedade e pelo Estado. O artigo 227 estabelece que 'É dever da família, da sociedade e do Estado assegurar à criança, ao adolescente e ao jovem, com absoluta prioridade' diversos direitos fundamentais. Além disso, o artigo 229 reforça que 'Os pais têm o dever de assistir, criar e educar os filhos menores', enquanto o artigo 208 detalha como 'O dever do Estado com a educação será efetivado mediante a garantia' de ensino obrigatório e gratuito.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art227",
+          "citedArticleId" : "cf88:art227",
+          "quote" : "É dever da família, da sociedade e do Estado assegurar à criança, ao adolescente e ao jovem, com absoluta prioridade",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art229",
+          "citedArticleId" : "cf88:art229",
+          "quote" : "Os pais têm o dever de assistir, criar e educar os filhos menores",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art208",
+          "citedArticleId" : "cf88:art208",
+          "quote" : "O dever do Estado com a educação será efetivado mediante a garantia",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art227", "cf88:art229", "cf88:art230", "cf88:art208", "cf88:art226" ]
+      }
+    }
+  }, {
+    "id" : "q44",
+    "type" : "single",
+    "gold" : [ "cf88:art220" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art37", "cf88:art60", "cf88:art103-a", "cf88:art167-a", "cf88:art213", "cf88:art195", "cf88:art155", "cf88:art103-b", "cdc:art36", "cf88:art40" ],
+      "DENSE" : [ "cf88:art220", "cf88:art139", "cdc:art69", "cf88:art222", "cdc:art68", "cdc:art67", "cf88:art223", "cdc:art60", "cdc:art64", "cf88:art136" ],
+      "HYBRID" : [ "cf88:art103-a", "cf88:art220", "cdc:art37", "cf88:art150", "cf88:art85", "cf88:art128", "cf88:art49", "cf88:art97", "cf88:art138", "cf88:art54" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Um jornal pode ser proibido pelo governo de publicar uma reportagem crítica?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não há nos artigos fornecidos previsão para proibição de jornal por publicar reportagem crítica. O texto menciona limites salariais, regras de emenda constitucional, súmulas vinculantes e diretrizes fiscais e educacionais, mas não trata de liberdade de imprensa ou censura.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art37",
+          "citedArticleId" : "cf88:art37",
+          "quote" : "XI - a remuneração e o subsídio dos ocupantes de cargos, funções e empregos públicos da administração direta, autárquica e fundacional...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art60",
+          "citedArticleId" : "cf88:art60",
+          "quote" : "Art. 60. A Constituição poderá ser emendada mediante proposta:",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art103-a",
+          "citedArticleId" : "cf88:art103-a",
+          "quote" : "Art. 103-A. O Supremo Tribunal Federal poderá, de ofício ou por provocação, mediante decisão de dois terços dos seus membros...",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art37", "cf88:art60", "cf88:art103-a", "cf88:art167-a", "cf88:art213" ]
+      },
+      "DENSE" : {
+        "question" : "Um jornal pode ser proibido pelo governo de publicar uma reportagem crítica?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não, o governo não pode proibir a publicação de uma reportagem crítica. O Artigo 220 garante que a manifestação do pensamento e a informação não sofrerão qualquer restrição, vedando toda e qualquer censura de natureza política, ideológica e artística. Além disso, a publicação de veículo impresso de comunicação independe de licença de autoridade.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art220",
+          "citedArticleId" : "cf88:art220",
+          "quote" : "A manifestação do pensamento, a criação, a expressão e a informação, sob qualquer forma, processo ou veículo não sofrerão qualquer restrição, observado o disposto nesta Constituição.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art220",
+          "citedArticleId" : "cf88:art220",
+          "quote" : "É vedada toda e qualquer censura de natureza política, ideológica e artística.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art220",
+          "citedArticleId" : "cf88:art220",
+          "quote" : "A publicação de veículo impresso de comunicação independe de licença de autoridade.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art220", "cf88:art139", "cdc:art69", "cf88:art222", "cdc:art68" ]
+      }
+    }
+  }, {
+    "id" : "q45",
+    "type" : "single",
+    "gold" : [ "cf88:art9" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art111-a", "cf88:art114", "cf88:art111", "cf88:art7", "cf88:art115", "cf88:art112", "cf88:art37", "cf88:art116", "cf88:art113", "cf88:art103-b" ],
+      "DENSE" : [ "cf88:art114", "cf88:art9", "cdc:art102", "cdc:art32", "cdc:art70", "cf88:art7", "cf88:art8", "cdc:art35", "cdc:art55", "cdc:art58" ],
+      "HYBRID" : [ "cf88:art114", "cf88:art7", "cf88:art8", "cf88:art112", "cf88:art111", "cf88:art71", "cf88:art97", "cf88:art103", "cf88:art83", "cf88:art53" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Os funcionários de uma fábrica podem parar o trabalho em protesto?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, os funcionários podem parar o trabalho em protesto, pois a Justiça do Trabalho tem competência para processar e julgar as ações que envolvam exercício do direito de greve. Além disso, é assegurado aos trabalhadores direitos fundamentais, incluindo a proteção em face da automação e reconhecimento das convenções coletivas.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art114",
+          "citedArticleId" : "cf88:art114",
+          "quote" : "II as ações que envolvam exercício do direito de greve;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art7",
+          "citedArticleId" : "cf88:art7",
+          "quote" : "XXVI - reconhecimento das convenções e acordos coletivos de trabalho;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art111-a", "cf88:art114", "cf88:art111", "cf88:art7", "cf88:art115" ]
+      },
+      "DENSE" : {
+        "question" : "Os funcionários de uma fábrica podem parar o trabalho em protesto?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, os funcionários podem parar o trabalho em protesto, pois é assegurado o direito de greve. A lei define que compete aos trabalhadores decidir sobre a oportunidade de exercê-lo e sobre os interesses que devam por meio dele defender.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art9",
+          "citedArticleId" : "cf88:art9",
+          "quote" : "Art. 9º É assegurado o direito de greve, competindo aos trabalhadores decidir sobre a oportunidade de exercê-lo e sobre os interesses que devam por meio dele defender.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art114", "cf88:art9", "cdc:art102", "cdc:art32", "cdc:art70" ]
+      }
+    }
+  }, {
+    "id" : "q46",
+    "type" : "single",
+    "gold" : [ "cf88:art8" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art8", "cdc:art84", "cdc:art107", "cf88:art100", "cf88:art114", "cf88:art5", "cdc:art22", "cdc:art40", "cf88:art151", "cdc:art28" ],
+      "DENSE" : [ "cf88:art8", "cf88:art201", "cf88:art7", "cf88:art37", "cf88:art240", "cf88:art40", "cf88:art149", "cf88:art195", "cf88:art22", "cf88:art5" ],
+      "HYBRID" : [ "cf88:art8", "cdc:art107", "cf88:art7", "cf88:art198", "cf88:art37", "cdc:art84", "cf88:art201", "cf88:art100", "cf88:art114", "cf88:art5" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Sou obrigado a me filiar ao sindicato da minha categoria?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não, você não é obrigado a se filiar ao sindicato da sua categoria. O artigo 8º da CF/88 estabelece explicitamente que 'ninguém será obrigado a filiar-se ou a manter-se filiado a sindicato'.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art8",
+          "citedArticleId" : "cf88:art8",
+          "quote" : "V - ninguém será obrigado a filiar-se ou a manter-se filiado a sindicato;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art8",
+          "citedArticleId" : "cf88:art8",
+          "quote" : "I - a lei não poderá exigir autorização do Estado para a fundação de sindicato, ressalvado o registro no órgão competente, vedadas ao Poder Público a interferência e a intervenção na organização sindical;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art8", "cdc:art84", "cdc:art107", "cf88:art100", "cf88:art114" ]
+      },
+      "DENSE" : {
+        "question" : "Sou obrigado a me filiar ao sindicato da minha categoria?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não, você não é obrigado a se filiar ao sindicato. O artigo 8º do texto fornecido estabelece explicitamente que ninguém será obrigado a manter-se filiado.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art8",
+          "citedArticleId" : "cf88:art8",
+          "quote" : "V - ninguém será obrigado a filiar-se ou a manter-se filiado a sindicato;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art8",
+          "citedArticleId" : "cf88:art8",
+          "quote" : "I - a lei não poderá exigir autorização do Estado para a fundação de sindicato, ressalvado o registro no órgão competente, vedadas ao Poder Público a interferência e a intervenção na organização sindical;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art8", "cf88:art201", "cf88:art7", "cf88:art37", "cf88:art240" ]
+      }
+    }
+  }, {
+    "id" : "q47",
+    "type" : "single",
+    "gold" : [ "cf88:art37" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art111-a", "cf88:art114", "cf88:art111", "cf88:art7", "cf88:art115", "cf88:art112", "cf88:art116", "cf88:art113", "cf88:art103-b", "cf88:art37" ],
+      "DENSE" : [ "cf88:art37", "cf88:art39", "cf88:art29", "cf88:art38", "cf88:art167-c", "cf88:art129", "cf88:art31", "cf88:art93", "cf88:art41", "cf88:art167-a" ],
+      "HYBRID" : [ "cf88:art37", "cf88:art93", "cf88:art132", "cf88:art193", "cf88:art111-a", "cf88:art114", "cf88:art39", "cf88:art111", "cf88:art29", "cf88:art7" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Para trabalhar numa prefeitura preciso passar em concurso?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não contêm informações sobre a exigência de concurso para trabalho em prefeituras. Eles tratam da estrutura da Justiça do Trabalho, competência judicial e direitos trabalhistas gerais.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art111-a", "cf88:art114", "cf88:art111", "cf88:art7", "cf88:art115" ]
+      },
+      "DENSE" : {
+        "question" : "Para trabalhar numa prefeitura preciso passar em concurso?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, a investidura em cargo ou emprego público depende de aprovação prévia em concurso público de provas ou de provas e títulos, ressalvadas as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art37",
+          "citedArticleId" : "cf88:art37",
+          "quote" : "II - a investidura em cargo ou emprego público depende de aprovação prévia em concurso público de provas ou de provas e títulos, de acordo com a natureza e a complexidade do cargo ou emprego, na forma prevista em lei, ressalvadas as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art37",
+          "citedArticleId" : "cf88:art37",
+          "quote" : "IX - a lei estabelecerá os casos de contratação por tempo determinado para atender a necessidade temporária de excepcional interesse público;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art37", "cf88:art39", "cf88:art29", "cf88:art38", "cf88:art167-c" ]
+      }
+    }
+  }, {
+    "id" : "q48",
+    "type" : "single",
+    "gold" : [ "cf88:art41" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art114", "cf88:art37", "cf88:art213", "cf88:art111-a", "cf88:art40", "cf88:art128", "cf88:art39", "cf88:art115", "cf88:art61", "cf88:art111" ],
+      "DENSE" : [ "cf88:art41", "cf88:art37", "cf88:art142", "cf88:art169", "cf88:art14", "cf88:art167-a", "cf88:art56", "cf88:art38", "cf88:art235", "cf88:art93" ],
+      "HYBRID" : [ "cf88:art37", "cf88:art41", "cf88:art39", "cf88:art129", "cf88:art40", "cf88:art128", "cf88:art54", "cf88:art142", "cf88:art111-a", "cf88:art103-b" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Depois de quanto tempo de trabalho um servidor público concursado não pode mais ser demitido facilmente?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não há prazo mínimo de trabalho para que um servidor público concursado não possa ser demitido facilmente. A investidura em cargo público depende de aprovação prévia em concurso público, conforme o Art. 37, § 1º do texto fornecido. Contudo, a estabilidade após dois anos de efetivo exercício não é explicitamente mencionada nos artigos listados.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art37",
+          "citedArticleId" : "cf88:art37",
+          "quote" : "II - a investidura em cargo ou emprego público depende de aprovação prévia em concurso público de provas ou de provas e títulos, de acordo com a natureza e a complexidade do cargo ou emprego, na forma prevista em lei, ressalvadas as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art37",
+          "citedArticleId" : "cf88:art37",
+          "quote" : "III - o prazo de validade do concurso público será de até dois anos, prorrogável uma vez, por igual período;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art114", "cf88:art37", "cf88:art213", "cf88:art111-a", "cf88:art40" ]
+      },
+      "DENSE" : {
+        "question" : "Depois de quanto tempo de trabalho um servidor público concursado não pode mais ser demitido facilmente?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "O servidor público estável só perde o cargo mediante sentença judicial transitada em julgado, processo administrativo com ampla defesa ou avaliação periódica de desempenho. A estabilidade é adquirida após três anos de efetivo exercício para servidores nomeados por concurso público.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art41",
+          "citedArticleId" : "cf88:art41",
+          "quote" : "Art. 41. São estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art41",
+          "citedArticleId" : "cf88:art41",
+          "quote" : "§ 1º O servidor público estável só perderá o cargo: I - em virtude de sentença judicial transitada em julgado; II - mediante processo administrativo em que lhe seja assegurada ampla defesa; III - mediante procedimento de avaliação periódica de desempenho, na forma de lei complementar, assegurada ampla defesa.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art41", "cf88:art37", "cf88:art142", "cf88:art169", "cf88:art14" ]
+      }
+    }
+  }, {
+    "id" : "q49",
+    "type" : "single",
+    "gold" : [ "cf88:art114" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art103-b", "cf88:art102", "cf88:art119", "cf88:art120", "cf88:art103", "cf88:art111-a", "cf88:art92", "cf88:art73", "cf88:art125", "cf88:art36" ],
+      "DENSE" : [ "cf88:art114", "cf88:art100", "cdc:art104-b", "cf88:art71", "cf88:art96", "cf88:art116", "cf88:art135", "cf88:art93", "cf88:art102", "cdc:art104-a" ],
+      "HYBRID" : [ "cf88:art102", "cf88:art103", "cf88:art71", "cf88:art100", "cf88:art105", "cdc:art104-b", "cf88:art111", "cdc:art98", "cf88:art109", "cf88:art112" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Fui demitido e quero cobrar verbas do patrão. Em que tribunal a ação deve correr?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "A ação deve correr no Tribunal Regional do Trabalho da respectiva região. Os artigos fornecidos tratam da composição e competência do Supremo Tribunal Federal, Superior Tribunal de Justiça e Conselho Nacional de Justiça, não mencionando a competência para causas trabalhistas de demissão.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art103-b", "cf88:art102", "cf88:art119", "cf88:art120", "cf88:art103" ]
+      },
+      "DENSE" : {
+        "question" : "Fui demitido e quero cobrar verbas do patrão. Em que tribunal a ação deve correr?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "A ação deve correr na Justiça do Trabalho. Conforme o artigo 114 da Constituição Federal, compete à Justiça do Trabalho processar e julgar as ações oriundas da relação de trabalho, abrangidos os entes de direito público externo e da administração pública direta e indireta da União, dos Estados, do Distrito Federal e dos Municípios.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art114",
+          "citedArticleId" : "cf88:art114",
+          "quote" : "Compete à Justiça do Trabalho processar e julgar:\nI as ações oriundas da relação de trabalho, abrangidos os entes de direito público externo e da administração pública direta e indireta da União, dos Estados, do Distrito Federal e dos Municípios;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art114", "cf88:art100", "cdc:art104-b", "cf88:art71", "cf88:art96" ]
+      }
+    }
+  }, {
+    "id" : "q50",
+    "type" : "multi",
+    "gold" : [ "cf88:art134", "cf88:art5" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art37", "cf88:art103-b", "cf88:art103", "cf88:art213", "cf88:art60", "cf88:art103-a", "cf88:art167-a", "cf88:art85", "cf88:art97", "cf88:art114" ],
+      "DENSE" : [ "cdc:art81", "cdc:art82", "cf88:art5", "cf88:art226", "cf88:art199", "cdc:art100", "cf88:art133", "cdc:art91", "cf88:art8", "cf88:art131" ],
+      "HYBRID" : [ "cf88:art103", "cf88:art5", "cf88:art99", "cf88:art103-b", "cf88:art127", "cf88:art37", "cdc:art81", "cdc:art82", "cf88:art213", "cf88:art226" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Não tenho dinheiro para pagar advogado. Alguém pode me defender de graça?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos tratam exclusivamente de limites remuneratórios (art. 37) e da composição e atribuições do Conselho Nacional de Justiça (art. 103-B), sem conter informações sobre a existência de defensoria pública gratuita para quem não possui recursos financeiros. Portanto, com base estritamente no texto apresentado, não é possível responder à sua pergunta.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art37", "cf88:art103-b", "cf88:art103", "cf88:art213", "cf88:art60" ]
+      },
+      "DENSE" : {
+        "question" : "Não tenho dinheiro para pagar advogado. Alguém pode me defender de graça?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, o Estado prestará assistência jurídica integral e gratuita aos que comprovarem insuficiência de recursos. Além disso, associações legalmente constituídas há pelo menos um ano podem defender interesses coletivos, incluindo a defesa dos consumidores.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "LXXIV - o Estado prestará assistência jurídica integral e gratuita aos que comprovarem insuficiência de recursos;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art82",
+          "citedArticleId" : "cdc:art82",
+          "quote" : "IV - as associações legalmente constituídas há pelo menos um ano e que incluam entre seus fins institucionais a defesa dos interesses e direitos protegidos por este código, dispensada a autorização assemblear.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art81", "cdc:art82", "cf88:art5", "cf88:art226", "cf88:art199" ]
+      }
+    }
+  }, {
+    "id" : "q51",
+    "type" : "single",
+    "gold" : [ "cf88:art5" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art5", "cf88:art136", "cdc:art37", "cdc:art3", "cf88:art199", "cf88:art74", "cf88:art8", "cf88:art226", "cf88:art71", "cf88:art201" ],
+      "DENSE" : [ "cf88:art136", "cf88:art5", "cf88:art53", "cf88:art62", "cdc:art71", "cf88:art102", "cf88:art103", "cdc:art80", "cf88:art109", "cf88:art84" ],
+      "HYBRID" : [ "cf88:art5", "cf88:art136", "cf88:art53", "cf88:art226", "cf88:art134", "cdc:art37", "cdc:art3", "cf88:art62", "cf88:art199", "cdc:art71" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Meu parente foi preso e acho que a prisão é ilegal. Que instrumento rápido existe para soltá-lo?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Para soltar seu parente em caso de prisão ilegal, o instrumento rápido é o habeas-corpus. A lei garante que 'conceder-se-á \"habeas-corpus\" sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder'. Além disso, a prisão ilegal será imediatamente relaxada pela autoridade judiciária.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "LXVIII - conceder-se-á \"habeas-corpus\" sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "LXV - a prisão ilegal será imediatamente relaxada pela autoridade judiciária;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art5", "cf88:art136", "cdc:art37", "cdc:art3", "cf88:art199" ]
+      },
+      "DENSE" : {
+        "question" : "Meu parente foi preso e acho que a prisão é ilegal. Que instrumento rápido existe para soltá-lo?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Para soltá-lo rapidamente, você deve requerer o 'habeas-corpus', que é concedido sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder. Além disso, a prisão ilegal será imediatamente relaxada pela autoridade judiciária.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "LXVIII - conceder-se-á \"habeas-corpus\" sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "LXV - a prisão ilegal será imediatamente relaxada pela autoridade judiciária;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art136", "cf88:art5", "cf88:art53", "cf88:art62", "cdc:art71" ]
+      }
+    }
+  }, {
+    "id" : "q52",
+    "type" : "single",
+    "gold" : [ "cf88:art226" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art5", "cf88:art226", "cf88:art14", "cf88:art201", "cf88:art55", "cf88:art40", "cf88:art222", "cf88:art230", "cf88:art100", "cf88:art199" ],
+      "DENSE" : [ "cf88:art226", "cf88:art227", "cf88:art230", "cf88:art183", "cf88:art191", "cf88:art229", "cf88:art5", "cdc:art104-b", "cf88:art228", "cf88:art2" ],
+      "HYBRID" : [ "cf88:art226", "cf88:art230", "cf88:art5", "cf88:art235", "cf88:art14", "cf88:art228", "cf88:art166", "cf88:art65", "cf88:art53", "cf88:art95" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Um casal que mora junto há anos sem casar no papel é visto como família?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "A Constituição não define explicitamente o conceito de 'família' para casais que moram juntos sem casamento formal nos artigos fornecidos. O artigo 226, embora trate da família, não detalha essa situação específica no texto disponibilizado. Os artigos citados focam em direitos individuais e sociais gerais.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art5", "cf88:art226", "cf88:art14", "cf88:art201", "cf88:art55" ]
+      },
+      "DENSE" : {
+        "question" : "Um casal que mora junto há anos sem casar no papel é visto como família?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, a lei reconhece a união estável entre homem e mulher como entidade familiar. O artigo 226, § 3º afirma que 'Para efeito da proteção do Estado, é reconhecida a união estável entre o homem e a mulher como entidade familiar'. Além disso, o parágrafo 1º do mesmo artigo estabelece que 'A família, base da sociedade, tem especial proteção do Estado'. Portanto, um casal morando junto sem casar civilmente pode ser considerado família se configurada a união estável.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art226",
+          "citedArticleId" : "cf88:art226",
+          "quote" : "Para efeito da proteção do Estado, é reconhecida a união estável entre o homem e a mulher como entidade familiar",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art226",
+          "citedArticleId" : "cf88:art226",
+          "quote" : "A família, base da sociedade, tem especial proteção do Estado",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art226", "cf88:art227", "cf88:art230", "cf88:art183", "cf88:art191" ]
+      }
+    }
+  }, {
+    "id" : "q53",
+    "type" : "single",
+    "gold" : [ "cf88:art77" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art77", "cf88:art80", "cf88:art66", "cf88:art79", "cf88:art81", "cf88:art78", "cf88:art86", "cf88:art49", "cf88:art82", "cf88:art89" ],
+      "DENSE" : [ "cf88:art77", "cf88:art81", "cf88:art14", "cf88:art28", "cf88:art80", "cf88:art78", "cf88:art16", "cf88:art119", "cf88:art82", "cf88:art79" ],
+      "HYBRID" : [ "cf88:art77", "cf88:art81", "cf88:art80", "cf88:art78", "cf88:art79", "cf88:art82", "cf88:art14", "cf88:art86", "cf88:art119", "cf88:art120" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Se ninguém ganhar a eleição para presidente na primeira rodada, o que acontece?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Se nenhum candidato alcançar maioria absoluta na primeira votação, far-se-á nova eleição em até vinte dias após a proclamação do resultado, concorrendo os dois candidatos mais votados e considerando-se eleito aquele que obtiver a maioria dos votos válidos.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art77",
+          "citedArticleId" : "cf88:art77",
+          "quote" : "§ 3º Se nenhum candidato alcançar maioria absoluta na primeira votação, far-se-á nova eleição em até vinte dias após a proclamação do resultado, concorrendo os dois candidatos mais votados e considerando-se eleito aquele que obtiver a maioria dos votos válidos.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art77", "cf88:art80", "cf88:art66", "cf88:art79", "cf88:art81" ]
+      },
+      "DENSE" : {
+        "question" : "Se ninguém ganhar a eleição para presidente na primeira rodada, o que acontece?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Se nenhum candidato alcançar maioria absoluta na primeira votação, far-se-á nova eleição em até vinte dias após a proclamação do resultado, concorrendo os dois candidatos mais votados e considerando-se eleito aquele que obtiver a maioria dos votos válidos.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art77",
+          "citedArticleId" : "cf88:art77",
+          "quote" : "§ 3º Se nenhum candidato alcançar maioria absoluta na primeira votação, far-se-á nova eleição em até vinte dias após a proclamação do resultado, concorrendo os dois candidatos mais votados e considerando-se eleito aquele que obtiver a maioria dos votos válidos.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art77", "cf88:art81", "cf88:art14", "cf88:art28", "cf88:art80" ]
+      }
+    }
+  }, {
+    "id" : "q54",
+    "type" : "single",
+    "gold" : [ "cf88:art19" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art37", "cf88:art136", "cf88:art137", "cf88:art138", "cf88:art125", "cf88:art60", "cf88:art50", "cf88:art141", "cf88:art18", "cf88:art155" ],
+      "DENSE" : [ "cf88:art19", "cf88:art150", "cf88:art226", "cf88:art155", "cf88:art164", "cf88:art216", "cf88:art13", "cf88:art198", "cf88:art212-a", "cf88:art212" ],
+      "HYBRID" : [ "cf88:art13", "cf88:art213", "cf88:art50", "cf88:art37", "cf88:art19", "cf88:art136", "cf88:art150", "cf88:art226", "cf88:art137", "cf88:art155" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "O Estado brasileiro pode ter uma religião oficial e dar dinheiro a uma igreja?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Não há menção na Constituição Federal aos artigos fornecidos sobre a existência de religião oficial ou financiamento estatal direto a igrejas. Os textos citados tratam exclusivamente de limites remuneratórios (art. 37), estado de defesa e sítio (arts. 136, 137, 138) e organização da justiça estadual (art. 125). Portanto, com base estritamente nos artigos fornecidos, não é possível responder à pergunta.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art37", "cf88:art136", "cf88:art137", "cf88:art138", "cf88:art125" ]
+      },
+      "DENSE" : {
+        "question" : "O Estado brasileiro pode ter uma religião oficial e dar dinheiro a uma igreja?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Não, o Estado brasileiro não pode ter uma religião oficial nem dar dinheiro a uma igreja. O Artigo 19 veda à União, Estados, DF e Municípios 'estabelecer cultos religiosos ou igrejas, subvencioná-los, embaraçar-lhes o funcionamento ou manter com eles ou seus representantes relações de dependência ou aliança'. Além disso, o Artigo 150 proíbe a instituição de impostos sobre 'entidades religiosas e templos de qualquer culto', inclusive suas organizações assistenciais e beneficentes. A colaboração de interesse público é ressalvada apenas na forma da lei.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art19",
+          "citedArticleId" : "cf88:art19",
+          "quote" : "I - estabelecer cultos religiosos ou igrejas, subvencioná-los, embaraçar-lhes o funcionamento ou manter com eles ou seus representantes relações de dependência ou aliança, ressalvada, na forma da lei, a colaboração de interesse público;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art150",
+          "citedArticleId" : "cf88:art150",
+          "quote" : "VI - instituir impostos sobre:\na) patrimônio, renda ou serviços, uns dos outros;\nb) entidades religiosas e templos de qualquer culto, inclusive suas organizações assistenciais e beneficentes;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art19", "cf88:art150", "cf88:art226", "cf88:art155", "cf88:art164" ]
+      }
+    }
+  }, {
+    "id" : "q55",
+    "type" : "single",
+    "gold" : [ "cf88:art62" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cf88:art62", "cf88:art57", "cf88:art66", "cf88:art49", "cf88:art77", "cf88:art71", "cf88:art84", "cf88:art83", "cf88:art68", "cf88:art80" ],
+      "DENSE" : [ "cf88:art62", "cf88:art138", "cf88:art84", "cf88:art66", "cf88:art83", "cf88:art64", "cf88:art137", "cf88:art57", "cf88:art49", "cf88:art61" ],
+      "HYBRID" : [ "cf88:art62", "cf88:art66", "cf88:art57", "cf88:art84", "cf88:art83", "cf88:art49", "cf88:art138", "cf88:art64", "cf88:art77", "cf88:art78" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "O presidente pode editar uma medida provisória e por quanto tempo ela vale sem votação do Congresso?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "O Presidente da República pode editar medidas provisórias com força de lei. Elas perderão eficácia se não forem convertidas em lei no prazo de sessenta dias, prorrogável uma vez por igual período.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art62",
+          "citedArticleId" : "cf88:art62",
+          "quote" : "§ 3º As medidas provisórias, ressalvado o disposto nos §§ 11 e 12 perderão eficácia, desde a edição, se não forem convertidas em lei no prazo de sessenta dias, prorrogável, nos termos do § 7º, uma vez por igual período",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art62",
+          "citedArticleId" : "cf88:art62",
+          "quote" : "§ 7º Prorrogar-se-á uma única vez por igual período a vigência de medida provisória que, no prazo de sessenta dias, contado de sua publicação, não tiver a sua votação encerrada nas duas Casas do Congresso Nacional.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art62", "cf88:art57", "cf88:art66", "cf88:art49", "cf88:art77" ]
+      },
+      "DENSE" : {
+        "question" : "O presidente pode editar uma medida provisória e por quanto tempo ela vale sem votação do Congresso?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "O Presidente da República pode editar medidas provisórias com força de lei em casos de relevância e urgência. Elas perderão eficácia se não forem convertidas em lei no prazo de sessenta dias, prorrogável uma vez por igual período.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art62",
+          "citedArticleId" : "cf88:art62",
+          "quote" : "Art. 62. Em caso de relevância e urgência, o Presidente da República poderá adotar medidas provisórias, com força de lei...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art62",
+          "citedArticleId" : "cf88:art62",
+          "quote" : "§ 3º As medidas provisórias, ressalvado o disposto nos §§ 11 e 12 perderão eficácia, desde a edição, se não forem convertidas em lei no prazo de sessenta dias, prorrogável, nos termos do § 7º, uma vez por igual período...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art62",
+          "citedArticleId" : "cf88:art62",
+          "quote" : "§ 7º Prorrogar-se-á uma única vez por igual período a vigência de medida provisória que, no prazo de sessenta dias, contado de sua publicação, não tiver a sua votação encerrada nas duas Casas do Congresso Nacional.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art62", "cf88:art138", "cf88:art84", "cf88:art66", "cf88:art83" ]
+      }
+    }
+  }, {
+    "id" : "q56",
+    "type" : "multi",
+    "gold" : [ "cf88:art5", "cf88:art170", "cdc:art1" ],
+    "retrieved" : {
+      "KEYWORD" : [ "cdc:art54-d", "cf88:art5", "cdc:art106", "cdc:art104-c", "cdc:art51", "cdc:art43", "cdc:art4", "cf88:art14", "cdc:art39", "cdc:art54-b" ],
+      "DENSE" : [ "cdc:art1", "cdc:art44", "cdc:art83", "cdc:art82", "cdc:art102", "cdc:art106", "cdc:art81", "cdc:art4", "cdc:art7", "cdc:art105" ],
+      "HYBRID" : [ "cdc:art106", "cdc:art4", "cf88:art5", "cdc:art54-d", "cdc:art43", "cdc:art5", "cdc:art54-g", "cdc:art104-c", "cdc:art54-b", "cdc:art117" ]
+    },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "O governo garante a defesa do consumidor na lei maior do país, e existe um código específico para isso?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, a Constituição Federal garante que o Estado promoverá a defesa do consumidor. Além disso, existe um Código de Defesa do Consumidor específico para regulamentar esses direitos.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXXII - o Estado promoverá, na forma da lei, a defesa do consumidor;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art54-d",
+          "citedArticleId" : "cdc:art54-d",
+          "quote" : "Art. 54-D. Na oferta de crédito, previamente à contratação, o fornecedor ou o intermediário deverá, entre outras condutas:",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art54-d", "cf88:art5", "cdc:art106", "cdc:art104-c", "cdc:art51" ]
+      },
+      "DENSE" : {
+        "question" : "O governo garante a defesa do consumidor na lei maior do país, e existe um código específico para isso?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, o Código de Defesa do Consumidor (CDC) estabelece normas específicas para a proteção e defesa do consumidor. O artigo 1º confirma que o código foi criado com base na Constituição Federal para essa finalidade. Além disso, o artigo 44 determina que órgãos públicos devem manter cadastros atualizados de reclamações contra fornecedores, reforçando o papel estatal na defesa desses direitos.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cdc:art1",
+          "citedArticleId" : "cdc:art1",
+          "quote" : "Art. 1° O presente código estabelece normas de proteção e defesa do consumidor, de ordem pública e interesse social, nos termos dos arts. 5°, inciso XXXII, 170, inciso V, da Constituição Federal e art. 48 de suas Disposições Transitórias.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art44",
+          "citedArticleId" : "cdc:art44",
+          "quote" : "Art. 44. Os órgãos públicos de defesa do consumidor manterão cadastros atualizados de reclamações fundamentadas contra fornecedores de produtos e serviços, devendo divulgá-lo pública e anualmente.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cdc:art1", "cdc:art44", "cdc:art83", "cdc:art82", "cdc:art102" ]
+      }
+    }
+  }, {
+    "id" : "q57",
+    "type" : "unanswerable",
+    "gold" : [ ],
+    "retrieved" : { },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Quantos pontos perco na carteira de motorista se eu avançar o sinal vermelho?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "insufficient",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art212-a", "cf88:art218", "cdc:art21", "cdc:art41", "cdc:art42" ]
+      },
+      "DENSE" : {
+        "question" : "Quantos pontos perco na carteira de motorista se eu avançar o sinal vermelho?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "insufficient",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cdc:art63", "cdc:art57", "cdc:art73", "cdc:art64", "cdc:art72" ]
+      }
+    }
+  }, {
+    "id" : "q58",
+    "type" : "unanswerable",
+    "gold" : [ ],
+    "retrieved" : { },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Quanto tempo de aviso prévio o inquilino precisa dar ao dono antes de sair do imóvel alugado?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não contêm informações sobre o prazo de aviso prévio para inquilinos. O artigo 156 trata de impostos municipais, e os artigos 40, 201, 184 e 142 referem-se a previdência social, servidores públicos e forças armadas, respectivamente.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art156", "cf88:art40", "cf88:art201", "cf88:art184", "cf88:art142" ]
+      },
+      "DENSE" : {
+        "question" : "Quanto tempo de aviso prévio o inquilino precisa dar ao dono antes de sair do imóvel alugado?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não contêm informações sobre o prazo de aviso prévio para inquilinos. O Código de Defesa do Consumidor (CDC) trata de orçamento, crédito e usucapião, mas não regula especificamente a locação residencial ou o aviso de saída. Portanto, com base estritamente nos textos fornecidos, é impossível responder à pergunta.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cdc:art40", "cdc:art54-b", "cdc:art52", "cdc:art54-d", "cf88:art183" ]
+      }
+    }
+  }, {
+    "id" : "q59",
+    "type" : "unanswerable",
+    "gold" : [ ],
+    "retrieved" : { },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Posso fazer um testamento deixando todos os meus bens para um amigo e nada para os meus filhos?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Sim, você pode fazer um testamento deixando todos os seus bens para um amigo e nada para os filhos. O Art. 5º garante o direito de herança (XXX), mas não impede a disposição testamentária livre do autor sobre seus bens.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXX - são a todos assegurados, independentemente do pagamento de taxas:",
+          "status" : "FUZZY"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXX - o Estado promoverá, na forma da lei, a defesa do consumidor;",
+          "status" : "FUZZY"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXX - são a todos assegurados, independentemente do pagamento de taxas:",
+          "status" : "FUZZY"
+        } ],
+        "retrievedIds" : [ "cf88:art156-a", "cf88:art5", "cf88:art156", "cf88:art231", "cf88:art155" ]
+      },
+      "DENSE" : {
+        "question" : "Posso fazer um testamento deixando todos os meus bens para um amigo e nada para os meus filhos?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Sim, você pode fazer um testamento deixando todos os seus bens para um amigo e nada para os filhos. O direito de herança é garantido (cf88:art5), mas a sucessão de bens de estrangeiros situados no País será regulada pela lei brasileira em benefício do cônjuge ou dos filhos brasileiros, sempre que não lhes seja mais favorável a lei pessoal do 'de cujus' (cf88:art5). No entanto, para nacionais, o testador pode dispor livremente de seus bens, respeitando apenas as regras legais sobre herança. A propriedade atenderá a sua função social (cf88:art5), mas isso não impede a disposição testamentária.",
+        "insufficient" : false,
+        "failed" : false,
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXX - é garantido o direito de herança;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXII - é garantido o direito de propriedade;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXIII - a propriedade atenderá a sua função social;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art5", "cf88:art54", "cf88:art227", "cf88:art199", "cdc:art53" ]
+      }
+    }
+  }, {
+    "id" : "q60",
+    "type" : "unanswerable",
+    "gold" : [ ],
+    "retrieved" : { },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Como funciona o pedido de recuperação judicial de uma empresa endividada?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não descrevem o funcionamento do pedido de recuperação judicial. Eles tratam de exploração estatal (Art. 173), propriedade de meios de comunicação (Art. 222), superendividamento e plano compulsório (Art. 104-B), impedimentos políticos para parlamentares (Art. 54) e aporte de recursos a previdência privada (Art. 202). Portanto, não há base nos textos citados para responder à pergunta sobre recuperação judicial.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art173", "cf88:art222", "cdc:art104-b", "cf88:art54", "cf88:art202" ]
+      },
+      "DENSE" : {
+        "question" : "Como funciona o pedido de recuperação judicial de uma empresa endividada?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos tratam exclusivamente de superendividamento de consumidores pessoas naturais e não abordam o pedido de recuperação judicial de empresas. Portanto, as informações solicitadas não estão disponíveis no texto.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cdc:art104-b", "cdc:art104-a", "cdc:art104-c", "cf88:art100", "cdc:art103" ]
+      }
+    }
+  }, {
+    "id" : "q61",
+    "type" : "unanswerable",
+    "gold" : [ ],
+    "retrieved" : { },
+    "answers" : {
+      "KEYWORD" : {
+        "question" : "Até que dia posso pagar o IPVA do meu carro com desconto?",
+        "mode" : "KEYWORD",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não contêm informações sobre prazos de pagamento do IPVA ou descontos aplicáveis a esse tributo. O texto aborda posse de cargos, contratos de compra e venda, organização municipal e regras de pagamento de precatórios, mas não menciona o IPVA.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art78", "cdc:art53", "cf88:art29", "cf88:art28", "cf88:art100" ]
+      },
+      "DENSE" : {
+        "question" : "Até que dia posso pagar o IPVA do meu carro com desconto?",
+        "mode" : "DENSE",
+        "provider" : "ollama",
+        "answer" : "Os artigos fornecidos não contêm informações sobre prazos para pagamento do IPVA com desconto. O texto aborda regras gerais de tributação, alíquotas e regimes específicos, mas não menciona datas limite ou benefícios de pagamento antecipado para o IPVA.",
+        "insufficient" : true,
+        "failed" : false,
+        "citations" : [ ],
+        "retrievedIds" : [ "cf88:art156-a", "cf88:art155", "cf88:art159", "cf88:art162", "cf88:art160" ]
+      }
+    }
+  } ]
+}
