@@ -53,12 +53,8 @@ public class RecordingEmbedder {
         out[i] = got.get(j).vector();
         rec.put(Recordings.key(modelId, texts.get(i)), out[i]);
       }
+      rec.save();
     }
     return List.of(out);
-  }
-
-  /** Persists new recordings; a no-op outside record mode. */
-  public void save() {
-    if (record) rec.save();
   }
 }

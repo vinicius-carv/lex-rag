@@ -39,7 +39,6 @@ public class Ingest {
     List<float[]> vectors = embedder.embedAll(chunks.stream().map(Chunk::embedText).toList());
     repo.reset();
     for (int i = 0; i < chunks.size(); i++) repo.insert(chunks.get(i), vectors.get(i));
-    embedder.save();
     log.info("ingested {} chunks from {} articles", chunks.size(), articles.size());
   }
 }

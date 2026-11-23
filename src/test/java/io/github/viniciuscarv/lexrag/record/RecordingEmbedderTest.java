@@ -36,7 +36,7 @@ class RecordingEmbedderTest {
   }
 
   @Test
-  void recordModeCallsLiveAndStores() {
+  void recordModePersistsWithoutExplicitSave() {
     Path f = dir.resolve("r.json.gz");
     float[] vec = new float[1024];
     Arrays.fill(vec, 0.5f);
@@ -48,9 +48,8 @@ class RecordingEmbedderTest {
           }
         };
     var e = new RecordingEmbedder(fake, "m", new Recordings(f), true);
-    assertThat(e.embedAll(List.of("a", "b"))).hasSize(2);
-    e.save();
-    assertThat(new Recordings(f).get(Recordings.key("m", "b"), float[].class))
+    assertThat(e.embed("x")).hasSize(1024);
+    assertThat(new Recordings(f).get(Recordings.key("m", "x"), float[].class))
         .hasValueSatisfying(x -> assertThat(x).hasSize(1024).isEqualTo(vec));
   }
 }
