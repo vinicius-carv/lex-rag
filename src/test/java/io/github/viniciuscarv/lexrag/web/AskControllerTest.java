@@ -28,11 +28,11 @@ class AskControllerTest {
   @Test
   void answers() throws Exception {
     var cite = new VerifiedCitation("cdc:art49", "cdc:art49", "sete dias", CitationStatus.VERIFIED);
-    when(answerer.answer(eq("prazo?"), eq(Mode.HYBRID)))
+    when(answerer.answer(eq("prazo?"), eq(Mode.SYSTEM)))
         .thenReturn(
             new Answer(
                 "prazo?",
-                Mode.HYBRID,
+                Mode.SYSTEM,
                 "ollama",
                 "Sete dias.",
                 false,

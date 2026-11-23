@@ -133,3 +133,15 @@ English, one pt-BR line under the title. Sections: what it does, how citations a
 - Integration-test mechanism (Testcontainers vs CI service container).
 - Exact prompt wording (Portuguese, versioned as `v1`).
 - Project name `lex-rag` and folder `C:\Users\vinic\Documents\projects\lex-rag` (assistant's call; easy to rename before publishing).
+
+## Amendment 2026-11-23
+
+Measured on the real corpus (56 answerable questions, bge-m3, replay):
+
+| Mode | Hit@1 | Recall@5 | MRR@10 |
+|---|---|---|---|
+| KEYWORD | 0.214 | 0.417 | 0.324 |
+| DENSE | 0.661 | 0.827 | 0.758 |
+| HYBRID (RRF k=60) | 0.393 | 0.702 | 0.544 |
+
+Equal-weight RRF lets the weak keyword list pull noise in, so hybrid loses to dense. The shipped system mode is therefore DENSE (`Mode.SYSTEM`), not HYBRID. Hybrid stays as a reported retrieval row; RRF weights and k are not tuned. The regression gate keys on the system mode (`systemRecall5` in `corpus/baseline.json`). This choice was made after seeing results on the same eval set; the README must disclose it.

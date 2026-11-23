@@ -37,7 +37,7 @@ public class LexRagApplication {
     boolean ask = a.contains("--ask");
     if (ask) {
       p.put("lexrag.ask", opt(a, "--ask"));
-      p.put("lexrag.ask-mode", Objects.toString(opt(a, "--mode"), "hybrid"));
+      p.put("lexrag.ask-mode", Objects.toString(opt(a, "--mode"), Mode.SYSTEM.name().toLowerCase(Locale.ROOT)));
     }
     boolean eval = a.contains("--eval");
     if (eval) {

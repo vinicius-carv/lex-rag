@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -41,7 +42,7 @@ public class EvalRunner {
     this.questions = questions;
   }
 
-  /** Retrieval rows for every mode; answer rows only for HYBRID and KEYWORD (the generation baseline). */
+  /** Retrieval rows for every mode; answer rows only for Mode.SYSTEM and KEYWORD (the generation baseline). */
   public EvalReport run(Set<Mode> modes, boolean answers) {
     Map<String, Map<String, Object>> perQuestion = new LinkedHashMap<>();
     for (Question q : questions) {
@@ -71,7 +72,7 @@ public class EvalRunner {
     List<AnswerRow> rows = new ArrayList<>();
     if (answers) {
       for (Mode mode : EnumSet.copyOf(modes)) {
-        if (mode == Mode.DENSE) continue;
+        if (mode != Mode.SYSTEM && mode != Mode.KEYWORD) continue;
         Map<String, Answer> byId = new LinkedHashMap<>();
         for (Question q : questions) {
           Answer a = answerer.answer(q.question(), mode);
@@ -79,7 +80,7 @@ public class EvalRunner {
           nested(perQuestion.get(q.id()), "answers").put(mode.name(), a);
         }
         String provider = byId.values().iterator().next().provider();
-        Double judged = mode == Mode.HYBRID && judge != null ? judgeSupported(byId.values()) : null;
+        Double judged = mode == Mode.SYSTEM && judge != null ? judgeSupported(byId.values()) : null;
         rows.add(Metrics.aggregate(provider, mode, questions, byId, judged));
       }
     }
@@ -119,7 +120,7 @@ public class EvalRunner {
   }
 
   /**
-   * Fails when hybrid Recall@5 or (if answers were run) the ollama/hybrid supported rate fall more than 0.02
+   * Fails when system-mode Recall@5 or (if answers were run) the ollama/system-mode supported rate fall more than 0.02
    * below the baseline, or when a row to gate is missing.
    */
   public static boolean gate(EvalReport r, Path baseline, boolean answersRun) {
@@ -130,25 +131,26 @@ public class EvalRunner {
       throw new UncheckedIOException(e);
     }
     boolean ok = true;
-    if (r.retrieval().stream().noneMatch(x -> x.mode() == Mode.HYBRID)) {
-      System.out.println("GATE FAIL: no hybrid retrieval row to gate; run with --mode hybrid or all");
+    String sys = Mode.SYSTEM.name().toLowerCase(Locale.ROOT);
+    if (r.retrieval().stream().noneMatch(x -> x.mode() == Mode.SYSTEM)) {
+      System.out.printf("GATE FAIL: no %s retrieval row to gate; run with --mode %s or all%n", sys, sys);
       ok = false;
     }
-    if (answersRun && r.answers().stream().noneMatch(x -> x.mode() == Mode.HYBRID && x.provider().equals("ollama"))) {
-      System.out.println("GATE FAIL: no ollama/hybrid answer row to gate; use --provider ollama or --retrieval-only");
+    if (answersRun && r.answers().stream().noneMatch(x -> x.mode() == Mode.SYSTEM && x.provider().equals("ollama"))) {
+      System.out.printf("GATE FAIL: no ollama/%s answer row to gate; use --provider ollama or --retrieval-only%n", sys);
       ok = false;
     }
-    double minRecall = b.get("hybridRecall5").asDouble() - TOLERANCE;
+    double minRecall = b.get("systemRecall5").asDouble() - TOLERANCE;
     for (RetrievalRow row : r.retrieval()) {
-      if (row.mode() == Mode.HYBRID && row.recall5() < minRecall - 1e-9) {
-        System.out.printf("GATE FAIL: hybrid recall@5 %.3f < %.3f%n", row.recall5(), minRecall);
+      if (row.mode() == Mode.SYSTEM && row.recall5() < minRecall - 1e-9) {
+        System.out.printf("GATE FAIL: %s recall@5 %.3f < %.3f%n", sys, row.recall5(), minRecall);
         ok = false;
       }
     }
     double minSupported = b.get("supportedRate").asDouble() - TOLERANCE;
     for (AnswerRow row : r.answers()) {
-      if (row.mode() == Mode.HYBRID && row.provider().equals("ollama") && row.supportedRate() < minSupported - 1e-9) {
-        System.out.printf("GATE FAIL: ollama/hybrid supported rate %.3f < %.3f%n", row.supportedRate(), minSupported);
+      if (row.mode() == Mode.SYSTEM && row.provider().equals("ollama") && row.supportedRate() < minSupported - 1e-9) {
+        System.out.printf("GATE FAIL: ollama/%s supported rate %.3f < %.3f%n", sys, row.supportedRate(), minSupported);
         ok = false;
       }
     }

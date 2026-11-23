@@ -19,6 +19,12 @@ class LexRagApplicationTest {
   }
 
   @Test
+  void askDefaultsToSystemMode() {
+    assertThat(LexRagApplication.properties(List.of("--ask", "prazo?")))
+        .containsEntry("lexrag.ask-mode", "dense");
+  }
+
+  @Test
   void ingestIngests() {
     assertThat(LexRagApplication.properties(List.of("--ingest", "--record")))
         .containsEntry("lexrag.ingest", "true")

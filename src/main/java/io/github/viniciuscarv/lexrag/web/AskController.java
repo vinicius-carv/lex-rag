@@ -31,7 +31,7 @@ public class AskController {
 
   private static Mode parseMode(String s) {
     try {
-      return s == null || s.isBlank() ? Mode.HYBRID : Mode.valueOf(s.toUpperCase(Locale.ROOT));
+      return s == null || s.isBlank() ? Mode.SYSTEM : Mode.valueOf(s.toUpperCase(Locale.ROOT));
     } catch (IllegalArgumentException e) {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "unknown mode: " + s);
     }

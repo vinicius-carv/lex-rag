@@ -24,15 +24,15 @@ class EvalRunnerTest {
 
   private EvalReport report(double recall5, double supported) {
     return new EvalReport(
-        List.of(new RetrievalRow(Mode.HYBRID, 0, recall5, 0, 1)),
-        List.of(new AnswerRow("ollama", Mode.HYBRID, 0, supported, 0, 0, 0, 0, 1, null)),
+        List.of(new RetrievalRow(Mode.SYSTEM, 0, recall5, 0, 1)),
+        List.of(new AnswerRow("ollama", Mode.SYSTEM, 0, supported, 0, 0, 0, 0, 1, null)),
         List.of());
   }
 
   @Test
   void gateToleratesTwoPointsAndFailsBeyond() throws Exception {
     Path b = dir.resolve("baseline.json");
-    Files.writeString(b, "{\"hybridRecall5\":0.80,\"supportedRate\":0.70}");
+    Files.writeString(b, "{\"systemRecall5\":0.80,\"supportedRate\":0.70}");
     assertThat(EvalRunner.gate(report(0.79, 0.69), b, true)).isTrue();
     assertThat(EvalRunner.gate(report(0.77, 0.69), b, true)).isFalse();
     assertThat(EvalRunner.gate(report(0.79, 0.67), b, true)).isFalse();
@@ -41,12 +41,12 @@ class EvalRunnerTest {
   @Test
   void gateFailsOnMissingRowsButRetrievalOnlySkipsAnswers() throws Exception {
     Path b = dir.resolve("baseline.json");
-    Files.writeString(b, "{\"hybridRecall5\":0.80,\"supportedRate\":0.70}");
+    Files.writeString(b, "{\"systemRecall5\":0.80,\"supportedRate\":0.70}");
     var retrievalOnly = new EvalReport(report(0.80, 0).retrieval(), List.of(), List.of());
     assertThat(EvalRunner.gate(retrievalOnly, b, false)).isTrue();
     assertThat(EvalRunner.gate(retrievalOnly, b, true)).isFalse();
-    var noHybrid = new EvalReport(List.of(new RetrievalRow(Mode.KEYWORD, 0, 1, 0, 1)), List.of(), List.of());
-    assertThat(EvalRunner.gate(noHybrid, b, false)).isFalse();
+    var noSystem = new EvalReport(List.of(new RetrievalRow(Mode.KEYWORD, 0, 1, 0, 1)), List.of(), List.of());
+    assertThat(EvalRunner.gate(noSystem, b, false)).isFalse();
   }
 
   @Test
@@ -54,9 +54,9 @@ class EvalRunnerTest {
     RecordingChat chat = mock(RecordingChat.class);
     when(chat.complete(anyString())).thenReturn("{\"supported\":true}", "{\"supported\":false}");
     var cite = new VerifiedCitation("g:art1", "g:art1", "trecho", CitationStatus.VERIFIED);
-    Answer ok = new Answer("q", Mode.HYBRID, "ollama", "a", false, false, List.of(cite), List.of());
-    Answer abstained = new Answer("q", Mode.HYBRID, "ollama", "", true, false, List.of(), List.of());
-    Answer failed = new Answer("q", Mode.HYBRID, "ollama", "", false, true, List.of(), List.of());
+    Answer ok = new Answer("q", Mode.SYSTEM, "ollama", "a", false, false, List.of(cite), List.of());
+    Answer abstained = new Answer("q", Mode.SYSTEM, "ollama", "", true, false, List.of(), List.of());
+    Answer failed = new Answer("q", Mode.SYSTEM, "ollama", "", false, true, List.of(), List.of());
     var runner = new EvalRunner(null, null, chat, List.of());
     assertThat(runner.judgeSupported(List.of(ok, abstained, failed, ok))).isEqualTo(0.5);
   }

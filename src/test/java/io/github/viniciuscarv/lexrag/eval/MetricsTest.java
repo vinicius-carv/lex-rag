@@ -28,7 +28,7 @@ class MetricsTest {
   }
 
   private static Answer ans(boolean insufficient, boolean failed, VerifiedCitation... cs) {
-    return new Answer("q", Mode.HYBRID, "ollama", "", insufficient, failed, List.of(cs), List.of());
+    return new Answer("q", Mode.SYSTEM, "ollama", "", insufficient, failed, List.of(cs), List.of());
   }
 
   @Test
@@ -47,7 +47,7 @@ class MetricsTest {
             "q3", ans(false, true),
             "q4", ans(true, false),
             "q5", ans(true, false));
-    var r = Metrics.aggregate("ollama", Mode.HYBRID, qs, answers, null);
+    var r = Metrics.aggregate("ollama", Mode.SYSTEM, qs, answers, null);
     assertThat(r.citationPrecision()).isCloseTo(2.0 / 3, within(1e-9));
     assertThat(r.supportedRate()).isCloseTo(2.0 / 3, within(1e-9));
     assertThat(r.answerRecall()).isEqualTo(0.5);
