@@ -96,4 +96,17 @@ class AnswererTest {
     assertThat(r.citations()).isEmpty();
     verify(retriever).retrieve(eq("q?"), eq(Mode.KEYWORD), eq(5));
   }
+
+  @Test
+  void chatExceptionCountsAsFailure() {
+    when(chat.complete(anyString())).thenThrow(new RuntimeException("timeout"));
+    Answer r = answerer.answer("q?", Mode.HYBRID);
+    assertThat(r.failed()).isTrue();
+    assertThat(r.citations()).isEmpty();
+    verify(chat, times(2)).complete(anyString());
+
+    org.mockito.Mockito.reset(chat);
+    when(chat.complete(anyString())).thenThrow(new RuntimeException("timeout")).thenReturn(GOOD);
+    assertThat(answerer.answer("q?", Mode.HYBRID).failed()).isFalse();
+  }
 }

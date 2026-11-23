@@ -45,6 +45,7 @@ public class ModelConfig {
         .responseFormat(ResponseFormat.JSON)
         .think(false)
         .temperature(0.0)
+        .numPredict(1024)
         .timeout(Duration.ofMinutes(5))
         .build();
   }

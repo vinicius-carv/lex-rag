@@ -11,9 +11,13 @@ import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 
 public class Answerer {
+
+  private static final Logger log = LoggerFactory.getLogger(Answerer.class);
 
   static final int TOP_ARTICLES = 5;
   static final int PROMPT_BUDGET = 6000;
@@ -43,8 +47,8 @@ public class Answerer {
     List<String> ids = articles.stream().map(RetrievedArticle::articleId).toList();
     String prompt = prompt(question, articles);
 
-    Optional<ParsedAnswer> parsed = AnswerParser.parse(chat.complete(prompt));
-    if (parsed.isEmpty()) parsed = AnswerParser.parse(chat.complete(prompt + RETRY_SUFFIX));
+    Optional<ParsedAnswer> parsed = tryComplete(question, prompt);
+    if (parsed.isEmpty()) parsed = tryComplete(question, prompt + RETRY_SUFFIX);
     if (parsed.isEmpty()) {
       return new Answer(question, mode, provider, "", false, true, List.of(), ids);
     }
@@ -53,6 +57,16 @@ public class Answerer {
     List<Citation> cites = p.insufficient() ? List.<Citation>of() : p.citations().stream().limit(3).toList();
     var verified = CitationVerifier.verify(cites, repo.articleTexts(ids));
     return new Answer(question, mode, provider, p.answer(), p.insufficient(), false, verified, ids);
+  }
+
+  // A chat error (e.g. timeout) must not abort a whole eval run: treat it like malformed output.
+  private Optional<ParsedAnswer> tryComplete(String question, String prompt) {
+    try {
+      return AnswerParser.parse(chat.complete(prompt));
+    } catch (RuntimeException e) {
+      log.warn("Chat call failed for question '{}': {}", question.substring(0, Math.min(60, question.length())), e.toString());
+      return Optional.empty();
+    }
   }
 
   private String prompt(String question, List<RetrievedArticle> articles) {
