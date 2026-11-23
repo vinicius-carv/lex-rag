@@ -58,6 +58,12 @@ class ChunkRepositoryIT {
   }
 
   @Test
+  void keywordMatchesWhenOnlySomeTermsPresent() {
+    assertThat(repo.keyword("Comprei um celular pela internet e me arrependi da compra, posso devolver hoje?", 5).get(0).articleId())
+        .isEqualTo("cdc:art49");
+  }
+
+  @Test
   void keywordToleratesUserSyntax() {
     assertThatCode(() -> repo.keyword("O que diz o art. 5º, § 1º - \"direitos\"?", 5)).doesNotThrowAnyException();
     assertThat(repo.keyword("!!!", 5)).isEmpty();

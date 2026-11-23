@@ -28,12 +28,16 @@ public class ChunkRepository {
         c.articleId(), c.ordinal(), c.text(), c.embedText(), new PGvector(embedding));
   }
 
-  /** Empty when the query yields no usable tsquery terms. */
+  /**
+   * OR over the question's lexemes: layperson questions rarely contain every term, so an AND match
+   * (websearch_to_tsquery) returns nothing. Ranking is length-normalised so short, focused articles
+   * beat long ones. Empty when the query yields no usable tsquery terms.
+   */
   public List<ScoredChunk> keyword(String query, int n) {
     return jdbc.query(
         """
-        select article_id, ordinal, text, ts_rank_cd(tsv, q) as score
-        from chunk, websearch_to_tsquery('portuguese', ?) q
+        select article_id, ordinal, text, ts_rank_cd(tsv, q, 1) as score
+        from chunk, to_tsquery('portuguese', replace(plainto_tsquery('portuguese', ?)::text, '&', '|')) q
         where tsv @@ q
         order by score desc, article_id, ordinal
         limit ?""",
