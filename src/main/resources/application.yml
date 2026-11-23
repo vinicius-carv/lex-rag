@@ -16,5 +16,6 @@ lexrag:
     provider: ${LEXRAG_CHAT_PROVIDER:ollama}
     ollama-model: ${LEXRAG_CHAT_OLLAMA_MODEL:qwen3.5:9b}
     anthropic-model: ${LEXRAG_CHAT_ANTHROPIC_MODEL:claude-sonnet-5-5}
+  live: ${LEXRAG_LIVE:true}
   record: ${LEXRAG_RECORD:false}
   recordings-dir: ${LEXRAG_RECORDINGS_DIR:corpus/recordings}

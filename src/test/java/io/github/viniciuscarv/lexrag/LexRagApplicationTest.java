@@ -44,6 +44,13 @@ class LexRagApplicationTest {
   }
 
   @Test
+  void onlyEvalAndIngestAreReplayOnly() {
+    assertThat(LexRagApplication.properties(List.of("--eval"))).containsEntry("lexrag.live", "false");
+    assertThat(LexRagApplication.properties(List.of("--ingest"))).containsEntry("lexrag.live", "false");
+    assertThat(LexRagApplication.properties(List.of("--ask", "q?"))).doesNotContainKey("lexrag.live");
+  }
+
+  @Test
   void noFlagsStartsWebServer() {
     assertThat(LexRagApplication.properties(List.of())).isEmpty();
   }

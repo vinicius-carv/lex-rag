@@ -26,11 +26,12 @@ public class ModelConfig {
       @Value("${lexrag.embedding.model}") String model,
       @Value("${lexrag.ollama.base-url}") String ollamaUrl,
       @Value("${lexrag.recordings-dir}") String dir,
-      @Value("${lexrag.record}") boolean record) {
+      @Value("${lexrag.record}") boolean record,
+      @Value("${lexrag.live}") boolean allowLive) {
     var live =
-        record ? OllamaEmbeddingModel.builder().baseUrl(ollamaUrl).modelName(model).build() : null;
+        record || allowLive ? OllamaEmbeddingModel.builder().baseUrl(ollamaUrl).modelName(model).build() : null;
     var rec = new Recordings(Path.of(dir, "embeddings-" + model + ".json.gz"));
-    return new RecordingEmbedder(live, model, rec, record);
+    return new RecordingEmbedder(live, model, rec, record, allowLive);
   }
 
   @Bean
@@ -69,7 +70,8 @@ public class ModelConfig {
       @Value("${lexrag.chat.anthropic-model}") String anthropicModel,
       @Value("${lexrag.ollama.base-url}") String ollamaUrl,
       @Value("${lexrag.recordings-dir}") String dir,
-      @Value("${lexrag.record}") boolean record) {
+      @Value("${lexrag.record}") boolean record,
+      @Value("${lexrag.live}") boolean allowLive) {
     String model =
         switch (provider) {
           case "ollama" -> ollamaModel;
@@ -82,11 +84,11 @@ public class ModelConfig {
       if (key == null || key.isBlank()) {
         throw new IllegalStateException("Provider anthropic selected but ANTHROPIC_API_KEY is not set");
       }
-      if (record) live = anthropicChat(key, model);
-    } else if (record) {
+      if (record || allowLive) live = anthropicChat(key, model);
+    } else if (record || allowLive) {
       live = ollamaChat(ollamaUrl, model);
     }
     var rec = new Recordings(Path.of(dir, "answers-" + provider + "-" + model.replace(':', '-') + ".json.gz"));
-    return new Answerer(retriever, repo, new RecordingChat(live, provider + ":" + model, rec, record), provider);
+    return new Answerer(retriever, repo, new RecordingChat(live, provider + ":" + model, rec, record, allowLive), provider);
   }
 }

@@ -50,6 +50,7 @@ public class LexRagApplication {
     if (provider != null) p.put("lexrag.chat.provider", provider);
     if (ingest || ask || eval) p.put("spring.main.web-application-type", "none");
     if (ingest) p.put("lexrag.ingest", "true");
+    if (ingest || eval) p.put("lexrag.live", "false");
     if (a.contains("--record")) p.put("lexrag.record", "true");
     return p;
   }

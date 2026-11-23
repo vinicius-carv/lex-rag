@@ -52,4 +52,19 @@ class RecordingEmbedderTest {
     assertThat(new Recordings(f).get(Recordings.key("m", "x"), float[].class))
         .hasValueSatisfying(x -> assertThat(x).hasSize(1024).isEqualTo(vec));
   }
+
+  @Test
+  void liveModeCallsModelOnMissWithoutPersisting() {
+    Path f = dir.resolve("r.json.gz");
+    EmbeddingModel fake =
+        new EmbeddingModel() {
+          @Override
+          public Response<List<Embedding>> embedAll(List<TextSegment> segs) {
+            return Response.from(segs.stream().map(s -> Embedding.from(new float[] {7f})).toList());
+          }
+        };
+    var e = new RecordingEmbedder(fake, "m", new Recordings(f), false, true);
+    assertThat(e.embed("x")).containsExactly(7f);
+    assertThat(new Recordings(f).get(Recordings.key("m", "x"), float[].class)).isEmpty();
+  }
 }

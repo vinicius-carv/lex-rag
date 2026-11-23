@@ -6,7 +6,7 @@ import dev.langchain4j.model.embedding.EmbeddingModel;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Embeds via recordings; calls the live model only in record mode, otherwise a miss is an error. */
+/** Embeds via recordings; a miss calls the live model in record or live mode (only record persists), else errors. */
 public class RecordingEmbedder {
 
   static final int BATCH = 32;
@@ -15,13 +15,19 @@ public class RecordingEmbedder {
   private final String modelId;
   private final Recordings rec;
   private final boolean record;
+  private final boolean allowLive;
 
-  /** {@code live} may be null when {@code record} is false. */
   public RecordingEmbedder(EmbeddingModel live, String modelId, Recordings rec, boolean record) {
+    this(live, modelId, rec, record, false);
+  }
+
+  /** {@code live} may be null when neither {@code record} nor {@code allowLive}. */
+  public RecordingEmbedder(EmbeddingModel live, String modelId, Recordings rec, boolean record, boolean allowLive) {
     this.live = live;
     this.modelId = modelId;
     this.rec = rec;
     this.record = record;
+    this.allowLive = allowLive;
   }
 
   public float[] embed(String text) {
@@ -35,7 +41,7 @@ public class RecordingEmbedder {
       out[i] = rec.get(Recordings.key(modelId, texts.get(i)), float[].class).orElse(null);
       if (out[i] == null) misses.add(i);
     }
-    if (!misses.isEmpty() && !record) {
+    if (!misses.isEmpty() && !record && !allowLive) {
       String t = texts.get(misses.get(0));
       throw new IllegalStateException(
           "No recorded embedding for key "
@@ -51,9 +57,9 @@ public class RecordingEmbedder {
       for (int j = 0; j < batch.size(); j++) {
         int i = batch.get(j);
         out[i] = got.get(j).vector();
-        rec.put(Recordings.key(modelId, texts.get(i)), out[i]);
+        if (record) rec.put(Recordings.key(modelId, texts.get(i)), out[i]);
       }
-      rec.save();
+      if (record) rec.save();
     }
     return List.of(out);
   }
