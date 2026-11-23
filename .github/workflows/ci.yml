@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+      - name: Build
+        run: ./mvnw -q verify
+      - name: Start Postgres (same pinned image as docker-compose.yml)
+        run: |
+          docker compose up -d db
+          for i in $(seq 1 30); do
+            docker compose exec -T db pg_isready -U lexrag -d lexrag && exit 0
+            sleep 2
+          done
+          exit 1
+      - name: Ingest (replays embeddings from corpus/recordings)
+        run: java -jar target/lex-rag-0.1.0-SNAPSHOT.jar --ingest
+      - name: Eval baseline gate (replay, no Ollama)
+        run: java -jar target/lex-rag-0.1.0-SNAPSHOT.jar --eval --mode all
