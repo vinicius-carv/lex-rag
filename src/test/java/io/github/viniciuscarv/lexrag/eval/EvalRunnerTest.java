@@ -60,4 +60,19 @@ class EvalRunnerTest {
     var runner = new EvalRunner(null, null, chat, List.of());
     assertThat(runner.judgeSupported(List.of(ok, abstained, failed, ok))).isEqualTo(0.5);
   }
+
+  @Test
+  void judgeTimeoutCountsAsUnsupportedButReplayMissPropagates() {
+    RecordingChat chat = mock(RecordingChat.class);
+    var cite = new VerifiedCitation("g:art1", "g:art1", "trecho", CitationStatus.VERIFIED);
+    Answer ok = new Answer("q", Mode.SYSTEM, "ollama", "a", false, false, List.of(cite), List.of());
+    var runner = new EvalRunner(null, null, chat, List.of());
+    when(chat.complete(anyString()))
+        .thenThrow(new dev.langchain4j.exception.TimeoutException("t"))
+        .thenReturn("{\"supported\":true}");
+    assertThat(runner.judgeSupported(List.of(ok, ok))).isEqualTo(0.5);
+    when(chat.complete(anyString())).thenThrow(new IllegalStateException("no recording"));
+    org.assertj.core.api.Assertions.assertThatThrownBy(() -> runner.judgeSupported(List.of(ok)))
+        .isInstanceOf(IllegalStateException.class);
+  }
 }

@@ -1,5 +1,6 @@
 package io.github.viniciuscarv.lexrag.answer;
 
+import dev.langchain4j.exception.LangChain4jException;
 import io.github.viniciuscarv.lexrag.answer.AnswerParser.ParsedAnswer;
 import io.github.viniciuscarv.lexrag.record.RecordingChat;
 import io.github.viniciuscarv.lexrag.retrieve.Mode;
@@ -59,11 +60,12 @@ public class Answerer {
     return new Answer(question, mode, provider, p.answer(), p.insufficient(), false, verified, ids);
   }
 
-  // A chat error (e.g. timeout) must not abort a whole eval run: treat it like malformed output.
+  // A model error (e.g. timeout) must not abort a whole eval run: treat it like malformed output.
+  // Replay misses (IllegalStateException) are deliberately not caught.
   private Optional<ParsedAnswer> tryComplete(String question, String prompt) {
     try {
       return AnswerParser.parse(chat.complete(prompt));
-    } catch (RuntimeException e) {
+    } catch (LangChain4jException e) {
       log.warn("Chat call failed for question '{}': {}", question.substring(0, Math.min(60, question.length())), e.toString());
       return Optional.empty();
     }

@@ -1,6 +1,7 @@
 package io.github.viniciuscarv.lexrag.answer;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyString;
@@ -10,6 +11,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import dev.langchain4j.exception.TimeoutException;
 import io.github.viniciuscarv.lexrag.record.RecordingChat;
 import io.github.viniciuscarv.lexrag.retrieve.Mode;
 import io.github.viniciuscarv.lexrag.retrieve.RetrievedArticle;
@@ -99,14 +101,20 @@ class AnswererTest {
 
   @Test
   void chatExceptionCountsAsFailure() {
-    when(chat.complete(anyString())).thenThrow(new RuntimeException("timeout"));
+    when(chat.complete(anyString())).thenThrow(new TimeoutException("timeout"));
     Answer r = answerer.answer("q?", Mode.HYBRID);
     assertThat(r.failed()).isTrue();
     assertThat(r.citations()).isEmpty();
     verify(chat, times(2)).complete(anyString());
 
     org.mockito.Mockito.reset(chat);
-    when(chat.complete(anyString())).thenThrow(new RuntimeException("timeout")).thenReturn(GOOD);
+    when(chat.complete(anyString())).thenThrow(new TimeoutException("timeout")).thenReturn(GOOD);
     assertThat(answerer.answer("q?", Mode.HYBRID).failed()).isFalse();
+  }
+
+  @Test
+  void replayMissPropagates() {
+    when(chat.complete(anyString())).thenThrow(new IllegalStateException("no recording"));
+    assertThatThrownBy(() -> answerer.answer("q?", Mode.HYBRID)).isInstanceOf(IllegalStateException.class);
   }
 }

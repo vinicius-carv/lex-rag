@@ -1,5 +1,6 @@
 package io.github.viniciuscarv.lexrag.eval;
 
+import dev.langchain4j.exception.LangChain4jException;
 import io.github.viniciuscarv.lexrag.answer.Answer;
 import io.github.viniciuscarv.lexrag.answer.Answerer;
 import io.github.viniciuscarv.lexrag.answer.VerifiedCitation;
@@ -21,10 +22,14 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.json.JsonMapper;
 
 public class EvalRunner {
+
+  private static final Logger log = LoggerFactory.getLogger(EvalRunner.class);
 
   static final double TOLERANCE = 0.02;
   private static final JsonMapper MAPPER = JsonMapper.builder().build();
@@ -106,7 +111,11 @@ public class EvalRunner {
               + a.answer()
               + "\n\nTrechos citados:\n"
               + quotes;
-      if (supported(judge.complete(prompt))) yes++;
+      try {
+        if (supported(judge.complete(prompt))) yes++;
+      } catch (LangChain4jException e) {
+        log.warn("Judge call failed, counting as unsupported: {}", e.toString());
+      }
     }
     return n == 0 ? null : (double) yes / n;
   }
