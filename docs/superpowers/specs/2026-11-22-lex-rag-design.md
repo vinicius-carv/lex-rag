@@ -144,4 +144,6 @@ Measured on the real corpus (56 answerable questions, bge-m3, replay):
 | DENSE | 0.661 | 0.827 | 0.758 |
 | HYBRID (RRF k=60) | 0.393 | 0.702 | 0.544 |
 
+(Numbers as measured when the decision was made, before a later keyword-query fix; current numbers are in the README.)
+
 Equal-weight RRF lets the weak keyword list pull noise in, so hybrid loses to dense. The shipped system mode is therefore DENSE (`Mode.SYSTEM`), not HYBRID. Hybrid stays as a reported retrieval row; RRF weights and k are not tuned. The regression gate keys on the system mode (`systemRecall5` in `corpus/baseline.json`). This choice was made after seeing results on the same eval set; the README must disclose it.
