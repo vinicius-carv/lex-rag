@@ -1,5 +1,6 @@
 target/
 results/*.tmp
+corpus/recordings/*.tmp
 .env
 .idea/
 *.iml

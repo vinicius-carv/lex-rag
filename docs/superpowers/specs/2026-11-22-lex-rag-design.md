@@ -132,7 +132,7 @@ English, one pt-BR line under the title. Sections: what it does, how citations a
 - FUZZY similarity measure (documented).
 - Integration-test mechanism (Testcontainers vs CI service container).
 - Exact prompt wording (Portuguese, versioned as `v1`).
-- Project name `lex-rag` and folder `C:\Users\vinic\Documents\projects\lex-rag` (assistant's call; easy to rename before publishing).
+- Project name `lex-rag` and folder `lex-rag` (assistant's call; easy to rename before publishing).
 
 ## Amendment 2026-11-23
 

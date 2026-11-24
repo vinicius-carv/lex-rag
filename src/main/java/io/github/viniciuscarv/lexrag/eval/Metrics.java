@@ -69,7 +69,7 @@ public final class Metrics {
         if (ok && inGold) precise++;
         goldHit |= ok && inGold;
       }
-      if (isAnswerable && goldHit) recalled++;
+      if (isAnswerable && goldHit && !a.insufficient()) recalled++;
     }
     return new AnswerRow(
         provider, mode, ratio(precise, cites), ratio(supported, cites), ratio(recalled, answerable),

@@ -58,5 +58,7 @@ class CitationVerifierTest {
     assertThat(verify("cdc:art999", "frase que não existe em lugar nenhum").status())
         .isEqualTo(CitationStatus.UNSUPPORTED);
     assertThat(verify("cdc:art49", "   ").status()).isEqualTo(CitationStatus.UNSUPPORTED);
+    // fewer than 4 tokens: a substring of the article, but too short to count as a quote
+    assertThat(verify("cdc:art49", "o consumidor pode").status()).isEqualTo(CitationStatus.UNSUPPORTED);
   }
 }

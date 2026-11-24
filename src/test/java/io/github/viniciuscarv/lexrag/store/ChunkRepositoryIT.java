@@ -64,6 +64,19 @@ class ChunkRepositoryIT {
   }
 
   @Test
+  void keywordDoesNotRestemLexemes() {
+    // "preciso" stems to "precis"; re-stemming would turn that into "prec" and miss "precisa"
+    repo.insert(chunk("cdc:art99", 0, "O consumidor precisa informar o fornecedor."), unit(4));
+    assertThat(repo.keyword("preciso", 5)).extracting(ScoredChunk::articleId).containsExactly("cdc:art99");
+  }
+
+  @Test
+  void articleTextsFollowRequestedOrder() {
+    assertThat(repo.articleTexts(List.of("cf88:art5", "cdc:art6", "cdc:art49")).keySet())
+        .containsExactly("cf88:art5", "cdc:art6", "cdc:art49");
+  }
+
+  @Test
   void keywordToleratesUserSyntax() {
     assertThatCode(() -> repo.keyword("O que diz o art. 5º, § 1º - \"direitos\"?", 5)).doesNotThrowAnyException();
     assertThat(repo.keyword("!!!", 5)).isEmpty();

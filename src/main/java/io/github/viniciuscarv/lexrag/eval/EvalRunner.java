@@ -142,24 +142,24 @@ public class EvalRunner {
     boolean ok = true;
     String sys = Mode.SYSTEM.name().toLowerCase(Locale.ROOT);
     if (r.retrieval().stream().noneMatch(x -> x.mode() == Mode.SYSTEM)) {
-      System.out.printf("GATE FAIL: no %s retrieval row to gate; run with --mode %s or all%n", sys, sys);
+      log.error(String.format("GATE FAIL: no %s retrieval row to gate; run with --mode %s or all", sys, sys));
       ok = false;
     }
     if (answersRun && r.answers().stream().noneMatch(x -> x.mode() == Mode.SYSTEM && x.provider().equals("ollama"))) {
-      System.out.printf("GATE FAIL: no ollama/%s answer row to gate; use --provider ollama or --retrieval-only%n", sys);
+      log.error(String.format("GATE FAIL: no ollama/%s answer row to gate; use --provider ollama or --retrieval-only", sys));
       ok = false;
     }
     double minRecall = b.get("systemRecall5").asDouble() - TOLERANCE;
     for (RetrievalRow row : r.retrieval()) {
       if (row.mode() == Mode.SYSTEM && row.recall5() < minRecall - 1e-9) {
-        System.out.printf("GATE FAIL: %s recall@5 %.3f < %.3f%n", sys, row.recall5(), minRecall);
+        log.error(String.format("GATE FAIL: %s recall@5 %.3f < %.3f", sys, row.recall5(), minRecall));
         ok = false;
       }
     }
     double minSupported = b.get("supportedRate").asDouble() - TOLERANCE;
     for (AnswerRow row : r.answers()) {
       if (row.mode() == Mode.SYSTEM && row.provider().equals("ollama") && row.supportedRate() < minSupported - 1e-9) {
-        System.out.printf("GATE FAIL: ollama/%s supported rate %.3f < %.3f%n", sys, row.supportedRate(), minSupported);
+        log.error(String.format("GATE FAIL: ollama/%s supported rate %.3f < %.3f", sys, row.supportedRate(), minSupported));
         ok = false;
       }
     }

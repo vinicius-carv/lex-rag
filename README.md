@@ -16,7 +16,7 @@ Corpus: CF88 main body (the ADCT is excluded) and CDC (Lei 8.078/1990, consolida
 
 ## How citations are verified
 
-The model never marks its own homework. It returns `{answer, citations: [{articleId, quote}], insufficient}`, and Java checks each quote against the text of the retrieved articles. Text is normalized first (lowercase, curly quotes, whitespace, trailing ellipsis).
+The model never marks its own homework. It returns `{answer, citations: [{articleId, quote}], insufficient}`, and Java checks each quote against the text of the retrieved articles. Text is normalized first (lowercase, curly quotes, `°` to `º`, whitespace; only a trailing ellipsis is stripped).
 
 | Status | Meaning |
 |---|---|
@@ -39,7 +39,7 @@ Answers, over all 61 questions:
 
 - **Citation precision**: citations that are not `UNSUPPORTED` and point (after correction) to a gold article, divided by all citations from all answers.
 - **Supported rate**: citations that are `VERIFIED`, `FUZZY` or `WRONG_ARTICLE`, divided by all citations.
-- **Answer recall**: answerable questions with at least one supported citation to a gold article, divided by the 56 answerable questions.
+- **Answer recall**: answerable questions with at least one supported citation to a gold article, divided by the 56 answerable questions. An `insufficient` answer never counts as recalled, even with a verified gold citation (its citations are still verified and counted above).
 - **Abstention**: unanswerable questions answered `insufficient=true`, divided by the 5 unanswerable questions.
 - **False abstention**: answerable questions answered `insufficient=true`, divided by 56.
 - **Failed**: answers whose model output was not valid JSON after one retry. They have no citations and count against answer recall.
@@ -48,7 +48,7 @@ Answers, over all 61 questions:
 
 ## Results
 
-61 questions (56 answerable, 5 unanswerable; 49 single-article, 7 multi-article), split evenly between CDC and CF88 by first gold article (28 answerable each). `bge-m3` and `qwen3.5:9b` via Ollama, one run, recorded 2026-11-23 (`results/eval-2026-11-23.json`). Reproduce with `--eval --mode all`, which replays `corpus/recordings/`.
+61 questions (56 answerable, 5 unanswerable; 49 `single`, 7 `multi` and 5 `unanswerable` by question type), split evenly between CDC and CF88 by first gold article (28 answerable each). `bge-m3` and `qwen3.5:9b` via Ollama, one run, recorded 2026-11-23 (`results/eval-2026-11-23.json`). Reproduce with `--eval --mode all`, which replays `corpus/recordings/`.
 
 Retrieval (n = 56):
 
@@ -106,7 +106,7 @@ curl -X POST localhost:8080/ask -H "Content-Type: application/json" -d '{"questi
 
 Flags: `--ingest`, `--ask "question" [--mode keyword|dense|hybrid] [--provider ollama|anthropic]`, `--eval [--mode all] [--retrieval-only] [--judge] [--record]`. `--record` calls live models for anything not yet recorded; delete `corpus/recordings/` to re-record after changing the prompt or model.
 
-`--ask` and the web server answer new questions live: recorded embeddings and answers are reused when the text matches, misses go to Ollama and are not persisted. `--eval` and `--ingest` are replay-only unless `--record` is given. `POST /ask` takes `{question, mode?}` and returns the answer, citations with status, and retrieved article ids.
+`--ask` and the web server answer new questions live: recorded embeddings and answers are reused when the text matches, misses go to Ollama and are not persisted (unless `--record` is given). `--eval` and `--ingest` are replay-only unless `--record` is given. `POST /ask` takes `{question, mode?}` and returns the answer, citations with status, and retrieved article ids.
 
 Configuration (env vars): `DB_URL`, `DB_USER`, `DB_PASSWORD`, `LEXRAG_OLLAMA_BASE_URL`, `LEXRAG_EMBEDDING_MODEL`, `LEXRAG_CHAT_PROVIDER`, `LEXRAG_CHAT_OLLAMA_MODEL`, `LEXRAG_CHAT_ANTHROPIC_MODEL`, and `ANTHROPIC_API_KEY` (read only from the environment).
 

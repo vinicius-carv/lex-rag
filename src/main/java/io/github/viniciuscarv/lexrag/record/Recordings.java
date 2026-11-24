@@ -5,6 +5,7 @@ import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HexFormat;
@@ -56,9 +57,11 @@ public final class Recordings {
   public void save() {
     try {
       Files.createDirectories(file.toAbsolutePath().getParent());
-      try (var out = new GZIPOutputStream(Files.newOutputStream(file))) {
+      Path tmp = file.resolveSibling(file.getFileName() + ".tmp");
+      try (var out = new GZIPOutputStream(Files.newOutputStream(tmp))) {
         MAPPER.writeValue(out, data);
       }
+      Files.move(tmp, file, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
     } catch (IOException e) {
       throw new UncheckedIOException(e);
     }

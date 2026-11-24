@@ -55,7 +55,7 @@ public class Answerer {
     }
 
     ParsedAnswer p = parsed.get();
-    List<Citation> cites = p.insufficient() ? List.<Citation>of() : p.citations().stream().limit(3).toList();
+    List<Citation> cites = p.citations().stream().limit(3).toList();
     var verified = CitationVerifier.verify(cites, repo.articleTexts(ids));
     return new Answer(question, mode, provider, p.answer(), p.insufficient(), false, verified, ids);
   }

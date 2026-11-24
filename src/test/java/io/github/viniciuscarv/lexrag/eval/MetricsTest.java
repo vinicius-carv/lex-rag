@@ -32,6 +32,17 @@ class MetricsTest {
   }
 
   @Test
+  void insufficientAnswerWithGoldCitationIsNotRecalled() {
+    var qs = List.of(new Question("q1", "?", List.of("g:art1"), "single", ""));
+    var r =
+        Metrics.aggregate(
+            "ollama", Mode.SYSTEM, qs, Map.of("q1", ans(true, false, cite("g:art1", CitationStatus.VERIFIED))), null);
+    assertThat(r.answerRecall()).isZero();
+    assertThat(r.supportedRate()).isEqualTo(1.0);
+    assertThat(r.falseAbstention()).isEqualTo(1.0);
+  }
+
+  @Test
   void answerAggregation() {
     var qs =
         List.of(

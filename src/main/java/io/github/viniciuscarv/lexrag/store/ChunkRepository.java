@@ -3,7 +3,7 @@ package io.github.viniciuscarv.lexrag.store;
 import com.pgvector.PGvector;
 import io.github.viniciuscarv.lexrag.law.Chunk;
 import java.util.Collection;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -31,14 +31,15 @@ public class ChunkRepository {
   /**
    * OR over the question's lexemes: layperson questions rarely contain every term, so an AND match
    * (websearch_to_tsquery) returns nothing. Ranking is length-normalised so short, focused articles
-   * beat long ones. Empty when the query yields no usable tsquery terms.
+   * beat long ones. Empty when the query yields no usable tsquery terms. The ::tsquery cast (unlike to_tsquery) does not
+   * re-stem lexemes that plainto_tsquery already stemmed.
    */
   public List<ScoredChunk> keyword(String query, int n) {
     return jdbc.query(
         """
-        select article_id, ordinal, text, ts_rank_cd(tsv, q, 1) as score
-        from chunk, to_tsquery('portuguese', replace(plainto_tsquery('portuguese', ?)::text, '&', '|')) q
-        where tsv @@ q
+        select article_id, ordinal, text, ts_rank_cd(tsv, t.q, 1) as score
+        from chunk, (select replace(plainto_tsquery('portuguese', ?)::text, '&', '|')::tsquery as q) t
+        where tsv @@ t.q
         order by score desc, article_id, ordinal
         limit ?""",
         (rs, i) -> new ScoredChunk(rs.getString(1), rs.getInt(2), rs.getString(3), rs.getDouble(4)),
@@ -59,14 +60,15 @@ public class ChunkRepository {
   }
 
   public Map<String, String> articleTexts(Collection<String> ids) {
-    Map<String, String> out = new HashMap<>();
+    Map<String, String> out = new LinkedHashMap<>();
     if (ids.isEmpty()) return out;
     jdbc.query(
         "select article_id, string_agg(text, chr(10) order by ordinal) from chunk"
-            + " where article_id = any (?) group by article_id",
+            + " where article_id = any (?) group by article_id order by array_position(?, article_id)",
         rs -> {
           out.put(rs.getString(1), rs.getString(2));
         },
+        (Object) ids.toArray(String[]::new),
         (Object) ids.toArray(String[]::new));
     return out;
   }

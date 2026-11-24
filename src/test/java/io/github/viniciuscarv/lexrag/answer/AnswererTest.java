@@ -28,7 +28,7 @@ class AnswererTest {
 
   private static final String GOOD =
       "{\"answer\":\"a\",\"insufficient\":false,\"citations\":["
-          + "{\"articleId\":\"x:art1\",\"quote\":\"primeira regra\"},"
+          + "{\"articleId\":\"x:art1\",\"quote\":\"a primeira regra do artigo\"},"
           + "{\"articleId\":\"x:art2\",\"quote\":\"inventada\"}]}";
 
   Retriever retriever = mock(Retriever.class);
@@ -89,13 +89,13 @@ class AnswererTest {
   }
 
   @Test
-  void insufficientDropsCitations() {
+  void insufficientStillVerifiesCitations() {
     when(chat.complete(anyString()))
         .thenReturn(
             "{\"answer\":\"n/a\",\"insufficient\":true,\"citations\":[{\"articleId\":\"x:art1\",\"quote\":\"q\"}]}");
     Answer r = answerer.answer("q?", Mode.KEYWORD);
     assertThat(r.insufficient()).isTrue();
-    assertThat(r.citations()).isEmpty();
+    assertThat(r.citations()).hasSize(1);
     verify(retriever).retrieve(eq("q?"), eq(Mode.KEYWORD), eq(5));
   }
 

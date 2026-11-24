@@ -3,4 +3,5 @@
   <logger name="org.testcontainers" level="WARN"/>
   <logger name="com.github.dockerjava" level="WARN"/>
   <logger name="tc" level="WARN"/>
+  <logger name="io.github.viniciuscarv.lexrag.eval.EvalRunner" level="OFF"/>
 </configuration>

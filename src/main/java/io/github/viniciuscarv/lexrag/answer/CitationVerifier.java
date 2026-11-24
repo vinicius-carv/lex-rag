@@ -10,6 +10,8 @@ import java.util.Map;
 public final class CitationVerifier {
 
   private static final double FUZZY_THRESHOLD = 0.8;
+  // Shorter quotes would VERIFY by trivial substring match ("lei", "de").
+  private static final int MIN_QUOTE_TOKENS = 4;
 
   private CitationVerifier() {}
 
@@ -28,7 +30,7 @@ public final class CitationVerifier {
   private static VerifiedCitation check(Citation c, Map<String, String> norm) {
     String q = Text.normalize(c.quote() == null ? "" : c.quote());
     String cited = norm.get(c.articleId());
-    if (q.isEmpty()) return result(c, c.articleId(), CitationStatus.UNSUPPORTED);
+    if (q.split(" ").length < MIN_QUOTE_TOKENS) return result(c, c.articleId(), CitationStatus.UNSUPPORTED);
     if (cited != null && cited.contains(q)) return result(c, c.articleId(), CitationStatus.VERIFIED);
     for (var e : norm.entrySet()) {
       if (!e.getKey().equals(c.articleId()) && e.getValue().contains(q)) {
