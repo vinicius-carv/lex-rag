@@ -1,9 +1,9 @@
 {
   "retrieval" : [ {
     "mode" : "KEYWORD",
-    "hit1" : 0.21428571428571427,
-    "recall5" : 0.41666666666666663,
-    "mrr10" : 0.32431972789115643,
+    "hit1" : 0.23214285714285715,
+    "recall5" : 0.4345238095238095,
+    "mrr10" : 0.3342687074829932,
     "n" : 56
   }, {
     "mode" : "DENSE",
@@ -14,16 +14,16 @@
   }, {
     "mode" : "HYBRID",
     "hit1" : 0.39285714285714285,
-    "recall5" : 0.7023809523809524,
-    "mrr10" : 0.54375,
+    "recall5" : 0.6845238095238095,
+    "mrr10" : 0.5438988095238095,
     "n" : 56
   } ],
   "answers" : [ {
     "provider" : "ollama",
     "mode" : "KEYWORD",
-    "citationPrecision" : 0.3855421686746988,
-    "supportedRate" : 0.963855421686747,
-    "answerRecall" : 0.3392857142857143,
+    "citationPrecision" : 0.2962962962962963,
+    "supportedRate" : 0.8796296296296297,
+    "answerRecall" : 0.35714285714285715,
     "abstention" : 0.8,
     "falseAbstention" : 0.30357142857142855,
     "failed" : 0,
@@ -148,9 +148,9 @@
     "type" : "single",
     "gold" : [ "cdc:art26" ],
     "retrieved" : {
-      "KEYWORD" : [ "cdc:art6", "cf88:art78", "cdc:art14", "cf88:art231", "cdc:art12", "cf88:art156-a", "cf88:art220", "cdc:art31", "cf88:art219", "cdc:art3" ],
+      "KEYWORD" : [ "cdc:art6", "cf88:art78", "cdc:art14", "cf88:art231", "cdc:art12", "cf88:art156-a", "cf88:art103-a", "cf88:art220", "cdc:art31", "cf88:art219" ],
       "DENSE" : [ "cdc:art26", "cdc:art18", "cdc:art27", "cdc:art12", "cdc:art10", "cdc:art20", "cdc:art25", "cdc:art101", "cdc:art74", "cdc:art64" ],
-      "HYBRID" : [ "cdc:art12", "cdc:art20", "cdc:art8", "cdc:art14", "cdc:art31", "cdc:art40", "cdc:art6", "cdc:art26", "cf88:art78", "cdc:art18" ]
+      "HYBRID" : [ "cdc:art12", "cdc:art26", "cdc:art20", "cdc:art14", "cdc:art8", "cdc:art31", "cdc:art44", "cdc:art6", "cf88:art78", "cdc:art18" ]
     },
     "answers" : {
       "KEYWORD" : {
@@ -296,20 +296,20 @@
     "type" : "single",
     "gold" : [ "cdc:art43" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art37", "cf88:art213", "cf88:art40", "cf88:art60", "cf88:art167-a", "cf88:art84", "cf88:art103-a", "cf88:art155", "cf88:art103-b", "cdc:art18" ],
+      "KEYWORD" : [ "cf88:art37", "cf88:art84", "cf88:art213", "cf88:art103-b", "cf88:art40", "cf88:art142", "cf88:art60", "cf88:art103-a", "cf88:art167-a", "cf88:art85" ],
       "DENSE" : [ "cdc:art72", "cdc:art104-a", "cdc:art73", "cdc:art64", "cdc:art49", "cdc:art66", "cdc:art63", "cdc:art74", "cdc:art71", "cdc:art70" ],
-      "HYBRID" : [ "cdc:art18", "cf88:art138", "cdc:art43", "cf88:art93", "cf88:art71", "cf88:art54", "cf88:art37", "cdc:art72", "cf88:art213", "cdc:art104-a" ]
+      "HYBRID" : [ "cdc:art18", "cf88:art93", "cf88:art71", "cf88:art41", "cf88:art138", "cf88:art37", "cdc:art72", "cf88:art84", "cdc:art104-a", "cf88:art213" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "Por quanto tempo meu nome pode ficar negativado no SPC ou na Serasa?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Os artigos fornecidos não contêm informações sobre o tempo de permanência de nomes negativados no SPC ou Serasa. O texto aborda limites salariais, destinação de recursos públicos, regras para emenda constitucional e medidas fiscais, mas não menciona restrições ao nome dos consumidores.",
+        "answer" : "insufficient",
         "insufficient" : true,
         "failed" : false,
         "citations" : [ ],
-        "retrievedIds" : [ "cf88:art37", "cf88:art213", "cf88:art40", "cf88:art60", "cf88:art167-a" ]
+        "retrievedIds" : [ "cf88:art37", "cf88:art84", "cf88:art213", "cf88:art103-b", "cf88:art40" ]
       },
       "DENSE" : {
         "question" : "Por quanto tempo meu nome pode ficar negativado no SPC ou na Serasa?",
@@ -421,7 +421,7 @@
     "retrieved" : {
       "KEYWORD" : [ "cf88:art5", "cdc:art37", "cf88:art150", "cf88:art158", "cf88:art8", "cf88:art167", "cf88:art100", "cf88:art153", "cf88:art165", "cf88:art157" ],
       "DENSE" : [ "cdc:art37", "cdc:art67", "cdc:art66", "cdc:art68", "cdc:art10", "cdc:art54-c", "cdc:art69", "cdc:art60", "cdc:art39", "cdc:art71" ],
-      "HYBRID" : [ "cdc:art37", "cf88:art167", "cdc:art54-g", "cf88:art150", "cdc:art33", "cdc:art54-c", "cf88:art160", "cdc:art51", "cf88:art151", "cdc:art52" ]
+      "HYBRID" : [ "cdc:art37", "cdc:art10", "cf88:art167", "cdc:art54-g", "cf88:art150", "cdc:art33", "cdc:art54-c", "cf88:art160", "cdc:art51", "cf88:art151" ]
     },
     "answers" : {
       "KEYWORD" : {
@@ -472,7 +472,7 @@
     "retrieved" : {
       "KEYWORD" : [ "cdc:art54-f", "cf88:art37", "cf88:art103-a", "cf88:art103-b", "cf88:art167-a", "cf88:art71", "cf88:art50", "cf88:art54", "cf88:art213", "cf88:art195" ],
       "DENSE" : [ "cdc:art53", "cdc:art51", "cdc:art49", "cf88:art206", "cdc:art54", "cdc:art40", "cdc:art54-g", "cdc:art31", "cdc:art41", "cf88:art5" ],
-      "HYBRID" : [ "cdc:art54", "cdc:art51", "cdc:art53", "cdc:art54-f", "cf88:art54", "cdc:art54-g", "cf88:art5", "cdc:art18", "cdc:art54-c", "cf88:art37" ]
+      "HYBRID" : [ "cdc:art54", "cdc:art51", "cdc:art54-f", "cdc:art53", "cf88:art54", "cdc:art54-g", "cf88:art5", "cdc:art18", "cdc:art54-c", "cf88:art37" ]
     },
     "answers" : {
       "KEYWORD" : {
@@ -567,20 +567,35 @@
     "type" : "single",
     "gold" : [ "cdc:art53" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art37", "cf88:art213", "cf88:art100", "cf88:art103-b", "cf88:art167-a", "cf88:art60", "cf88:art103-a", "cf88:art85", "cf88:art97", "cf88:art114" ],
+      "KEYWORD" : [ "cf88:art37", "cf88:art213", "cf88:art100", "cf88:art103-b", "cf88:art167", "cf88:art71", "cf88:art99", "cf88:art60", "cf88:art103-a", "cf88:art62" ],
       "DENSE" : [ "cf88:art100", "cf88:art167-a", "cdc:art71", "cf88:art195", "cf88:art250", "cf88:art167", "cdc:art54-g", "cf88:art156-a", "cf88:art150", "cf88:art184" ],
-      "HYBRID" : [ "cf88:art100", "cf88:art150", "cf88:art5", "cdc:art52", "cf88:art169", "cf88:art37", "cf88:art213", "cf88:art167-a", "cf88:art103-b", "cdc:art71" ]
+      "HYBRID" : [ "cf88:art100", "cf88:art70", "cf88:art150", "cf88:art72", "cf88:art37", "cf88:art213", "cf88:art167-a", "cdc:art71", "cf88:art103-b", "cf88:art195" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "Parei de pagar as parcelas do carro e a financeira quer ficar com o veículo e com tudo o que eu já paguei. Pode?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Não há previsão nos artigos fornecidos sobre a posse de veículos por financeiras em caso de inadimplência. Os textos citados tratam exclusivamente de limites remuneratórios de servidores (art. 37), destinação de recursos públicos para escolas (art. 213) e regras de pagamento de precatórios e endividamento da União, Estados, DF e Municípios (art. 100). Portanto, as informações necessárias para responder à sua dúvida sobre contratos de financiamento veicular não estão presentes no material fornecido.",
+        "answer" : "Não há previsão legal nos artigos fornecidos para regular contratos de financiamento de veículos ou a retenção de valores pagos pelo consumidor. Os textos citados tratam exclusivamente de remuneração de servidores públicos, destinação de recursos a escolas e regras sobre pagamento de precatórios por entes federativos. Portanto, com base estritamente no material fornecido, não é possível fundamentar a resposta à sua pergunta.",
         "insufficient" : true,
         "failed" : false,
-        "citations" : [ ],
-        "retrievedIds" : [ "cf88:art37", "cf88:art213", "cf88:art100", "cf88:art103-b", "cf88:art167-a" ]
+        "citations" : [ {
+          "articleId" : "cf88:art37",
+          "citedArticleId" : "cf88:art37",
+          "quote" : "XI - a remuneração e o subsídio dos ocupantes de cargos, funções e empregos públicos da administração direta, autárquica e fundacional...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art213",
+          "citedArticleId" : "cf88:art213",
+          "quote" : "Art. 213. Os recursos públicos serão destinados às escolas públicas...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art100",
+          "citedArticleId" : "cf88:art100",
+          "quote" : "II - nos contratos em que houve prestação de garantia a outro ente federativo;",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art37", "cf88:art213", "cf88:art100", "cf88:art103-b", "cf88:art167" ]
       },
       "DENSE" : {
         "question" : "Parei de pagar as parcelas do carro e a financeira quer ficar com o veículo e com tudo o que eu já paguei. Pode?",
@@ -649,30 +664,30 @@
     "type" : "single",
     "gold" : [ "cdc:art54-c" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art164", "cf88:art5", "cdc:art32", "cf88:art8", "cdc:art43", "cdc:art50", "cf88:art199", "cdc:art37", "cf88:art150", "cf88:art155" ],
+      "KEYWORD" : [ "cf88:art164", "cf88:art5", "cf88:art199", "cdc:art37", "cf88:art150", "cdc:art32", "cf88:art208", "cdc:art33", "cdc:art35", "cdc:art31" ],
       "DENSE" : [ "cdc:art54-c", "cdc:art54-d", "cdc:art52", "cdc:art54-b", "cdc:art54-f", "cf88:art239", "cdc:art54-g", "cf88:art167", "cdc:art104-a", "cf88:art199" ],
-      "HYBRID" : [ "cf88:art199", "cdc:art54-c", "cf88:art164", "cdc:art54-b", "cdc:art43", "cdc:art33", "cf88:art150", "cf88:art201", "cdc:art66", "cf88:art166" ]
+      "HYBRID" : [ "cf88:art199", "cf88:art164", "cdc:art54-c", "cdc:art33", "cdc:art54-b", "cdc:art54-d", "cf88:art201", "cdc:art66", "cf88:art150", "cdc:art43" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "O banco me ligou dizendo que o empréstimo sai sem olhar se estou no Serasa e sem analisar minha renda. Esse tipo de oferta é correta?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "A oferta descrita pode ser questionada sob a ótica da liberdade de associação e direitos fundamentais, mas os artigos fornecidos não tratam especificamente de regras de concessão de empréstimos por bancos. O Art. 164 do CF/88 estabelece que a competência para emitir moeda é exclusiva do banco central e veda-lhe conceder empréstimos ao Tesouro Nacional ou a entidades que não sejam instituições financeiras, mas não detalha critérios internos de análise de crédito.",
-        "insufficient" : false,
+        "answer" : "A oferta descrita pode ser questionada sob a ótica da proteção ao consumidor e da liberdade de associação, mas os artigos fornecidos não abordam diretamente regras sobre análise de crédito ou Serasa. O Art. 5º, XXXII garante a defesa do consumidor, e o Art. 5º, XX assegura que ninguém seja compelido a associar-se. Contudo, sem normas específicas sobre empréstimos nos textos citados, a resposta é insuficiente para julgar a legalidade da oferta com base estrita nesses artigos.",
+        "insufficient" : true,
         "failed" : false,
         "citations" : [ {
-          "articleId" : "cf88:art164",
-          "citedArticleId" : "cf88:art164",
-          "quote" : "Art. 164. A competência da União para emitir moeda será exercida exclusivamente pelo banco central.\n§ 1º É vedado ao banco central conceder, direta ou indiretamente, empréstimos ao Tesouro Nacional e a qualquer órgão ou entidade que não seja instituição financeira.",
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "XXXII - o Estado promoverá, na forma da lei, a defesa do consumidor;",
           "status" : "VERIFIED"
         }, {
           "articleId" : "cf88:art5",
           "citedArticleId" : "cf88:art5",
-          "quote" : "Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade, nos termos seguintes:",
+          "quote" : "XX - ninguém poderá ser compelido a associar-se ou a permanecer associado;",
           "status" : "VERIFIED"
         } ],
-        "retrievedIds" : [ "cf88:art164", "cf88:art5", "cdc:art32", "cf88:art8", "cdc:art43" ]
+        "retrievedIds" : [ "cf88:art164", "cf88:art5", "cf88:art199", "cdc:art37", "cf88:art150" ]
       },
       "DENSE" : {
         "question" : "O banco me ligou dizendo que o empréstimo sai sem olhar se estou no Serasa e sem analisar minha renda. Esse tipo de oferta é correta?",
@@ -848,9 +863,9 @@
     "type" : "single",
     "gold" : [ "cdc:art50" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art53", "cf88:art5", "cdc:art50", "cdc:art54-g", "cf88:art100", "cf88:art206", "cf88:art95", "cf88:art227", "cf88:art7", "cdc:art66" ],
+      "KEYWORD" : [ "cf88:art53", "cf88:art5", "cdc:art50", "cdc:art54-g", "cf88:art100", "cf88:art206", "cf88:art95", "cf88:art227", "cf88:art7", "cf88:art230" ],
       "DENSE" : [ "cdc:art74", "cdc:art31", "cdc:art50", "cdc:art21", "cdc:art24", "cdc:art8", "cdc:art44", "cdc:art18", "cdc:art101", "cdc:art12" ],
-      "HYBRID" : [ "cdc:art50", "cdc:art31", "cdc:art74", "cdc:art66", "cdc:art24", "cf88:art5", "cdc:art41", "cdc:art6", "cf88:art53", "cdc:art21" ]
+      "HYBRID" : [ "cdc:art50", "cdc:art31", "cdc:art74", "cdc:art24", "cf88:art5", "cdc:art30", "cdc:art66", "cdc:art41", "cf88:art53", "cdc:art21" ]
     },
     "answers" : {
       "KEYWORD" : {
@@ -860,7 +875,22 @@
         "answer" : "Não há previsão nos artigos fornecidos sobre garantia de produtos ou documentos de lojas. Os textos citados tratam de direitos fundamentais, imunidade parlamentar e normas processuais, não abordando consumo ou responsabilidade civil do fornecedor.",
         "insufficient" : true,
         "failed" : false,
-        "citations" : [ ],
+        "citations" : [ {
+          "articleId" : "cf88:art53",
+          "citedArticleId" : "cf88:art53",
+          "quote" : "Art. 53. Os Deputados e Senadores são invioláveis, civil e penalmente, por quaisquer de suas opiniões, palavras e votos.",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade, nos termos seguintes:",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cdc:art50",
+          "citedArticleId" : "cdc:art50",
+          "quote" : "",
+          "status" : "UNSUPPORTED"
+        } ],
         "retrievedIds" : [ "cf88:art53", "cf88:art5", "cdc:art50", "cdc:art54-g", "cf88:art100" ]
       },
       "DENSE" : {
@@ -950,16 +980,16 @@
     "type" : "single",
     "gold" : [ "cdc:art12" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art96", "cdc:art12", "cdc:art51", "cf88:art37", "cdc:art54-b", "cdc:art20", "cdc:art19", "cdc:art103", "cdc:art18", "cf88:art127" ],
+      "KEYWORD" : [ "cf88:art96", "cdc:art12", "cf88:art37", "cdc:art54-b", "cdc:art103", "cf88:art127", "cdc:art51", "cdc:art32", "cdc:art13", "cf88:art35" ],
       "DENSE" : [ "cdc:art12", "cdc:art13", "cdc:art25", "cdc:art19", "cdc:art14", "cdc:art18", "cdc:art101", "cdc:art21", "cdc:art20", "cdc:art17" ],
-      "HYBRID" : [ "cdc:art12", "cdc:art19", "cdc:art20", "cdc:art18", "cdc:art13", "cdc:art21", "cdc:art32", "cdc:art9", "cdc:art38", "cdc:art66" ]
+      "HYBRID" : [ "cdc:art12", "cdc:art13", "cdc:art19", "cdc:art20", "cdc:art18", "cdc:art25", "cdc:art21", "cdc:art32", "cdc:art9", "cdc:art38" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "O liquidificador explodiu e queimou minha mão. Quem paga o prejuízo e preciso provar que o fabricante errou?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "O fabricante responde independentemente da existência de culpa pelos danos causados por defeitos do produto. O produto é defeituoso quando não oferece a segurança que dele legitimamente se espera, considerando sua apresentação e o uso razoavelmente esperado. O fabricante só não será responsabilizado se provar que não colocou o produto no mercado, que o defeito inexiste ou que a culpa foi exclusiva do consumidor.",
+        "answer" : "O fabricante responde independentemente da existência de culpa pelos danos causados por defeitos do produto. O produto é defeituoso quando não oferece a segurança que dele legitimamente se espera. O fabricante só não será responsabilizado se provar que o defeito inexiste ou que a culpa foi exclusiva do consumidor.",
         "insufficient" : false,
         "failed" : false,
         "citations" : [ {
@@ -970,15 +1000,15 @@
         }, {
           "articleId" : "cdc:art12",
           "citedArticleId" : "cdc:art12",
-          "quote" : "O produto é defeituoso quando não oferece a segurança que dele legitimamente se espera, levando-se em consideração as circunstâncias relevantes, entre as quais: I - sua apresentação; II - o uso e os riscos que razoavelmente dele se esperam...",
+          "quote" : "O produto é defeituoso quando não oferece a segurança que dele legitimamente se espera...",
           "status" : "VERIFIED"
         }, {
           "articleId" : "cdc:art12",
           "citedArticleId" : "cdc:art12",
-          "quote" : "O fabricante, o construtor, o produtor ou importador só não será responsabilizado quando provar: I - que não colocou o produto no mercado; II - que, embora haja colocado o produto no mercado, o defeito inexiste; III - a culpa exclusiva do consumidor ou de terceiro.",
-          "status" : "VERIFIED"
+          "quote" : "O fabricante, o construtor, o produtor ou importador só não será responsabilizado quando provar:... II - que, embora haja colocado o produto no mercado, o defeito inexiste; III - a culpa exclusiva do consumidor ou de terceiro.",
+          "status" : "UNSUPPORTED"
         } ],
-        "retrievedIds" : [ "cf88:art96", "cdc:art12", "cdc:art51", "cf88:art37", "cdc:art54-b" ]
+        "retrievedIds" : [ "cf88:art96", "cdc:art12", "cf88:art37", "cdc:art54-b", "cdc:art103" ]
       },
       "DENSE" : {
         "question" : "O liquidificador explodiu e queimou minha mão. Quem paga o prejuízo e preciso provar que o fabricante errou?",
@@ -1176,7 +1206,7 @@
     "retrieved" : {
       "KEYWORD" : [ "cf88:art136", "cf88:art137", "cf88:art102", "cf88:art138", "cf88:art141", "cf88:art5", "cf88:art28", "cf88:art18", "cf88:art173", "cf88:art125" ],
       "DENSE" : [ "cdc:art93", "cf88:art155", "cf88:art35", "cf88:art109", "cf88:art110", "cf88:art179", "cf88:art166-a", "cf88:art25", "cf88:art105", "cf88:art37" ],
-      "HYBRID" : [ "cf88:art25", "cf88:art102", "cf88:art155", "cf88:art125", "cf88:art105", "cf88:art109", "cf88:art18", "cf88:art173", "cf88:art43", "cf88:art156-b" ]
+      "HYBRID" : [ "cf88:art25", "cf88:art102", "cf88:art155", "cf88:art125", "cf88:art105", "cf88:art109", "cf88:art18", "cf88:art173", "cf88:art156-b", "cf88:art136" ]
     },
     "answers" : {
       "KEYWORD" : {
@@ -1215,30 +1245,30 @@
     "type" : "single",
     "gold" : [ "cdc:art2" ],
     "retrieved" : {
-      "KEYWORD" : [ "cdc:art43", "cdc:art106", "cdc:art51", "cdc:art5", "cdc:art39", "cdc:art4", "cdc:art104-c", "cdc:art54-c", "cdc:art54", "cdc:art54-g" ],
+      "KEYWORD" : [ "cdc:art43", "cdc:art51", "cdc:art106", "cdc:art5", "cdc:art39", "cdc:art4", "cdc:art104-c", "cdc:art54-d", "cdc:art54-c", "cdc:art54" ],
       "DENSE" : [ "cdc:art2", "cdc:art13", "cdc:art3", "cdc:art43", "cdc:art39", "cdc:art12", "cdc:art29", "cdc:art19", "cdc:art8", "cdc:art107" ],
-      "HYBRID" : [ "cdc:art43", "cdc:art39", "cdc:art2", "cdc:art54-g", "cdc:art29", "cdc:art5", "cdc:art55", "cdc:art8", "cdc:art54-c", "cdc:art14" ]
+      "HYBRID" : [ "cdc:art43", "cdc:art39", "cdc:art2", "cdc:art12", "cdc:art54-g", "cdc:art29", "cdc:art8", "cdc:art14", "cdc:art5", "cdc:art55" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "Sou dono de uma pequena padaria e comprei uma batedeira para usar nela. Posso me considerar consumidor?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Sim, você pode se considerar consumidor. O Código de Defesa do Consumidor protege quem adquire produtos ou serviços para uso pessoal, familiar ou doméstico, não sendo necessário que a pessoa seja física. Como sua padaria é uma pequena empresa e a batedeira foi comprada para uso na atividade, ainda assim há proteção dependendo da natureza da relação jurídica específica, mas o artigo 43 garante acesso a dados sobre cadastros de consumidores, reforçando a abrangência da proteção.",
+        "answer" : "Sim, você pode se considerar consumidor. O Código de Defesa do Consumidor protege quem adquire produtos ou serviços para uso pessoal, familiar ou doméstico, não sendo necessário que a pessoa seja física. Como sua padaria é uma pequena empresa e a batedeira foi comprada para uso na atividade, há discussão sobre se se enquadra como consumo final ou profissional. Contudo, o artigo 51, inciso IV, veta cláusulas abusivas que coloquem o consumidor em desvantagem exagerada, reforçando a proteção ao comprador. Além disso, o artigo 43 garante acesso às informações sobre cadastros e dados pessoais do consumidor. Assim, dependendo da finalidade exata da compra (uso próprio vs. revenda), você pode ter direitos de consumidor.",
         "insufficient" : false,
         "failed" : false,
         "citations" : [ {
+          "articleId" : "cdc:art51",
+          "citedArticleId" : "cdc:art51",
+          "quote" : "IV - estabeleçam obrigações consideradas iníquas, abusivas, que coloquem o consumidor em desvantagem exagerada, ou sejam incompatíveis com a boa-fé ou a eqüidade;",
+          "status" : "VERIFIED"
+        }, {
           "articleId" : "cdc:art43",
           "citedArticleId" : "cdc:art43",
           "quote" : "Art. 43. O consumidor, sem prejuízo do disposto no art. 86, terá acesso às informações existentes em cadastros, fichas, registros e dados pessoais e de consumo arquivados sobre ele, bem como sobre as suas respectivas fontes.",
           "status" : "VERIFIED"
-        }, {
-          "articleId" : "cdc:art51",
-          "citedArticleId" : "cdc:art51",
-          "quote" : "Art. 51. São nulas de pleno direito, entre outras, as cláusulas contratuais relativas ao fornecimento de produtos e serviços que:",
-          "status" : "VERIFIED"
         } ],
-        "retrievedIds" : [ "cdc:art43", "cdc:art106", "cdc:art51", "cdc:art5", "cdc:art39" ]
+        "retrievedIds" : [ "cdc:art43", "cdc:art51", "cdc:art106", "cdc:art5", "cdc:art39" ]
       },
       "DENSE" : {
         "question" : "Sou dono de uma pequena padaria e comprei uma batedeira para usar nela. Posso me considerar consumidor?",
@@ -1278,7 +1308,12 @@
         "answer" : "Não é possível parar de pagar o financiamento com base nos artigos fornecidos. O artigo 239 da Constituição Federal trata apenas do financiamento do seguro-desemprego e programas de desenvolvimento econômico, não abordando contratos de consumo ou a responsabilidade do consumidor em caso de fechamento da escola.",
         "insufficient" : true,
         "failed" : false,
-        "citations" : [ ],
+        "citations" : [ {
+          "articleId" : "cf88:art239",
+          "citedArticleId" : "cf88:art239",
+          "quote" : "Art. 239. A arrecadação decorrente das contribuições para o Programa de Integração Social, criado pela Lei Complementar nº 7, de 7 de setembro de 1970, e para o Programa de Formação do Patrimônio do Servidor Público, criado pela Lei Complementar nº 8, de 3 de dezembro de 1970, passa, a partir da promulgação desta Constituição, a financiar, nos termos que a lei dispuser, o programa do seguro-desemprego, outras ações da previdência social e o abono de que trata o § 3º deste artigo.",
+          "status" : "VERIFIED"
+        } ],
         "retrievedIds" : [ "cf88:art103-b", "cf88:art164", "cf88:art220", "cdc:art54-b", "cf88:art239" ]
       },
       "DENSE" : {
@@ -1307,30 +1342,30 @@
     "type" : "single",
     "gold" : [ "cdc:art3" ],
     "retrieved" : {
-      "KEYWORD" : [ "cdc:art43", "cdc:art51", "cdc:art106", "cdc:art39", "cdc:art104-c", "cdc:art40", "cdc:art54-c", "cdc:art37", "cdc:art4", "cdc:art54-d" ],
+      "KEYWORD" : [ "cdc:art106", "cdc:art104-c", "cdc:art43", "cdc:art51", "cf88:art91", "cdc:art105", "cdc:art5", "cdc:art39", "cdc:art44", "cf88:art136" ],
       "DENSE" : [ "cdc:art44", "cdc:art43", "cdc:art56", "cdc:art54-g", "cdc:art106", "cdc:art22", "cdc:art41", "cdc:art54-d", "cdc:art39", "cdc:art52" ],
-      "HYBRID" : [ "cdc:art43", "cdc:art106", "cdc:art44", "cdc:art54-d", "cdc:art54-g", "cdc:art4", "cdc:art5", "cdc:art39", "cdc:art54-c", "cdc:art52" ]
+      "HYBRID" : [ "cdc:art43", "cdc:art106", "cdc:art44", "cdc:art5", "cdc:art54-d", "cdc:art54-g", "cdc:art4", "cdc:art39", "cdc:art54-c", "cdc:art105" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "O banco é obrigado a seguir as regras de defesa do consumidor ou isso vale só para lojas?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Sim, o banco é obrigado a seguir as regras de defesa do consumidor. O Código de Defesa do Consumidor aplica-se a fornecedores de produtos e serviços, incluindo instituições financeiras como bancos, que não podem adotar práticas abusivas ou transferir responsabilidades indevidamente.",
+        "answer" : "Sim, o banco é obrigado a seguir as regras de defesa do consumidor. O Código de Defesa do Consumidor aplica-se a fornecedores de produtos e serviços, incluindo instituições financeiras como bancos, que não estão excluídos das normas. Por exemplo, cláusulas contratuais abusivas são nulas de pleno direito para qualquer fornecedor, conforme o artigo 51.",
         "insufficient" : false,
         "failed" : false,
         "citations" : [ {
           "articleId" : "cdc:art51",
           "citedArticleId" : "cdc:art51",
-          "quote" : "São nulas de pleno direito, entre outras, as cláusulas contratuais relativas ao fornecimento de produtos e serviços que...",
+          "quote" : "São nulas de pleno direito, entre outras, as cláusulas contratuais relativas ao fornecimento de produtos e serviços que:",
           "status" : "VERIFIED"
         }, {
-          "articleId" : "cdc:art39",
-          "citedArticleId" : "cdc:art39",
-          "quote" : "É vedado ao fornecedor de produtos ou serviços, dentre outras práticas abusivas:",
+          "articleId" : "cdc:art43",
+          "citedArticleId" : "cdc:art43",
+          "quote" : "O consumidor, sem prejuízo do disposto no art. 86, terá acesso às informações existentes em cadastros, fichas, registros e dados pessoais e de consumo arquivados sobre ele, bem como sobre as suas respectivas fontes.",
           "status" : "VERIFIED"
         } ],
-        "retrievedIds" : [ "cdc:art43", "cdc:art51", "cdc:art106", "cdc:art39", "cdc:art104-c" ]
+        "retrievedIds" : [ "cdc:art106", "cdc:art104-c", "cdc:art43", "cdc:art51", "cf88:art91" ]
       },
       "DENSE" : {
         "question" : "O banco é obrigado a seguir as regras de defesa do consumidor ou isso vale só para lojas?",
@@ -1544,14 +1579,14 @@
     "retrieved" : {
       "KEYWORD" : [ "cf88:art7", "cf88:art114", "cf88:art111-a", "cf88:art5", "cf88:art111", "cf88:art115", "cf88:art112", "cf88:art6", "cdc:art7", "cf88:art8" ],
       "DENSE" : [ "cf88:art7", "cf88:art201", "cf88:art198", "cf88:art10", "cf88:art12", "cf88:art37", "cf88:art40", "cf88:art239", "cf88:art195", "cf88:art6" ],
-      "HYBRID" : [ "cf88:art7", "cf88:art111-a", "cf88:art6", "cf88:art10", "cf88:art8", "cf88:art5", "cf88:art227", "cf88:art9", "cf88:art114", "cf88:art201" ]
+      "HYBRID" : [ "cf88:art7", "cf88:art201", "cf88:art6", "cf88:art111-a", "cf88:art195", "cf88:art10", "cf88:art8", "cf88:art5", "cf88:art227", "cf88:art239" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "Todo trabalhador de carteira assinada tem direito ao décimo terceiro salário?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Sim, todo trabalhador com carteira assinada tem direito ao décimo terceiro salário. O artigo 7º da Constituição Federal garante explicitamente este benefício como um dos direitos fundamentais dos trabalhadores urbanos e rurais.",
+        "answer" : "Sim, todo trabalhador com carteira assinada tem direito ao décimo terceiro salário. O artigo 7º da Constituição Federal garante expressamente este benefício como um dos direitos fundamentais dos trabalhadores urbanos e rurais.",
         "insufficient" : false,
         "failed" : false,
         "citations" : [ {
@@ -1593,7 +1628,7 @@
     "type" : "single",
     "gold" : [ "cf88:art14" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art14", "cf88:art8", "cf88:art37", "cf88:art60", "cf88:art93", "cf88:art5", "cf88:art128", "cf88:art103-b", "cf88:art107", "cf88:art44" ],
+      "KEYWORD" : [ "cf88:art14", "cf88:art37", "cf88:art60", "cf88:art8", "cf88:art5", "cf88:art93", "cf88:art128", "cf88:art103-b", "cf88:art107", "cf88:art44" ],
       "DENSE" : [ "cf88:art14", "cf88:art208", "cf88:art227", "cf88:art16", "cf88:art205", "cf88:art17", "cf88:art121", "cf88:art228", "cf88:art5", "cf88:art212-a" ],
       "HYBRID" : [ "cf88:art14", "cf88:art208", "cf88:art8", "cf88:art53", "cf88:art5", "cf88:art49", "cf88:art77", "cf88:art89", "cf88:art46", "cf88:art37" ]
     },
@@ -1602,7 +1637,7 @@
         "question" : "Meu filho tem 16 anos, ele já pode votar? É obrigatório?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Não, seu filho de 16 anos ainda não pode votar obrigatoriamente. Conforme o Art. 14 da Constituição, o alistamento eleitoral e o voto são facultativos para os maiores de dezesseis e menores de dezoito anos. Portanto, ele já pode votar, mas não é obrigado a fazê-lo.",
+        "answer" : "Não, seu filho de 16 anos ainda não pode votar obrigatoriamente. Conforme o Art. 14, § 1º, I do texto fornecido, o alistamento eleitoral e o voto são 'obrigatórios para os maiores de dezoito anos'. Já para a faixa etária entre dezesseis e dezoito anos, o voto é 'facultativo', conforme disposto no item II, c) do mesmo artigo. Portanto, ele pode votar apenas se optar por fazê-lo voluntariamente.",
         "insufficient" : false,
         "failed" : false,
         "citations" : [ {
@@ -1611,7 +1646,7 @@
           "quote" : "§ 1º O alistamento eleitoral e o voto são:\nI - obrigatórios para os maiores de dezoito anos;\nII - facultativos para:\na) os analfabetos;\nb) os maiores de setenta anos;\nc) os maiores de dezesseis e menores de dezoito anos.",
           "status" : "VERIFIED"
         } ],
-        "retrievedIds" : [ "cf88:art14", "cf88:art8", "cf88:art37", "cf88:art60", "cf88:art93" ]
+        "retrievedIds" : [ "cf88:art14", "cf88:art37", "cf88:art60", "cf88:art8", "cf88:art5" ]
       },
       "DENSE" : {
         "question" : "Meu filho tem 16 anos, ele já pode votar? É obrigatório?",
@@ -1782,20 +1817,25 @@
     "type" : "single",
     "gold" : [ "cf88:art101" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art103-b", "cf88:art120", "cf88:art92", "cf88:art119", "cf88:art102", "cf88:art108", "cf88:art101", "cf88:art103", "cf88:art104", "cf88:art111-a" ],
+      "KEYWORD" : [ "cf88:art103-b", "cf88:art120", "cf88:art92", "cf88:art119", "cf88:art101", "cf88:art102", "cf88:art103", "cf88:art108", "cf88:art36", "cf88:art103-a" ],
       "DENSE" : [ "cf88:art101", "cf88:art103-b", "cf88:art104", "cf88:art119", "cf88:art107", "cf88:art92", "cf88:art96", "cf88:art123", "cf88:art111-a", "cf88:art120" ],
-      "HYBRID" : [ "cf88:art103-b", "cf88:art119", "cf88:art101", "cf88:art92", "cf88:art120", "cf88:art104", "cf88:art111-a", "cf88:art96", "cf88:art123", "cf88:art108" ]
+      "HYBRID" : [ "cf88:art103-b", "cf88:art101", "cf88:art119", "cf88:art92", "cf88:art120", "cf88:art104", "cf88:art111-a", "cf88:art96", "cf88:art103-a", "cf88:art123" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "Quantos juízes tem o Supremo Tribunal Federal e quem os escolhe?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Os artigos fornecidos não especificam o número exato de juízes do Supremo Tribunal Federal nem detalham quem os escolhe, mencionando apenas que três deles compõem o TSE e um é membro do CNJ.",
-        "insufficient" : true,
+        "answer" : "O Supremo Tribunal Federal compõe-se de onze Ministros. Eles são escolhidos mediante eleição pelo Congresso Nacional, conforme o texto constitucional que define sua composição.",
+        "insufficient" : false,
         "failed" : false,
-        "citations" : [ ],
-        "retrievedIds" : [ "cf88:art103-b", "cf88:art120", "cf88:art92", "cf88:art119", "cf88:art102" ]
+        "citations" : [ {
+          "articleId" : "cf88:art101",
+          "citedArticleId" : "cf88:art101",
+          "quote" : "Art. 101. O Supremo Tribunal Federal compõe-se de onze Ministros, escolhidos dentre cidadãos com mais de trinta e cinco e menos de setenta anos de idade, de notável",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art103-b", "cf88:art120", "cf88:art92", "cf88:art119", "cf88:art101" ]
       },
       "DENSE" : {
         "question" : "Quantos juízes tem o Supremo Tribunal Federal e quem os escolhe?",
@@ -1968,7 +2008,7 @@
     "retrieved" : {
       "KEYWORD" : [ "cf88:art5", "cf88:art14", "cf88:art201", "cf88:art40", "cdc:art63", "cf88:art89", "cdc:art37", "cf88:art7", "cf88:art8", "cf88:art142" ],
       "DENSE" : [ "cf88:art183", "cf88:art191", "cf88:art189", "cf88:art225", "cf88:art231", "cf88:art5", "cf88:art20", "cf88:art243", "cf88:art190", "cf88:art185" ],
-      "HYBRID" : [ "cf88:art5", "cf88:art183", "cf88:art14", "cf88:art20", "cf88:art191", "cf88:art222", "cf88:art8", "cf88:art182", "cf88:art95", "cf88:art201" ]
+      "HYBRID" : [ "cf88:art5", "cf88:art183", "cf88:art14", "cf88:art191", "cf88:art20", "cf88:art222", "cf88:art8", "cf88:art182", "cf88:art95", "cf88:art201" ]
     },
     "answers" : {
       "KEYWORD" : {
@@ -1978,7 +2018,22 @@
         "answer" : "Não se torna dono automaticamente apenas por morar no terreno. A propriedade é garantida constitucionalmente, mas a aquisição de bens exige procedimento legal específico. O artigo 5º, XXIV, estabelece que a lei estabelecerá o procedimento para desapropriação ou transferência de bens, mediante justa indenização. Além disso, o princípio da inviolabilidade da propriedade e a necessidade de devido processo legal (artigo 5º, LIV) impedem a aquisição informal sem base jurídica. Portanto, é necessário seguir os trâmites legais previstos na legislação civil para regularizar a situação.",
         "insufficient" : true,
         "failed" : false,
-        "citations" : [ ],
+        "citations" : [ {
+          "articleId" : "cf88:art201",
+          "citedArticleId" : "cf88:art201",
+          "quote" : "",
+          "status" : "UNSUPPORTED"
+        }, {
+          "articleId" : "cf88:art40",
+          "citedArticleId" : "cf88:art40",
+          "quote" : "",
+          "status" : "UNSUPPORTED"
+        }, {
+          "articleId" : "cdc:art63",
+          "citedArticleId" : "cdc:art63",
+          "quote" : "",
+          "status" : "UNSUPPORTED"
+        } ],
         "retrievedIds" : [ "cf88:art5", "cf88:art14", "cf88:art201", "cf88:art40", "cdc:art63" ]
       },
       "DENSE" : {
@@ -2002,16 +2057,16 @@
     "type" : "single",
     "gold" : [ "cf88:art230" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art5", "cf88:art230", "cdc:art51", "cdc:art7", "cf88:art6", "cf88:art227", "cdc:art81", "cf88:art229", "cdc:art54-f", "cf88:art8" ],
+      "KEYWORD" : [ "cf88:art5", "cf88:art230", "cdc:art81", "cdc:art51", "cf88:art156", "cf88:art226", "cf88:art156-a", "cf88:art37", "cdc:art7", "cf88:art6" ],
       "DENSE" : [ "cf88:art230", "cf88:art100", "cf88:art208", "cf88:art199", "cf88:art5", "cf88:art169", "cf88:art198", "cf88:art201", "cf88:art40", "cf88:art203" ],
-      "HYBRID" : [ "cf88:art230", "cf88:art5", "cf88:art100", "cf88:art6", "cf88:art8", "cf88:art9", "cf88:art7", "cf88:art14", "cf88:art227", "cf88:art208" ]
+      "HYBRID" : [ "cf88:art230", "cf88:art5", "cf88:art100", "cf88:art6", "cf88:art227", "cf88:art203", "cf88:art8", "cf88:art198", "cf88:art9", "cf88:art7" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "Pessoas idosas têm direito a andar de ônibus sem pagar?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Não há previsão nos artigos fornecidos de que pessoas idosas tenham direito a andar de ônibus sem pagar. Os textos citados tratam de direitos fundamentais, sucessão, consumidor e assistência social geral, mas não especificam gratuidade no transporte público para idosos.",
+        "answer" : "Não há previsão nos artigos fornecidos de que pessoas idosas tenham direito a andar de ônibus sem pagar. Os textos citados tratam de direitos fundamentais, sucessão, consumidor e prescrição, mas não mencionam transporte público gratuito para idosos.",
         "insufficient" : false,
         "failed" : false,
         "citations" : [ {
@@ -2020,12 +2075,17 @@
           "quote" : "XXX - é garantido o direito de herança; XXXI - a sucessão de bens de estrangeiros situados no País será regulada pela lei brasileira em benefício do cônjuge ou dos filhos brasileiros, sempre que não lhes seja mais favorável a lei pessoal do \"de cujus\";",
           "status" : "VERIFIED"
         }, {
-          "articleId" : "cf88:art6",
-          "citedArticleId" : "cf88:art6",
-          "quote" : "É garantido o direito de vida. É garantido o direito à liberdade.",
+          "articleId" : "cdc:art81",
+          "citedArticleId" : "cdc:art81",
+          "quote" : "",
+          "status" : "UNSUPPORTED"
+        }, {
+          "articleId" : "cf88:art230",
+          "citedArticleId" : "cf88:art230",
+          "quote" : "",
           "status" : "UNSUPPORTED"
         } ],
-        "retrievedIds" : [ "cf88:art5", "cf88:art230", "cdc:art51", "cdc:art7", "cf88:art6" ]
+        "retrievedIds" : [ "cf88:art5", "cf88:art230", "cdc:art81", "cdc:art51", "cf88:art156" ]
       },
       "DENSE" : {
         "question" : "Pessoas idosas têm direito a andar de ônibus sem pagar?",
@@ -2216,16 +2276,16 @@
     "type" : "single",
     "gold" : [ "cf88:art8" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art8", "cdc:art84", "cdc:art107", "cf88:art100", "cf88:art114", "cf88:art5", "cdc:art22", "cdc:art40", "cf88:art151", "cdc:art28" ],
+      "KEYWORD" : [ "cf88:art8", "cdc:art107", "cdc:art84", "cf88:art100", "cf88:art114", "cf88:art5", "cdc:art22", "cdc:art40", "cf88:art151", "cdc:art28" ],
       "DENSE" : [ "cf88:art8", "cf88:art201", "cf88:art7", "cf88:art37", "cf88:art240", "cf88:art40", "cf88:art149", "cf88:art195", "cf88:art22", "cf88:art5" ],
-      "HYBRID" : [ "cf88:art8", "cdc:art107", "cf88:art7", "cf88:art198", "cf88:art37", "cdc:art84", "cf88:art201", "cf88:art100", "cf88:art114", "cf88:art5" ]
+      "HYBRID" : [ "cf88:art8", "cdc:art107", "cf88:art7", "cf88:art198", "cf88:art37", "cf88:art201", "cdc:art84", "cf88:art100", "cf88:art114", "cf88:art5" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "Sou obrigado a me filiar ao sindicato da minha categoria?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Não, você não é obrigado a se filiar ao sindicato da sua categoria. O artigo 8º da CF/88 estabelece explicitamente que 'ninguém será obrigado a filiar-se ou a manter-se filiado a sindicato'.",
+        "answer" : "Não, você não é obrigado a se filiar ao sindicato da sua categoria. A lei garante que ninguém será obrigado a filiar-se ou a manter-se filiado a sindicato.",
         "insufficient" : false,
         "failed" : false,
         "citations" : [ {
@@ -2236,10 +2296,10 @@
         }, {
           "articleId" : "cf88:art8",
           "citedArticleId" : "cf88:art8",
-          "quote" : "I - a lei não poderá exigir autorização do Estado para a fundação de sindicato, ressalvado o registro no órgão competente, vedadas ao Poder Público a interferência e a intervenção na organização sindical;",
+          "quote" : "É livre a associação profissional ou sindical, observado o seguinte:",
           "status" : "VERIFIED"
         } ],
-        "retrievedIds" : [ "cf88:art8", "cdc:art84", "cdc:art107", "cf88:art100", "cf88:art114" ]
+        "retrievedIds" : [ "cf88:art8", "cdc:art107", "cdc:art84", "cf88:art100", "cf88:art114" ]
       },
       "DENSE" : {
         "question" : "Sou obrigado a me filiar ao sindicato da minha categoria?",
@@ -2279,7 +2339,17 @@
         "answer" : "Os artigos fornecidos não contêm informações sobre a exigência de concurso para trabalho em prefeituras. Eles tratam da estrutura da Justiça do Trabalho, competência judicial e direitos trabalhistas gerais.",
         "insufficient" : true,
         "failed" : false,
-        "citations" : [ ],
+        "citations" : [ {
+          "articleId" : "cf88:art114",
+          "citedArticleId" : "cf88:art114",
+          "quote" : "Compete à Justiça do Trabalho processar e julgar: I as ações oriundas da relação de trabalho, abrangidos os entes de direito público externo e da administração pública direta e indireta da União, dos Estados, do Distrito Federal e dos Municípios;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art111",
+          "citedArticleId" : "cf88:art111",
+          "quote" : "São órgãos da Justiça do Trabalho: I - o Tribunal Superior do Trabalho; II - os Tribunais Regionais do Trabalho; III - Juizes do Trabalho.",
+          "status" : "VERIFIED"
+        } ],
         "retrievedIds" : [ "cf88:art111-a", "cf88:art114", "cf88:art111", "cf88:art7", "cf88:art115" ]
       },
       "DENSE" : {
@@ -2371,7 +2441,22 @@
         "answer" : "A ação deve correr no Tribunal Regional do Trabalho da respectiva região. Os artigos fornecidos tratam da composição e competência do Supremo Tribunal Federal, Superior Tribunal de Justiça e Conselho Nacional de Justiça, não mencionando a competência para causas trabalhistas de demissão.",
         "insufficient" : true,
         "failed" : false,
-        "citations" : [ ],
+        "citations" : [ {
+          "articleId" : "cf88:art103-b",
+          "citedArticleId" : "cf88:art103-b",
+          "quote" : "O Conselho Nacional de Justiça compõe-se de 15 (quinze) membros com mandato de 2 (dois) anos, admitida 1 (uma) recondução, sendo:",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art102",
+          "citedArticleId" : "cf88:art102",
+          "quote" : "i) o habeas corpus , quando o coator for Tribunal Superior ou quando o coator ou o paciente for autoridade ou funcionário cujos atos estejam sujeitos diretamente à jurisdição do Supremo Tribunal Federal, ou se trate de crime sujeito à mesma jurisdição em uma única instância;",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art119",
+          "citedArticleId" : "cf88:art119",
+          "quote" : "",
+          "status" : "UNSUPPORTED"
+        } ],
         "retrievedIds" : [ "cf88:art103-b", "cf88:art102", "cf88:art119", "cf88:art120", "cf88:art103" ]
       },
       "DENSE" : {
@@ -2407,7 +2492,17 @@
         "answer" : "Os artigos fornecidos tratam exclusivamente de limites remuneratórios (art. 37) e da composição e atribuições do Conselho Nacional de Justiça (art. 103-B), sem conter informações sobre a existência de defensoria pública gratuita para quem não possui recursos financeiros. Portanto, com base estritamente no texto apresentado, não é possível responder à sua pergunta.",
         "insufficient" : true,
         "failed" : false,
-        "citations" : [ ],
+        "citations" : [ {
+          "articleId" : "cf88:art37",
+          "citedArticleId" : "cf88:art37",
+          "quote" : "XI - a remuneração e o subsídio dos ocupantes de cargos, funções e empregos públicos da administração direta, autárquica e fundacional...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art103-b",
+          "citedArticleId" : "cf88:art103-b",
+          "quote" : "Art. 103-B. O Conselho Nacional de Justiça compõe-se de 15 (quinze) membros com mandato de 2 (dois) anos...",
+          "status" : "VERIFIED"
+        } ],
         "retrievedIds" : [ "cf88:art37", "cf88:art103-b", "cf88:art103", "cf88:art213", "cf88:art60" ]
       },
       "DENSE" : {
@@ -2499,7 +2594,17 @@
         "answer" : "A Constituição não define explicitamente o conceito de 'família' para casais que moram juntos sem casamento formal nos artigos fornecidos. O artigo 226, embora trate da família, não detalha essa situação específica no texto disponibilizado. Os artigos citados focam em direitos individuais e sociais gerais.",
         "insufficient" : true,
         "failed" : false,
-        "citations" : [ ],
+        "citations" : [ {
+          "articleId" : "cf88:art5",
+          "citedArticleId" : "cf88:art5",
+          "quote" : "Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade, nos termos seguintes:",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art226",
+          "citedArticleId" : "cf88:art226",
+          "quote" : "",
+          "status" : "UNSUPPORTED"
+        } ],
         "retrievedIds" : [ "cf88:art5", "cf88:art226", "cf88:art14", "cf88:art201", "cf88:art55" ]
       },
       "DENSE" : {
@@ -2528,9 +2633,9 @@
     "type" : "single",
     "gold" : [ "cf88:art77" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art77", "cf88:art80", "cf88:art66", "cf88:art79", "cf88:art81", "cf88:art78", "cf88:art86", "cf88:art49", "cf88:art82", "cf88:art89" ],
+      "KEYWORD" : [ "cf88:art77", "cf88:art80", "cf88:art66", "cf88:art79", "cf88:art81", "cf88:art78", "cf88:art57", "cf88:art86", "cf88:art49", "cf88:art82" ],
       "DENSE" : [ "cf88:art77", "cf88:art81", "cf88:art14", "cf88:art28", "cf88:art80", "cf88:art78", "cf88:art16", "cf88:art119", "cf88:art82", "cf88:art79" ],
-      "HYBRID" : [ "cf88:art77", "cf88:art81", "cf88:art80", "cf88:art78", "cf88:art79", "cf88:art82", "cf88:art14", "cf88:art86", "cf88:art119", "cf88:art120" ]
+      "HYBRID" : [ "cf88:art77", "cf88:art81", "cf88:art80", "cf88:art78", "cf88:art79", "cf88:art82", "cf88:art119", "cf88:art14", "cf88:art86", "cf88:art28" ]
     },
     "answers" : {
       "KEYWORD" : {
@@ -2569,20 +2674,35 @@
     "type" : "single",
     "gold" : [ "cf88:art19" ],
     "retrieved" : {
-      "KEYWORD" : [ "cf88:art37", "cf88:art136", "cf88:art137", "cf88:art138", "cf88:art125", "cf88:art60", "cf88:art50", "cf88:art141", "cf88:art18", "cf88:art155" ],
+      "KEYWORD" : [ "cf88:art12", "cf88:art37", "cf88:art136", "cf88:art137", "cf88:art138", "cf88:art125", "cf88:art60", "cf88:art50", "cf88:art141", "cf88:art155" ],
       "DENSE" : [ "cf88:art19", "cf88:art150", "cf88:art226", "cf88:art155", "cf88:art164", "cf88:art216", "cf88:art13", "cf88:art198", "cf88:art212-a", "cf88:art212" ],
-      "HYBRID" : [ "cf88:art13", "cf88:art213", "cf88:art50", "cf88:art37", "cf88:art19", "cf88:art136", "cf88:art150", "cf88:art226", "cf88:art137", "cf88:art155" ]
+      "HYBRID" : [ "cf88:art213", "cf88:art13", "cf88:art50", "cf88:art5", "cf88:art12", "cf88:art19", "cf88:art37", "cf88:art150", "cf88:art136", "cf88:art226" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "O Estado brasileiro pode ter uma religião oficial e dar dinheiro a uma igreja?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Não há menção na Constituição Federal aos artigos fornecidos sobre a existência de religião oficial ou financiamento estatal direto a igrejas. Os textos citados tratam exclusivamente de limites remuneratórios (art. 37), estado de defesa e sítio (arts. 136, 137, 138) e organização da justiça estadual (art. 125). Portanto, com base estritamente nos artigos fornecidos, não é possível responder à pergunta.",
+        "answer" : "Não há menção no texto fornecido sobre a existência de religião oficial ou doação estatal a igrejas. Os artigos citados tratam de nacionalidade, limites salariais e estado de defesa/sítio.",
         "insufficient" : true,
         "failed" : false,
-        "citations" : [ ],
-        "retrievedIds" : [ "cf88:art37", "cf88:art136", "cf88:art137", "cf88:art138", "cf88:art125" ]
+        "citations" : [ {
+          "articleId" : "cf88:art12",
+          "citedArticleId" : "cf88:art12",
+          "quote" : "Art. 12. São brasileiros:",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art37",
+          "citedArticleId" : "cf88:art37",
+          "quote" : "XI - a remuneração e o subsídio dos ocupantes de cargos, funções e empregos públicos...",
+          "status" : "VERIFIED"
+        }, {
+          "articleId" : "cf88:art136",
+          "citedArticleId" : "cf88:art136",
+          "quote" : "Art. 136. O Presidente da República pode, ouvidos o Conselho da República e o Conselho de Defesa Nacional, decretar estado de defesa para preservar ou prontamente restabelecer, em locais restritos e determinados, a ordem pública ou a paz social ameaçadas por grave e iminente instabilidade institucional ou atingidas por calamidades de grandes proporções na natureza.",
+          "status" : "VERIFIED"
+        } ],
+        "retrievedIds" : [ "cf88:art12", "cf88:art37", "cf88:art136", "cf88:art137", "cf88:art138" ]
       },
       "DENSE" : {
         "question" : "O Estado brasileiro pode ter uma religião oficial e dar dinheiro a uma igreja?",
@@ -2666,16 +2786,16 @@
     "type" : "multi",
     "gold" : [ "cf88:art5", "cf88:art170", "cdc:art1" ],
     "retrieved" : {
-      "KEYWORD" : [ "cdc:art54-d", "cf88:art5", "cdc:art106", "cdc:art104-c", "cdc:art51", "cdc:art43", "cdc:art4", "cf88:art14", "cdc:art39", "cdc:art54-b" ],
+      "KEYWORD" : [ "cf88:art5", "cdc:art106", "cdc:art104-c", "cdc:art54-d", "cf88:art91", "cdc:art105", "cf88:art136", "cdc:art51", "cdc:art43", "cdc:art5" ],
       "DENSE" : [ "cdc:art1", "cdc:art44", "cdc:art83", "cdc:art82", "cdc:art102", "cdc:art106", "cdc:art81", "cdc:art4", "cdc:art7", "cdc:art105" ],
-      "HYBRID" : [ "cdc:art106", "cdc:art4", "cf88:art5", "cdc:art54-d", "cdc:art43", "cdc:art5", "cdc:art54-g", "cdc:art104-c", "cdc:art54-b", "cdc:art117" ]
+      "HYBRID" : [ "cdc:art106", "cdc:art105", "cf88:art5", "cdc:art4", "cdc:art5", "cdc:art81", "cdc:art54-d", "cdc:art43", "cdc:art117", "cdc:art82" ]
     },
     "answers" : {
       "KEYWORD" : {
         "question" : "O governo garante a defesa do consumidor na lei maior do país, e existe um código específico para isso?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Sim, a Constituição Federal garante que o Estado promoverá a defesa do consumidor. Além disso, existe um Código de Defesa do Consumidor específico para regulamentar esses direitos.",
+        "answer" : "Sim, a Constituição Federal garante que o Estado promoverá a defesa do consumidor. Além disso, existem códigos específicos para regular essa matéria, como indicado pelas referências ao Código de Defesa do Consumidor (CDC).",
         "insufficient" : false,
         "failed" : false,
         "citations" : [ {
@@ -2684,12 +2804,17 @@
           "quote" : "XXXII - o Estado promoverá, na forma da lei, a defesa do consumidor;",
           "status" : "VERIFIED"
         }, {
-          "articleId" : "cdc:art54-d",
-          "citedArticleId" : "cdc:art54-d",
-          "quote" : "Art. 54-D. Na oferta de crédito, previamente à contratação, o fornecedor ou o intermediário deverá, entre outras condutas:",
-          "status" : "VERIFIED"
+          "articleId" : "cdc:art106",
+          "citedArticleId" : "cdc:art106",
+          "quote" : "",
+          "status" : "UNSUPPORTED"
+        }, {
+          "articleId" : "cdc:art104-c",
+          "citedArticleId" : "cdc:art104-c",
+          "quote" : "",
+          "status" : "UNSUPPORTED"
         } ],
-        "retrievedIds" : [ "cdc:art54-d", "cf88:art5", "cdc:art106", "cdc:art104-c", "cdc:art51" ]
+        "retrievedIds" : [ "cf88:art5", "cdc:art106", "cdc:art104-c", "cdc:art54-d", "cf88:art91" ]
       },
       "DENSE" : {
         "question" : "O governo garante a defesa do consumidor na lei maior do país, e existe um código específico para isso?",
@@ -2749,11 +2874,11 @@
         "question" : "Quanto tempo de aviso prévio o inquilino precisa dar ao dono antes de sair do imóvel alugado?",
         "mode" : "KEYWORD",
         "provider" : "ollama",
-        "answer" : "Os artigos fornecidos não contêm informações sobre o prazo de aviso prévio para inquilinos. O artigo 156 trata de impostos municipais, e os artigos 40, 201, 184 e 142 referem-se a previdência social, servidores públicos e forças armadas, respectivamente.",
+        "answer" : "Os artigos fornecidos não contêm informações sobre o prazo de aviso prévio para inquilinos. O texto aborda impostos municipais, regras de aposentadoria e previdência social, mas é silencioso quanto às obrigações contratuais de locação.",
         "insufficient" : true,
         "failed" : false,
         "citations" : [ ],
-        "retrievedIds" : [ "cf88:art156", "cf88:art40", "cf88:art201", "cf88:art184", "cf88:art142" ]
+        "retrievedIds" : [ "cf88:art156", "cf88:art40", "cf88:art201", "cf88:art142", "cf88:art212-a" ]
       },
       "DENSE" : {
         "question" : "Quanto tempo de aviso prévio o inquilino precisa dar ao dono antes de sair do imóvel alugado?",

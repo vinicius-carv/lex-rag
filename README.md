@@ -54,18 +54,18 @@ Retrieval (n = 56):
 
 | Mode | Hit@1 | Recall@5 | MRR@10 |
 |---|---|---|---|
-| Keyword (Postgres full-text, baseline) | 0.214 | 0.417 | 0.324 |
+| Keyword (Postgres full-text, baseline) | 0.232 | 0.435 | 0.334 |
 | **Dense (bge-m3, the system)** | **0.661** | **0.827** | **0.758** |
-| Hybrid (keyword + dense, equal-weight RRF) | 0.393 | 0.702 | 0.544 |
+| Hybrid (keyword + dense, equal-weight RRF) | 0.393 | 0.685 | 0.544 |
 
 Answers (n = 61), same prompt, only the retrieval mode differs:
 
 | Retrieval | Citation precision | Supported rate | Answer recall | Abstention | False abstention | Failed |
 |---|---|---|---|---|---|---|
 | Dense (system) | 0.627 | 0.973 | 0.821 | 0.800 | 0.018 | 0 |
-| Keyword (baseline) | 0.386 | 0.964 | 0.339 | 0.800 | 0.304 | 0 |
+| Keyword (baseline) | 0.296 | 0.880 | 0.357 | 0.800 | 0.304 | 0 |
 
-Reading it: the model rarely produces a quote that is not in the retrieved text (supported rate about 0.97 in both rows), but that says little about whether it cites the right article. With keyword retrieval the right article is often missing, so the model abstains or cites something else. A citation precision of 0.627 means over a third of dense-mode citations are real quotes from articles that are not the gold article for that question. Some of those may be legitimately relevant, since gold is a single article-level label per question.
+Reading it: the model rarely produces a quote that is not in the retrieved text (supported rate 0.973 with dense retrieval, 0.880 with keyword), but that says little about whether it cites the right article. With keyword retrieval the right article is often missing, so the model abstains or cites something else. A citation precision of 0.627 means over a third of dense-mode citations are real quotes from articles that are not the gold article for that question. Some of those may be legitimately relevant, since gold is a single article-level label per question.
 
 ## Caveats
 
