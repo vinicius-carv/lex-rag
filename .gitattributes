@@ -1,4 +1,4 @@
 * text=auto
 mvnw eol=lf
-corpus/laws/*.htm -text
-src/test/resources/fixtures/*.htm -text
+corpus/laws/*.htm -text linguist-vendored
+src/test/resources/fixtures/*.htm -text linguist-vendored
